@@ -7,7 +7,7 @@ $scope.goToDoctorProfile = function() {
   }
 
 $scope.goToProfile = function() {
-    $state.go('patientProfileScreen');
+    $state.go('generalProfile');
 }
 
 })

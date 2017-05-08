@@ -43,5 +43,10 @@ angular.module('bookDoctor', ['ionic', 'ui.router'])
                 templateUrl: 'Modules/Templates/Signup.html',
                 controller: 'signupController'
             })
+           .state('generalProfile', {
+                url:'generalProfile',               
+                templateUrl: 'Modules/Templates/GeneralPatientProfile.html',
+                controller:'generalPatientProfileController'
+            }) 
         $urlRouterProvider.otherwise('/loginPage');
 })
