@@ -11,3 +11,19 @@
     height: 15px;
     text-align: center;
 }
+#centerCard {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width:50%;
+    height:40%;
+}
+#loginInput {
+    background: #FFFFFF;
+    color: black;
+    border: solid 1px #11c1f3;
+    text-align: center;
+    width: 70%;
+    margin-top: 10px;
+}
