@@ -1,0 +1,25 @@
+<ion-view hide-nav-bar="true">
+   <ion-header-bar class="bar bar-header bar-calm">
+        <div style="color: #FFFFFF;text-align: center;" class="title">LOGIN</div>
+   </ion-header-bar>
+   <ion-content>
+   <div>
+   	<img src="img/AppLogo.png" class="centerImage">
+	<p class="centerText" style="color: #cd3571; font-size: 25px;">BookDoctor</p>
+     <div class="list card" id="centerCard">
+		  <div class="item item-body" align="center">
+		     <input type="text" placeholder="Username" id="loginInput" ng-model="username">
+		     <br>
+		     <input type="password" placeholder="Password" id="loginInput" ng-model="password">
+		     <br>
+		     <button class="button button-calm" ng-click="goToHomeScreen(username)" style="width: 70%;margin-top: 10px;"> Login </button>
+		     <br>
+		     <button class="button button-clear button-calm" ng-click="goToSignup()" style="text-decoration:underline;float:left;margin-top: 10px;">Signup
+		     </button>
+		     <button class="button button-clear button-calm" ng-click="goToForgotPassword()" style="text-decoration:underline;float:right;margin-top: 10px;">Forgot password</button>
+		  </div>
+	</div>
+	</div>
+	<div class="spinner"><ion-spinner icon="bubbles" class="spinner-calm" ng-show="showSpinner"></ion-spinner></div>
+   </ion-content>
+</ion-view>
