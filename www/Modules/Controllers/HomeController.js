@@ -10,6 +10,10 @@ $scope.goToProfile = function() {
     $state.go('generalProfile');
 }
 
+$scope.goToDoctorSearch = function() {
+    $state.go('doctorSearch');
+}
+
 function CalendarCtrl($scope,$compile,uiCalendarConfig) {
     var date = new Date();
     var d = date.getDate();

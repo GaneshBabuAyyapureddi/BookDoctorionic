@@ -28,6 +28,15 @@
     margin-top: 10px;
 }
 
+/* Ratings Style - Start */
+.ionic_ratings .read_only {
+  pointer-events:none !important;
+}
+.ionic_ratings .icon {
+    font-size: 20px;
+  }
+/* Ratings Style - End */
+
 /* profile Controller - Start */
 .profile_back { 
     position: relative; 
@@ -58,4 +67,5 @@
     pointer-events:none;
 }
 /* profile Controller - End */
+
 

@@ -47,6 +47,11 @@ angular.module('bookDoctor', ['ionic', 'ui.router','ui.calendar','ui.bootstrap',
                 url:'/generalProfile',               
                 templateUrl: 'Modules/Templates/GeneralPatientProfile.html',
                 controller:'generalPatientProfileController'
+            })
+            .state('doctorSearch', {
+                url:'/doctorSearch',               
+                templateUrl: 'Modules/Templates/DoctorSearch.html',
+                controller:'doctorSearchController'
             }) 
            .state('doctorProfile', {
                 url:'/doctorProfile',               
