@@ -28,10 +28,44 @@
     margin-top: 10px;
 }
 
-/* Ratings Style */
+/* Ratings Style - Start */
 .ionic_ratings .read_only {
   pointer-events:none !important;
 }
 .ionic_ratings .icon {
     font-size: 20px;
   }
+/* Ratings Style - End */
+
+/* profile Controller - Start */
+.profile_back { 
+    position: relative; 
+    top: 0; 
+    left: 0; 
+} 
+.arrow_back { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+}
+.round_corner {
+    position: absolute; 
+    top: 75%; 
+    left: 45%; 
+    /*border: 3px solid #fff;
+    box-shadow: 0 0 5px gray;*/
+    border: 3px;
+    border-radius: 90%;
+    display: inline-block;
+    }
+
+.ionic_ratings .icon {
+    font-size: 15px;
+  }
+
+.my-disable{
+    pointer-events:none;
+}
+/* profile Controller - End */
+
+

@@ -3,7 +3,7 @@ angular.module('bookDoctor')
 .controller("homeController",function ($scope, $state) {
 
 $scope.goToDoctorProfile = function() {
-    $state.go('doctorProfileScreen');
+    $state.go('doctorProfile');
   }
 
 $scope.goToProfile = function() {

@@ -44,7 +44,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','ui.calendar','ui.bootstrap',
                 controller: 'signupController'
             })
            .state('generalProfile', {
-                url:'generalProfile',               
+                url:'/generalProfile',               
                 templateUrl: 'Modules/Templates/GeneralPatientProfile.html',
                 controller:'generalPatientProfileController'
             })
@@ -52,6 +52,12 @@ angular.module('bookDoctor', ['ionic', 'ui.router','ui.calendar','ui.bootstrap',
                 url:'/doctorSearch',               
                 templateUrl: 'Modules/Templates/DoctorSearch.html',
                 controller:'doctorSearchController'
-            })  
+            }) 
+           .state('doctorProfile', {
+                url:'/doctorProfile',               
+                templateUrl: 'Modules/Templates/Profile.html',
+                controller:'ProfileController'
+            })
         $urlRouterProvider.otherwise('/loginPage');
 })
+
