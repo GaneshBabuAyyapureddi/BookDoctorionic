@@ -27,3 +27,11 @@
     width: 70%;
     margin-top: 10px;
 }
+
+/* Ratings Style */
+.ionic_ratings .read_only {
+  pointer-events:none !important;
+}
+.ionic_ratings .icon {
+    font-size: 20px;
+  }
