@@ -31,7 +31,7 @@ $scope.goToDoctorProfile = function() {
   }
 
 $scope.goToProfile = function() {
-    $state.go('generalProfile');
+  $state.go('tabs.GeneralPatientProfile');
 }
 
 $ionicModal.fromTemplateUrl('Modules/Templates/ModalView.html', {

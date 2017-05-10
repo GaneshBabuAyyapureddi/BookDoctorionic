@@ -83,6 +83,74 @@ angular.module('bookDoctor', ['ionic', 'ui.router','ui.calendar','ui.bootstrap',
                 templateUrl: 'Modules/Templates/Profile.html',
                 controller:'ProfileController'
             })
+            .state('tabs', {
+                url: '/tab',
+                abstract: true,
+                templateUrl: 'Modules/Templates/tabs.html'
+             //   controller:'tabsController'
+           })
+            .state('tabs.about', {
+               url: '/about',
+               views: {
+               'about-tab': {
+                 templateUrl: 'Modules/Templates/about.html'
+                           }
+                      }
+           })
+           .state('tabs.GeneralPatientProfile', {
+             url: '/GeneralPatientProfile',
+             views: {
+              'GeneralPatientProfile-tab': {
+              templateUrl: 'Modules/Templates/GeneralPatientProfile.html',
+             controller:'generalPatientProfileController'
+                    }
+                   }
+                })
+        .state('tabs.PatientProfile', {
+             url: '/PatientProfile',
+             views: {
+              'PatientProfile-tab': {
+              templateUrl: 'Modules/Templates/PatientProfile.html',
+              controller:'patientProfileController'
+                    }
+                   }
+                })
+         .state('tabs.Allergies', {
+             url: '/Allergies',
+             views: {
+              'Allergies-tab': {
+              templateUrl: 'Modules/Templates/Allergies.html',
+              controller:'allergiesController'
+                    }
+                   }
+                })
+          .state('tabs.LabResults', {
+             url: '/LabResults',
+             views: {
+              'LabResults-tab': {
+              templateUrl: 'Modules/Templates/LabResults.html',
+              controller:'labResultsController'
+                    }
+                   }
+                })
+          .state('tabs.Immunization', {
+             url: '/Immunization',
+             views: {
+              'Immunization-tab': {
+              templateUrl: 'Modules/Templates/Immunization.html',
+              controller:'immunizationController'
+                    }
+                   }
+                })
+             /*   .state('tabs.Visits', {
+             url: '/Visits',
+             views: {
+              'Visits-tab': {
+              templateUrl: 'Modules/Templates/Visits.html',
+              controller:'visitsController'
+                    }
+                   }
+                })*/
         $urlRouterProvider.otherwise('/loginPage');
 })
 
