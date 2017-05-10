@@ -3,30 +3,6 @@ var app = angular.module('bookDoctor')
 
 .controller("HomeController",function ($scope, $state,$ionicModal) {
 
-/*
-var speciality = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",
-"Neurologist","General Physician"];
-var doctors = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr. Ramarajan"],
-["Dr. Ramarajan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
-["Dr.Seshasayee","Dr. Ramarajan","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
-["Dr.Balaji","Dr.Seshasayee","Dr. Ramarajan","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
-["Dr.Srinivasan","Dr.Seshasayee","Dr.Balaji","Dr. Ramarajan","Dr.Avinash","Dr.Mohan"],
-["Dr.Avinash","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr. Ramarajan","Dr.Mohan"]];
-
-function selectCtrl($scope){
-    $scope.options1 = speciality;
-    $scope.options2 = []; // we'll get these later
-    $scope.getOptions2 = function(){
-        // just some silly stuff to get the key of what was selected since we are using simple arrays.
-        var key = $scope.options1.indexOf($scope.option1);
-        // Here you could actually go out and fetch the options for a server.
-        var myNewOptions = doctors[key];
-        // Now set the options.
-        $scope.options2 = myNewOptions;
-    };
-}
-*/
-
 var specialityArray = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",
 "Neurologist","General Physician"];
 var doctorsArray = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr. Ramarajan"],
@@ -51,13 +27,12 @@ var doctorsArray = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.
 
 
 $scope.goToDoctorProfile = function() {
-    $state.go('doctorProfileScreen');
+    $state.go('doctorProfile');
   }
 
 $scope.goToProfile = function() {
     $state.go('generalProfile');
 }
-
 
 $ionicModal.fromTemplateUrl('Modules/Templates/ModalView.html', {
         scope: $scope
@@ -86,9 +61,9 @@ $ionicModal.fromTemplateUrl('Modules/Templates/ModalView.html', {
     });
 
 
-
-
-
+$scope.goToDoctorSearch = function() {
+    $state.go('doctorSearch');
+}
 
 
 function CalendarCtrl($scope,$compile,uiCalendarConfig) {
