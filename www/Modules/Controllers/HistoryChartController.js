@@ -1,7 +1,21 @@
 angular.module('bookDoctor')
 .controller("HistoryChartController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory){
-  $scope.profileObject = $stateParams.patientProfile; 
- 
+ // $scope.profileObject = $stateParams.patientProfile; 
+ $scope.profileObject =   
+   {  
+      "patientID":"PE458",
+      "patientName":"Peter",
+      "dateOfBirth":"01-May-1985",
+      "age":"31",
+      "street": "Downtown",
+      "city":"Atlanta",
+      "address":"No 8, abc Avenue, Houston-12",
+      "profilePic":"img/Mark.jpeg",
+      "gender":"Male",
+      "bloodGroup":"B+",
+      "mobileNumber":5551234567,
+      "emailID":"peter@doctorapp.com"
+   };
   $ionicModal.fromTemplateUrl('create-patientReportModal.html', {
     scope: $scope,
     animation: 'slide-in-up'
