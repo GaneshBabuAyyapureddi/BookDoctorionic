@@ -1,6 +1,54 @@
-angular.module('bookDoctor')
 
-.controller("homeController",function ($scope, $state) {
+var app = angular.module('bookDoctor')
+
+.controller("HomeController",function ($scope, $state,$ionicModal) {
+
+/*
+var speciality = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",
+"Neurologist","General Physician"];
+var doctors = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr. Ramarajan"],
+["Dr. Ramarajan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
+["Dr.Seshasayee","Dr. Ramarajan","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
+["Dr.Balaji","Dr.Seshasayee","Dr. Ramarajan","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
+["Dr.Srinivasan","Dr.Seshasayee","Dr.Balaji","Dr. Ramarajan","Dr.Avinash","Dr.Mohan"],
+["Dr.Avinash","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr. Ramarajan","Dr.Mohan"]];
+
+function selectCtrl($scope){
+    $scope.options1 = speciality;
+    $scope.options2 = []; // we'll get these later
+    $scope.getOptions2 = function(){
+        // just some silly stuff to get the key of what was selected since we are using simple arrays.
+        var key = $scope.options1.indexOf($scope.option1);
+        // Here you could actually go out and fetch the options for a server.
+        var myNewOptions = doctors[key];
+        // Now set the options.
+        $scope.options2 = myNewOptions;
+    };
+}
+*/
+
+var specialityArray = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",
+"Neurologist","General Physician"];
+var doctorsArray = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr. Ramarajan"],
+["Dr. Ramarajan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
+["Dr.Seshasayee","Dr. Ramarajan","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
+["Dr.Balaji","Dr.Seshasayee","Dr. Ramarajan","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
+["Dr.Srinivasan","Dr.Seshasayee","Dr.Balaji","Dr. Ramarajan","Dr.Avinash","Dr.Mohan"],
+["Dr.Avinash","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr. Ramarajan","Dr.Mohan"]];
+
+    $scope.options1 = specialityArray;
+    $scope.options2 = []; // we'll get these later
+    $scope.getOptions2 = function(option1){
+        // just some silly stuff to get the key of what was selected since we are using simple arrays.
+        console.log('Option1 selected:'+option1);
+        var key = $scope.options1.indexOf(option1);
+        // Here you could actually go out and fetch the options for a server.
+        var myNewOptions = doctorsArray[key];
+        // Now set the options.
+        // If you got the results from a server, this would go in the callback
+        $scope.options2 = myNewOptions;
+    };
+
 
 $scope.goToDoctorProfile = function() {
     $state.go('doctorProfileScreen');
@@ -10,7 +58,42 @@ $scope.goToProfile = function() {
     $state.go('generalProfile');
 }
 
+
+$ionicModal.fromTemplateUrl('Modules/Templates/ModalView.html', {
+        scope: $scope
+      }).then(function(modal) {
+        $scope.modal = modal;
+      });
+    $scope.openMod = function() {
+        $scope.modal.show();
+    };
+
+    $scope.closeModal = function() {
+        $scope.modal.hide();
+    };
+
+
+    $scope.$on('$destroy', function() {
+        $scope.modal.remove();
+    });
+
+    $scope.$on('modal.hidden', function() {
+        // Execute action
+    });
+
+    $scope.$on('modal.removed', function() {
+        // Execute action
+    });
+
+
+
+
+
+
+
 function CalendarCtrl($scope,$compile,uiCalendarConfig) {
+
+
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -131,10 +214,16 @@ function CalendarCtrl($scope,$compile,uiCalendarConfig) {
         $scope.uiConfig.calendar.dayNamesShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
         $scope.changeTo = 'Hungarian';
       }
-    };
+    };  
+
+
     /* event sources array*/
     $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
     $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
 }
 
-})
+});
+
+
+
+

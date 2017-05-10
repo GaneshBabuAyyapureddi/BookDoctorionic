@@ -27,26 +27,52 @@ angular.module('bookDoctor', ['ionic', 'ui.router','ui.calendar','ui.bootstrap']
   $ionicConfigProvider.views.swipeBackEnabled(false);
   $ionicConfigProvider.tabs.position("bottom"); //Places them at the bottom for all OS
   $ionicConfigProvider.tabs.style("standard");
+  $ionicConfigProvider.navBar.alignTitle('center');
         $stateProvider
+             .state('dashboard',{
+              url: '/dashboard',              
+              abstract: true,
+              templateUrl: 'Modules/Templates/menu.html',
+              controller: 'MenuController'     
+            })
+
+            .state('dashboard.homeScreen', {
+              url: '/homeScreen',  
+              views: {
+                  'menuContent': {
+                    templateUrl: 'Modules/Templates/Home.html',
+                    controller: 'HomeController'
+                  }
+                }                                  
+            })
+            .state('dashboard.patientProfile', {
+                url:'/patientProfile',   
+                views: {
+                  'menuContent': {
+                   templateUrl: 'Modules/Templates/PatientProfile.html',
+                   controller:'PatientProfileController'
+                  }
+                }               
+                
+            }) 
+
             .state('loginPage', {
                 url: '/loginPage',
                 templateUrl: 'Modules/Templates/Login.html',
                 controller: 'loginController'
             })
-            .state('homeScreen',{
-              url: '/homeScreen',
-                templateUrl: 'Modules/Templates/Home.html',
-                controller: 'homeController'
-            })
+            
+            // .state('homeScreen',{
+            //   url: '/homeScreen',
+            //     templateUrl: 'Modules/Templates/home.html',
+            //     controller: 'homeController'
+
+            // })
             .state('signupScreen',{
               url: '/signupScreen',
                 templateUrl: 'Modules/Templates/Signup.html',
                 controller: 'signupController'
             })
-           .state('generalProfile', {
-                url:'generalProfile',               
-                templateUrl: 'Modules/Templates/GeneralPatientProfile.html',
-                controller:'generalPatientProfileController'
-            }) 
+           
         $urlRouterProvider.otherwise('/loginPage');
 })

@@ -1,14 +1,23 @@
-<ion-view hide-nav-bar="true">
+<ion-view class="bar-balanced" hide-nav-bar="false" title="Home" color="#FFF">
+<!-- <ion-side-menus enable-menu-with-back-views="false"> -->
+<ion-nav-bar class="navi-bar" >
+<ion-nav-buttons side="left">  
+       <button class="button  button-icon light icon icon-left ion-navicon" menu-toggle="left" ></button>  
+ </ion-nav-buttons>
+ <ion-nav-buttons side="right" >
+       <button class="button button-icon light icon icon-right ion-plus" ng-click="openMod()"></button>
+  </ion-nav-buttons>
+
    <ion-header-bar class="bar bar-header bar-calm">
         <div style="color: #FFFFFF;text-align: center;" class="title">HOME</div>
    </ion-header-bar>
-   <ion-content>
+   <ion-content overflow-scroll="true">
    <div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources"></div> 
 
-   	<br>
-   	<button class="button button-block button-calm" ng-click="goToProfile()" style="width: 250px;margin-left: auto;margin-right: auto;">Patient Profile </button>
-   	<br>
-   	<br>
-   	<button class="button button-block button-calm" ng-click="goToDoctorProfile()" style="width: 250px;margin-left: auto;margin-right: auto;">Doctor Profile </button>
+      <br>
+      <button class="button button-block button-calm" ng-click="goToProfile()" style="width: 250px;margin-left: auto;margin-right: auto;">Patient Profile </button>
+      <br>
+      <br>
+      <button class="button button-block button-calm" ng-click="goToDoctorProfile()" style="width: 250px;margin-left: auto;margin-right: auto;">Doctor Profile </button>
    </ion-content>
 </ion-view>
