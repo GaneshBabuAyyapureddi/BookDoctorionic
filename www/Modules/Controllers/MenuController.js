@@ -6,7 +6,7 @@ angular.module('bookDoctor')
   }
   
   $scope.goToPatientProfile = function() {
-    $state.go('dashboard.patientProfile');
+    $state.go('tabs.PatientProfile');
   }
   
    $scope.goToSearchDoctor = function() {

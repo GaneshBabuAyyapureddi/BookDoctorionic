@@ -97,12 +97,12 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                            }
                       }
            })
-           .state('tabs.GeneralPatientProfile', {
-             url: '/GeneralPatientProfile',
+           .state('tabs.HistoryChart', {
+             url: '/HistoryChart',
              views: {
-              'GeneralPatientProfile-tab': {
-              templateUrl: 'Modules/Templates/GeneralPatientProfile.html',
-             controller:'generalPatientProfileController'
+              'HistoryChart-tab': {
+              templateUrl: 'Modules/Templates/HistoryChart.html',
+             controller:'HistoryChartController'
                     }
                    }
                 })
