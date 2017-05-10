@@ -1,0 +1,51 @@
+<ion-view hide-nav-bar="true">
+<!-- Modal for entering Diagnosis -->
+  <script id="create-patientDiagnosisModal.html" type="text/ng-template">
+    <ion-modal-view>
+     <form novalidate>
+      <ion-header-bar class="bar bar-header bar-balanced">
+        <h1 class="title" style="text-align: center;">Diagnosis Result</h1>
+        <button class = "button icon icon-right ion-ios-close-outline"
+            ng-click = "closeModal()"></button>
+      </ion-header-bar>
+      <ion-content>
+      <div class="list">
+       <label class="item item-input item-floating-label">
+         <span class="input-label">Patient ID</span>
+         <input type="text" ng-model="profileObject.patientID" ng-readonly=true >
+       </label>
+
+       <label class="item item-input item-floating-label">
+         <span class="input-label">Patient Name</span>
+         <input type="text" ng-model="profileObject.patientName" ng-readonly=true>
+       </label>
+
+       <label class="item item-input item-floating-label">
+         <span class="input-label">Diagnosis</span>
+         <input type="text" placeholder="Enter diagnosis" ng-model="diagnosisComments">
+       </label>  
+      </div>
+
+       <div id="wrapper"class="col"><button id="wrapperbutton" ng-click="submitDiagnosis(diagnosisComments)" class="button button-balanced" > Submit
+       </button> </div>
+      </ion-content>
+      </form>
+    </ion-modal-view>
+  </script>
+   <ion-header-bar class="bar bar-header bar-balanced">
+     <button class="button button-icon icon ion-android-arrow-back" style="color: #E4E4E4" ng-click="goBack()"></button>
+        <div style="color: #FFFFFF;text-align: center;" class="title">Diagnosis</div>
+   </ion-header-bar>
+   <ion-content ng-init="readDiagnosisData()">
+   <ion-list>
+   <ion-item-borderless ng-repeat = "diagnosisObject in diagnosisData">
+   <div class="card" style="text-align: left; padding:10px;">
+       <div style="color:#cd3571;">Diagnosis:</div><div>{{diagnosisObject.diagnosisComments}}</div>
+       <div>{{diagnosisObject.addedDate}}</div>
+       <div>{{diagnosisObject.addedTime}}</div>
+     </div>
+   </ion-item-borderless>
+</ion-list>
+ </ion-content>
+<ion-floating-button  ng-click="openModal()"has-footer="false" button-color="#cd3571" icon="ion-plus" icon-color="#fff">
+</ion-view>

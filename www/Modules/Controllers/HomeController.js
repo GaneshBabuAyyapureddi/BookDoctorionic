@@ -7,7 +7,7 @@ $scope.goToDoctorProfile = function() {
   }
 
 $scope.goToProfile = function() {
-    $state.go('generalProfile');
+  $state.go('tabs.GeneralPatientProfile');
 }
 
 $scope.goToDoctorSearch = function() {
