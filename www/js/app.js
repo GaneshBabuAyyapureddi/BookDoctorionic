@@ -80,8 +80,8 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
             }) 
            .state('doctorProfile', {
                 url:'/doctorProfile',               
-                templateUrl: 'Modules/Templates/Profile.html',
-                controller:'ProfileController'
+                templateUrl: 'Modules/Templates/DoctorProfile.html',
+                controller:'DoctorProfileController'
             })
             .state('tabs', {
                 url: '/tab',
