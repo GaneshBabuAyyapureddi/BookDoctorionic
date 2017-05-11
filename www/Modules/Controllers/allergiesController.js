@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("allergiesController", function($scope, $state,$stateParams,$ionicHistory){
+.controller("allergiesController", function($scope, $state,$stateParams,$ionicHistory,$ionicModal){
  //  $scope.profileObject = $stateParams.patientProfile;
   $scope.profileObject = 
    {  
@@ -21,7 +21,19 @@ angular.module('bookDoctor')
     //$state.go('patientProfile',{"patientProfile":$scope.profileObject});
     $ionicHistory.goBack();
   }
-
+$ionicModal.fromTemplateUrl('Modules/Templates/AllergiesForm.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+  $scope.openModal = function(person){
+  	$scope.person=person;
+    $scope.modal.show();
+  }
+  $scope.closeModal = function(){
+    $scope.modal.hide();
+  }
   $scope.submitAllergies = function(allergiesDetails) {
       
       var db;
