@@ -1,6 +1,6 @@
 angular.module('bookDoctor')
 
-.controller("MenuController",function ($scope, $state) {
+.controller("MenuController",function ($scope, $state,$ionicModal,$http) {
   $scope.goToHomeScreen = function() {
     $state.go('dashboard.homeScreen');
   }
@@ -10,7 +10,7 @@ angular.module('bookDoctor')
   }
   
    $scope.goToSearchDoctor = function() {
-    $state.go('searchDoctor');
+    $state.go('dashboard.doctorSearch');
   }
 
   $scope.goToNotification = function() {
@@ -19,6 +19,13 @@ angular.module('bookDoctor')
     $scope.goToLogin = function() {
     $state.go('loginPage');
   }
+
+$scope.goToDoctorProfile = function() {
+    $state.go('dashboard.doctorProfile');
+  }
+
+
+
 
 })
 

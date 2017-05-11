@@ -18,11 +18,16 @@
 </ion-header-bar>
 <ion-content>
 	<ion-list>
-		<ion-item menu-close ng-click="goToHomeScreen()">Home</ion-item>
+		<ion-item menu-close ui-sref="dashboard.homeScreen">Home</ion-item>
+		<ion-item menu-close ui-sref="dashboard.patientProfile">Patient Profile</ion-item>
+		<ion-item menu-close ui-sref="dashboard.doctorSearch"> Search Doctors </ion-item>
+		<!-- <ion-item menu-close ng-click="openNotif()">Notification</ion-item> -->
+		<ion-item menu-close ui-sref="loginPage">Logout</ion-item>
+		<!-- <ion-item menu-close ng-click="goToHomeScreen()">Home</ion-item>
 		<ion-item menu-close ng-click="goToPatientProfile()">Patient Profile</ion-item>
-		<ion-item menu-close ng-click="searchDoctor()"> Search Doctors </ion-item>
+		<ion-item menu-close ng-click="goToSearchDoctor()"> Search Doctors </ion-item>
 		<ion-item menu-close ng-click="goToNotification()">Notification</ion-item>
-		<ion-item menu-close ng-click="goToLogin()">Logout</ion-item>
+		<ion-item menu-close ng-click="goToLogin()">Logout</ion-item> -->
 	</ion-list>
 	</ion-side-menu>
 

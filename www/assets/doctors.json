@@ -1,8 +1,4 @@
-angular.module('bookDoctor')
-
-.controller("doctorSearchController",function ($scope, $state) {
-
- $scope.doctorsList = [  
+[  
    {  
       "doctorID":"DO458",
       "doctorName":"George",
@@ -251,25 +247,4 @@ angular.module('bookDoctor')
       "specialist":"Ophthalmologist",
       "ratings":"4"
    }
-];
-
-      $scope.doctorsList.forEach(function(x){
-      x.rating= {
-      iconOn: 'ion-ios-star',    
-      iconOff: 'ion-ios-star-outline',   
-      iconOnColor: 'rgb(255, 215, 0)',  
-      iconOffColor:  'rgb(224, 224, 224)',   
-      rating: x.ratings, 
-      minRating: 0,    
-      readOnly: true, // Set to true so user cannot edit rating
-      callback: function(rating) {    //Mandatory
-        // do nothing as read only stars 
-      }
-   }
-   })
-     
-      $scope.ratingsCallback = function(rating, index) {
-        console.log('Selected rating is : ', rating, ' and the index is : ', index);
-      };
-
-})
+]
