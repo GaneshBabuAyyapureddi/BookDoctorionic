@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("ProfileController",function ($scope, $state) {
+.controller("DoctorProfileController",function ($scope, $state) {
   $scope.goBack = function() {
     $state.go('homeScreen');
   }
