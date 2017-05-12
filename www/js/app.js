@@ -46,7 +46,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                   }
                 }                                  
             })
-            .state('dashboard.patientProfile', {
+           /* .state('dashboard.patientProfile', {
                 url:'/patientProfile',   
                 views: {
                   'menuContent': {
@@ -55,6 +55,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                   }
                 }               
                 
+<<<<<<< HEAD
             }) 
             .state('dashboard.doctorSearch', {
                 url:'/doctorSearch', 
@@ -71,6 +72,8 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                 templateUrl: 'Modules/Templates/Profile.html',
                 controller:'ProfileController'
             })
+=======
+            }) */
 
             .state('loginPage', {
                 url: '/loginPage',
@@ -89,12 +92,24 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                 templateUrl: 'Modules/Templates/Signup.html',
                 controller: 'signupController'
             })
-            // .state('doctorSearch', {
-            //     url:'/doctorSearch',               
-            //     templateUrl: 'Modules/Templates/DoctorSearch.html',
-            //     controller:'doctorSearchController'
-            // }) 
-           
+
+            .state('doctorSearch', {
+                url:'/doctorSearch',               
+                templateUrl: 'Modules/Templates/DoctorSearch.html',
+                controller:'doctorSearchController'
+            }) 
+
+           .state('forgotPassword', {
+                url:'forgotPassword',               
+                templateUrl: 'Modules/Templates/forgotPassword.html',
+                controller:'forgotPasswordController'
+            }) 
+
+           .state('doctorProfile', {
+                url:'/doctorProfile',               
+                templateUrl: 'Modules/Templates/DoctorProfile.html',
+                controller:'DoctorProfileController'
+            })
             .state('tabs', {
                 url: '/tab',
                 abstract: true,
@@ -109,6 +124,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                            }
                       }
            })
+
         //    .state('tabs.PatientProfile', {
         //      url: '/GeneralPatientProfile',
         //      views: {
@@ -127,6 +143,25 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
         //             }
         //            }
         //         })
+           .state('tabs.HistoryChart', {
+             url: '/HistoryChart',
+             views: {
+              'HistoryChart-tab': {
+              templateUrl: 'Modules/Templates/HistoryChart.html',
+             controller:'HistoryChartController'
+                    }
+                   }
+                })
+        .state('tabs.PatientProfile', {
+             url: '/PatientProfile',
+             views: {
+              'PatientProfile-tab': {
+              templateUrl: 'Modules/Templates/PatientProfile.html',
+              controller:'PatientProfileController'
+                    }
+                   }
+                })
+
          .state('tabs.Allergies', {
              url: '/Allergies',
              views: {

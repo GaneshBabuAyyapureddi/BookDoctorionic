@@ -44,7 +44,7 @@ angular.module('bookDoctor')
       {"src":"img/LabResult3.jpg", "date":"15/10/2017","time":"5:15 PM"},
       {"src":"img/LabResult4.jpg", "date":"26/09/2017","time":"6:22 PM"},
       {"src":"img/LabResult1.jpg", "date":"08/08/2017","time":"7:15 PM"},
-      {"src":"img/LabResult7.jpg", "date":"09/07/2017","time":"8:20 PM"}, 
+ 	  {"src":"img/LabResults7.jpg", "date":"29/03/2017","time":"9:35 AM"}, 
       {"src":"img/LabResults8.png", "date":"22/06/2017","time":"9:44 PM"},
       {"src":"img/LabResults10.jpg", "date":"04/05/2017","time":"10:06 AM"}];
 })

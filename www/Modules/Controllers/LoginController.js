@@ -10,7 +10,7 @@ angular.module('bookDoctor')
   }
 
   $scope.goToForgotPassword = function() {
-    $state.go('forgotpassword');
+    $state.go('forgotPassword');
   }
 
 })
