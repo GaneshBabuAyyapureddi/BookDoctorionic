@@ -4,14 +4,28 @@
   </ion-header-bar>
   <ion-content>
     <form >
-      <div class="view" >
-   		<div>
-	   		<label class = "item item-input item-select item-light">
-		      <div class = "input-label">You have an Appointment with</div>			
-          <label>{{title}}</label>
-	   		</label>
-   		</div class= "button-bar">
-   		<button class="button button-stable " ng-click="closeModal()">Cancel</button>
+       <div class="list" >
+        <div>
+          <label class = "item item-input">
+            <span class = "input-label">Doctor Name</span>    
+            <input type="text">
+          </label>
+          <label class = "item item-input">
+            <span class = "input-label">Doctor Speciality</span>   
+            <input type="text">        
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Appointment Date</span>
+               <input type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Appointment Time</span>
+            <input type="text">
+          </label>
+        </div class= "button-bar" style = "padding: 10px">
+          <button class="button button-stable button-calm" style="float: right; margin:10px 10px 5px 0px;" ng-model="event" ng-click="addAppointment(date,option2);closeModal()">Edit Appointment</button>
+          <button class="button button-stable button-calm" style="float: right; margin:10px 10px 5px 0px;" ng-click="closeModal()">Cancel Appointment</button>
+      
       </div>
     </form>
   </ion-content>

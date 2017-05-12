@@ -1,17 +1,17 @@
 [
 {
-	"title":"Notification1",
-	"description":"Notification2",
-	"date":"23-may"
+	"title":"Appointment Confirmed",
+	"description":"Your Appointment with Dr.John Doe has been Confirmed",
+	"date":"23-may-2017"
 },
 {
-	"title":"Notification2",
-	"description":"Notification2",
-	"date":"20-may"
+	"title":"Appointment Cancelled",
+	"description":"Your Appointment with Dr.Denzel Washington has been Cancelled",
+	"date":"20-may-2017"
 },
 {
-	"title":"Notification3",
-	"description":"Notification2",
-	"date":"16-may"
+	"title":"Appointment Rescheduled",
+	"description":"Your Appointment with Dr.Ken Jeong on 16-may-2017 has been Rescheduled to 19-may-2017",
+	"date":"15-may-2017"
 }
 ]

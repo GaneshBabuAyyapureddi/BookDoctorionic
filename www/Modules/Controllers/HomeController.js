@@ -29,8 +29,8 @@ var doctorsArray = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.
 /*Date Picker*/
 
 $scope.todayDate = $filter("date")(Date.now(), 'yyyy-MM-dd');
-$scope.date = $filter("date")(Date.now(), 'yyyy-MM-dd');
-
+//$scope.date = $filter("date")(Date.now(), 'yyyy-MM-dd');
+$scope.date = new Date();
 // /*Date Picker*/
 // var todayDate = new Date();
 // var year = todayDate.getFullYear();
@@ -140,7 +140,7 @@ $ionicPopover.fromTemplateUrl('Modules/Templates/NotificationView.html', {
     }).then(function(modal) {
       $scope.AppointmentDetailsModal = modal;
     });
-$scope.openAppointmentDetails = function(title) {
+$scope.openAppointmentDetails = function(date, jsEvent, view) {
     
     $scope.AppointmentDetailsModal.show();
 };
