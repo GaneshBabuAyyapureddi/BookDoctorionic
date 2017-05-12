@@ -1,7 +1,5 @@
 angular.module('bookDoctor')
-<<<<<<< HEAD:www/Modules/Controllers/patientProfileController.js
-.controller("PatientProfileController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory){
-=======
+
 .controller("HistoryChartController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory){
  // $scope.profileObject = $stateParams.patientProfile; 
  $scope.profileObject =   
@@ -69,7 +67,5 @@ angular.module('bookDoctor')
     //$scope.series = ['Average Spent Effort', 'Average Estimated Effort', 'Average Remainning Effort'];
     $scope.heartdata = [
         [65, 59, 80, 81, 56, 55, 40]
-    ];
->>>>>>> fa13cc7c99399a67116789b66659cade966c4cf0:www/Modules/Controllers/HistoryChartController.js
-    
+    ];    
 })
