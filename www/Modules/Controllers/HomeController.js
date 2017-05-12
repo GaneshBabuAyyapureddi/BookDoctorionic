@@ -30,7 +30,7 @@ var doctorsArray = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.
 
 $scope.todayDate = $filter("date")(Date.now(), 'yyyy-MM-dd');
 //$scope.date = $filter("date")(Date.now(), 'yyyy-MM-dd');
-$scope.date = new Date();
+$scope.date = new Date()
 // /*Date Picker*/
 // var todayDate = new Date();
 // var year = todayDate.getFullYear();
@@ -208,7 +208,6 @@ $scope.calEventsExt = {
 /* alert on eventClick */
 $scope.alertOnEventClick = function( date, jsEvent, view){
     $scope.alertMessage = (date.title + ' was clicked ');
-    $scope.AppointmentDetailsModal.show();
 };
 /* alert on Drop */
  $scope.alertOnDrop = function(event, delta, revertFunc, jsEvent, ui, view){
