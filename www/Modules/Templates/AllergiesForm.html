@@ -1,0 +1,22 @@
+  <ion-modal-view style=" height:260px;">
+            <ion-header-bar class="bar-positive fix-buttons bar-calm">
+              <a class="button" ng-click="closeModal()">Cancel</a>
+              <h1 class="title">Impression Details</h1>
+            </ion-header-bar>
+            <ion-content has-bouncing="true" >
+                <div class="card" style="flex-wrap: wrap;">
+                <p style="text-align:center; font-weight:bold; margin-top:10px" >IMPRESSION</p>
+                <p style="margin-left:15px; margin-right:15px;" ng-bind-html="person.data" ></p>
+              </div>
+              <div style=" text-align:center;background-color:#cd3571; color:white; margin-top:-20px;">  
+                  <div style="padding-top: 2px;" >
+                    <span >Date:</span>
+                    <span >{{person.date}}</span>
+                  </div>
+                  <div style="text-align:center;padding-top:2px; padding-bottom:2px;">
+                    <span >Time:</span>
+                    <span >{{person.time}}</span>
+                  </div>
+                </div>
+            </ion-content>
+        </ion-modal-view>
