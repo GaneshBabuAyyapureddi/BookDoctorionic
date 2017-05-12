@@ -78,6 +78,13 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                 templateUrl: 'Modules/Templates/DoctorSearch.html',
                 controller:'doctorSearchController'
             }) 
+
+           .state('forgotPassword', {
+                url:'forgotPassword',               
+                templateUrl: 'Modules/Templates/forgotPassword.html',
+                controller:'forgotPasswordController'
+            }) 
+
            .state('doctorProfile', {
                 url:'/doctorProfile',               
                 templateUrl: 'Modules/Templates/DoctorProfile.html',
