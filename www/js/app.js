@@ -19,6 +19,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
     }
     if(window.StatusBar) {
       StatusBar.styleDefault();
+      
     }
   });
 })
