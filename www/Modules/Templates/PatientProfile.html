@@ -21,59 +21,19 @@
         </div>
         <div class = "col2" style="margin-left:75px; margin-top:30px;">
         <div  class="item item-divider"><h4>General Details</h4></div>
+          <div ng-repeat="person in genearlProfileObject" >
         <div class="row" id="patient-profile-row-margin">
-       		 <div >Patient Name: </div>
-       		  <div id="patient-profile-row-value-margin">Johnson</div>
+       		 <div >{{person.name}}</div>
+       		  <div id="patient-profile-row-value-margin">{{person.value}}</div>
         </div>
-        <div class="row" id="patient-profile-row-margin"> 
-       		 <div>Patient ID: </div>
-       		 <div id="patient-profile-row-value-margin">P130412</div>
-        </div>
-        <div class="row" id="patient-profile-row-margin">
-             <div>Gender: </div>
-              <div id="patient-profile-row-value-margin">Male</div>
-        </div>
-        <div class="row" id="patient-profile-row-margin">
-             <div>MMH ID : </div>
-             <div id="patient-profile-row-value-margin">11122</div>
-        </div>
-        <div class="row" id="patient-profile-row-margin">
-             <div>Age: </div>
-             <div id="patient-profile-row-value-margin"">33 Years</div>
-        </div>
-        <div class="row" id="patient-profile-row-margin">
-             <div>Date of Birth: </div>
-             <div id="patient-profile-row-value-margin">Jul 14,1988</div>
-        </div>
-        <div class="row" id="patient-profile-row-margin">
-             <div>Blood Group: </div>
-             <div id="patient-profile-row-value-margin">O+ve</div>
-        </div>
+        </div>       
       <div  class="item item-divider"><h4>Contact Details</h4></div>
+       <div ng-repeat="contactInfo in genearlProfileContactDetails" >
       <div class="row" id="patient-profile-row-margin">
-        <div>Primary Mobile No:</div>
-        <div id="patient-profile-row-value-margin">9945344554</div>
+      <div >{{contactInfo.name}}</div>
+       		  <div id="patient-profile-row-value-margin">{{contactInfo.value}}</div>
         </div>
-        <div class="row" id="patient-profile-row-margin">
-        <div>Secondary Mobile No:</div>
-        <div id="patient-profile-row-value-margin">9945344579</div>
-        </div>
-        <div class="row" id="patient-profile-row-margin">
-        <div>Email: </div>
-        <div id="patient-profile-row-value-margin">rajadesingh@gmail.com</div>
-        </div>
-        <div class="row" id="patient-profile-row-margin">
-        <div>Street Address: </div>
-        <div id="patient-profile-row-value-margin">#13, 5th Main 15th Cross</div>
-        </div>
-        <div class="row" id="patient-profile-row-margin">
-        <div>Locality: </div>
-         <div id="patient-profile-row-value-margin">K K Nagar</div>
-        </div>
-        <div class="row" id="patient-profile-row-margin">
-    	 <div>City: </div>
-        <div id="patient-profile-row-value-margin">Chennai</div>
-    	 </div>
+        </div>       
         </div>
       </div>
       </div>
