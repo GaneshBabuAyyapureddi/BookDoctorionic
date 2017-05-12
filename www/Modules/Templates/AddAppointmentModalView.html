@@ -11,13 +11,13 @@
    		<div>
 	   		<label class = "item item-input item-select item-light">
 		      <div class = "input-label">Select Speciality</div>
-			  <select ng-model="option1" ng-options="option for option in options1" ng-change="getOptions2(option1)">
-    		  </select>
+			  <select ng-model="option1" ng-options="option for option in options1" ng-change="getOptions2(option1)" required>
+    		   <option></option></select>
 	   		</label>
 	   		<label class = "item item-input item-select item-light">
 		      <div class = "input-label">Select Doctor</div>	   		
-			<select ng-model="option2" ng-options="option for option in options2">
-		    </select>
+			<select ng-model="option2" ng-options="option for option in options2" required>
+		     <option></option></select>
     </label>
         <label class="item item-input">
           <span class="input-label" >Date</span>
