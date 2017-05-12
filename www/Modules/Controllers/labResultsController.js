@@ -1,0 +1,50 @@
+angular.module('bookDoctor')
+.controller("labResultsController", function($scope, $state,$stateParams,$ionicModal,$ionicHistory){
+    $scope.profileObject = $stateParams.patientProfile;
+    $scope.goBack = function() {
+     // $state.go('patientProfile',{"patientProfile":$scope.profileObject});
+     $ionicHistory.goBack();
+    }
+
+      $ionicModal.fromTemplateUrl('labResultModal.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function(modal) {
+        $scope.passwordModal = modal;
+      });
+
+      $scope.openLabResultModal = function(imageSource) {
+        $scope.passwordModal.show();
+      };
+
+      $scope.closeLabResultModal = function() {
+         $scope.passwordModal.hide();
+      };
+
+    $scope.openLabResult = function(imageSource) {
+      console.log(imageSource);
+      $scope.selectedResultSource = imageSource;
+      $scope.openLabResultModal (imageSource);
+    }
+
+    $scope.print = function(src) {
+     /*   if($cordovaPrinter.isAvailable()) {
+            $cordovaPrinter.print(src);
+        } else {
+            alert("Printing is not available on device");
+        }*/
+    }
+
+    $scope.persons = [{"src":"img/LabResult1.jpg", "date":"04/04/2017","time":"10:33 AM"},
+      {"src":"img/LabResults7.jpg", "date":"19/03/2017","time":"9:30 AM"}, 
+      {"src":"img/LabResults6.jpg", "date":"10/02/2017","time":"10:45 AM"},
+      {"src":"img/LabResults5.jpg", "date":"05/01/2017","time":"12:30 PM"},
+      {"src":"img/LabResults9.png", "date":"26/12/2016","time":"3:20 PM"},
+      {"src":"img/LabResults8.png", "date":"20/11/2017","time":"4:55 PM"}, 
+      {"src":"img/LabResult3.jpg", "date":"15/10/2017","time":"5:15 PM"},
+      {"src":"img/LabResult4.jpg", "date":"26/09/2017","time":"6:22 PM"},
+      {"src":"img/LabResult1.jpg", "date":"08/08/2017","time":"7:15 PM"},
+ 	  {"src":"img/LabResults7.jpg", "date":"29/03/2017","time":"9:35 AM"}, 
+      {"src":"img/LabResults8.png", "date":"22/06/2017","time":"9:44 PM"},
+      {"src":"img/LabResults10.jpg", "date":"04/05/2017","time":"10:06 AM"}];
+})

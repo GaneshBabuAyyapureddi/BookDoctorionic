@@ -2,7 +2,7 @@ angular.module('bookDoctor')
 
 .controller("loginController",function ($scope, $state) {
   $scope.goToHomeScreen = function() {
-    $state.go('homeScreen');
+    $state.go('dashboard.homeScreen');
   }
   
   $scope.goToSignup = function() {
