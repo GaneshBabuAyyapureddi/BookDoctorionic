@@ -51,8 +51,10 @@ angular.module('bookDoctor')
   $scope.ratingsObject = {
         iconOn : 'ion-ios-star',
         iconOff : 'ion-ios-star-outline',
-        iconOnColor: 'rgb(200, 200, 100)',
-        iconOffColor:  'rgb(200, 100, 100)',
+        // iconOnColor: 'rgb(255, 215, 0)',  
+        // iconOffColor:  'rgb(224, 224, 224)',   
+        iconOnColor:"#d62304", 
+        iconOffColor: "#ffa4a3",        
         rating:  4,
         minRating:1,
         callback: function(rating) {
@@ -64,6 +66,59 @@ angular.module('bookDoctor')
         console.log('Selected rating is : ', rating);
       };
 
+  $scope.patientList = [  
+   {  
+      "patientID":"DO451",
+      "patientName":"Ethan",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Mahboob Khan is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Olivia",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Jacob",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"James Wyatt",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Madison",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }];   
+
+   $scope.patientList.forEach(function(x){
+      x.rating= {
+      iconOn: 'ion-ios-star',    
+      iconOff: 'ion-ios-star-outline',   
+      // iconOnColor: 'rgb(255, 215, 0)',  
+      // iconOffColor:  'rgb(224, 224, 224)',   
+      iconOnColor:"#d62304", 
+      iconOffColor: "#ffa4a3",
+      rating: x.ratings, 
+      minRating: 0,    
+      readOnly: true, // Set to true so user cannot edit rating
+      callback: function(rating) {    //Mandatory
+        // do nothing as read only stars 
+      }
+    }
+   });
 })
 
 .filter('inSlicesOf', 
