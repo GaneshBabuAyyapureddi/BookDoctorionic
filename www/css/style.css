@@ -99,10 +99,6 @@
     display: inline-block;
     }
 
-.ionic_ratings .icon {
-    font-size: 15px;
-  }
-
 .my-disable{
     pointer-events:none;
 }
