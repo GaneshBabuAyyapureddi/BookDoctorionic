@@ -48,5 +48,10 @@ angular.module('bookDoctor', ['ionic', 'ui.router','ui.calendar','ui.bootstrap']
                 templateUrl: 'Modules/Templates/GeneralPatientProfile.html',
                 controller:'generalPatientProfileController'
             }) 
+           .state('forgotPassword', {
+                url:'forgotPassword',               
+                templateUrl: 'Modules/Templates/forgotPassword.html',
+                controller:'forgotPasswordController'
+            }) 
         $urlRouterProvider.otherwise('/loginPage');
 })
