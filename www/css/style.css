@@ -104,4 +104,15 @@
 }
 /* Doctor profile Controller - End */
 
+.my-disable{
+    pointer-events:none;
+}
+#patient-profile-row-margin{
+    margin-top:5px;
+    margin-bottom:5px;
+}
 
+#patient-profile-row-value-margin{
+	font-style:italic;
+	margin-left:5px;
+}
