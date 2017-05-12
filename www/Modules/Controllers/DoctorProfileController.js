@@ -1,7 +1,7 @@
 angular.module('bookDoctor')
 .controller("DoctorProfileController",function ($scope, $state) {
   $scope.goBack = function() {
-    $state.go('homeScreen');
+    $state.go('doctorSearch');
   }
   
   $scope.speciality = ""+

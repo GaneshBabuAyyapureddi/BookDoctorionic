@@ -77,7 +77,7 @@
   }
 /* Ratings Style - End */
 
-/* profile Controller - Start */
+/* Doctor profile Controller - Start */
 .profile_back { 
     position: relative; 
     top: 0; 
@@ -102,6 +102,6 @@
 .my-disable{
     pointer-events:none;
 }
-/* profile Controller - End */
+/* Doctor profile Controller - End */
 
 
