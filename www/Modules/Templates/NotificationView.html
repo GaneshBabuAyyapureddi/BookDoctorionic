@@ -1,0 +1,27 @@
+<ion-popover-view style="background-color:#E0E0E0"> 
+  <ion-header-bar class="navi-bar" >
+    <h1 class="title" style="color:white">Notifications</h1>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+    <ion-item-borderless ng-repeat = "notification in Notifications">
+      <div class="card" style="text-align: left; padding:4px 8px 4px 8px; ">
+        <div class="row">
+          <!-- <div class="col-15">
+            <div padding="false" class="item item-avatar">
+                <img style="width:100% ; height:100%; max-width: 60px; max-height: 60px ; 
+                margin-left:auto; margin-right:auto;padding:5px;" src="{{doctor.profilePic}}">
+              </div>
+          </div> -->
+          <div >
+            <div style="color:#000000;font-weight:bold;">{{notification.title}}</div>
+            <div style="color:#57EEE;">{{notification.description}}</div>
+            <div style="color:#AAA;">{{notification.date}}</div>
+          </div>        
+        </div>
+      </div>
+   </ion-item-borderless>
+    </ion-list>
+   
+</ion-content>
+</ion-popover-view>

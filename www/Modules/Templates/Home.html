@@ -1,19 +1,23 @@
-<ion-view class="bar-balanced" hide-nav-bar="false" title="Home" color="#FFF">
+<ion-view class="bar-balanced" hide-nav-bar="false" title="HOME" color="#FFF">
+
 <!-- <ion-side-menus enable-menu-with-back-views="false"> -->
-<ion-nav-bar class="navi-bar" >
+<ion-nav-bar class="navi-bar">
 <ion-nav-buttons side="left">  
        <button class="button  button-icon light icon icon-left ion-navicon" menu-toggle="left" ></button>  
  </ion-nav-buttons>
- <ion-nav-buttons side="right" >
-       <button class="button button-icon light icon icon-right ion-plus" ng-click="openMod()"></button>
+ <ion-nav-buttons side="right" > 
+     <button class="button button-icon light icon icon-right ion-android-notifications" ng-click="openNotif($event)"></button>
+     <button class="button button-icon light icon icon-right ion-plus" ng-click="openModal()"></button>
   </ion-nav-buttons>
+</ion-nav-bar>
+
 
    <ion-header-bar class="bar bar-header bar-calm">
         <div style="color: #FFFFFF;text-align: center;" class="title">HOME</div>
    </ion-header-bar>
    <ion-content overflow-scroll="true">
-   <div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources"></div> 
-      <button class="button button-block button-calm" ng-click="goToDoctorSearch()" style="width: 250px;margin-left: auto;margin-right: auto;">Doctor Search </button>
+   <div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources" style="padding: 20px;"></div> 
+      <!-- <button class="button button-block button-calm" ng-click="goToDoctorSearch()" style="width: 250px;margin-left: auto;margin-right: auto;">Doctor Search </button> -->
    </ion-content>
 </ion-view>
 

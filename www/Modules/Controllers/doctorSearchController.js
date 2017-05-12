@@ -1,5 +1,6 @@
 angular.module('bookDoctor')
 
+
 .controller("doctorSearchController",function ($scope, $state, $ionicHistory) {
    $scope.goBack = function() {
     $ionicHistory.goBack();
