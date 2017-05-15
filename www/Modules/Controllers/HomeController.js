@@ -28,18 +28,22 @@ var doctorsArray = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.
 
 /*Date Picker*/
 
-$scope.todayDate = $filter("date")(Date.now(), 'yyyy-MM-dd');
+//$scope.todayDate = $filter("date")(Date.now(), 'yyyy-MM-dd');
 //$scope.date = $filter("date")(Date.now(), 'yyyy-MM-dd');
+
 $scope.date = new Date()
-// /*Date Picker*/
-// var todayDate = new Date();
-// var year = todayDate.getFullYear();
-// var month = todayDate.getMonth()+1;
-// if (month<10){
-//   month = "0" + month;
-// };
-// var day = todayDate.getDate();
-// $scope.date = year + "-" + month + "-" + day;
+
+/*Date Picker*/
+var todayDate = new Date();
+var year = todayDate.getFullYear();
+var month = todayDate.getMonth()+1;
+if (month<10){
+  month = "0" + month;
+};
+var day = todayDate.getDate();
+$scope.todayDate = year + "-" + month + "-" + day;
+
+
 
 $scope.timeNow=new Date();
 var hour = $scope.timeNow.getHours();
@@ -59,11 +63,12 @@ $scope.timeNow.setHours(hour,minutes,0,0);
 
 /* add custom event*/
 //var appointment = {title: 'Appointment',start: new Date(sely,selm,seld)}
-$scope.addAppointment = function(dateobj,doctorName) {
+$scope.addAppointment = function(dateobj,timeObj,doctorName) {
   $scope.events.push(
-    {title: 'You have an Appointment with ' + doctorName,
-    start: new Date(y, m, dateobj.getDate()),
-    end: new Date(y, m, dateobj.getDate())
+    {
+      title: 'You have an Appointment with ' + doctorName,
+      start: new Date(y, m, dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0),
+      end: new Date(y, m, dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0)
   });
 };
 
@@ -141,7 +146,8 @@ $ionicPopover.fromTemplateUrl('Modules/Templates/NotificationView.html', {
       $scope.AppointmentDetailsModal = modal;
     });
 $scope.openAppointmentDetails = function(date, jsEvent, view) {
-    
+    $scope.data = date;
+    console.log($scope.data)
     $scope.AppointmentDetailsModal.show();
 };
  $scope.closeAppointmentDetails = function() {
@@ -230,14 +236,17 @@ $scope.addRemoveEventSource = function(sources,source) {
     sources.push(source);
   }
 };
+
+
 /* add custom event*/
-$scope.addEvent = function(dateobj) {
+$scope.addEvent = function() {
   $scope.events.push({
-    title: 'Appointtment with' + $scope.myNewOptions,
-    start: new Date(y, m, dateobj.getDate()),
-    end: new Date(y, m, dateobj.getDate())
+    title: 'Appointtment with',
+    start: new Date(y, m, 10),
+    end: new Date(y, m, 10)
   });
 };
+
 /* remove event */
 $scope.remove = function(index) {
   $scope.events.splice(index,1);

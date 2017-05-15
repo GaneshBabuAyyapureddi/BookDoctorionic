@@ -21,14 +21,14 @@
     </label>
         <label class="item item-input">
           <span class="input-label" >Date</span>
-             <input type="date" ng-model="date" value={{date}}>
+             <input type="date" min={{todayDate}} ng-model="date" value={{date}}>
         </label>
         <label class="item item-input">
           <span class="input-label">Time</span>
           <input type="time" ng-model ="timeNow" value={{timeNow}}>
         </label>
    		</div class= "button-bar" style = "padding: 10px">
-      <button class="button button-stable button-calm" style="float: right; margin:10px 10px 5px 0px;" ng-model="event" ng-click="addAppointment(date,option2);closeModal()">Add appointment</button>
+      <button class="button button-stable button-calm" style="float: right; margin:10px 10px 5px 0px;" ng-model="event" ng-click="addAppointment(date,timeNow,option2);closeModal()">Add appointment</button>
    		<button class="button button-stable button-calm" style="float: right; margin:10px 10px 5px 0px;" ng-click="closeModal()">Cancel</button>
 		  
       </div>

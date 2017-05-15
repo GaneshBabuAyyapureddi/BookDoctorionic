@@ -1,7 +1,4 @@
 angular.module('bookDoctor')
-<<<<<<< HEAD:www/Modules/Controllers/patientProfileController.js
-.controller("PatientProfileController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory){
-=======
 .controller("HistoryChartController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory){
  // $scope.profileObject = $stateParams.patientProfile; 
  $scope.profileObject =   
