@@ -1,13 +1,25 @@
 angular.module('bookDoctor')
 
+.controller("doctorSearchController",function ($scope, $state, $ionicHistory, $ionicPopover) {
+   $scope.specialist = "";
 
-.controller("doctorSearchController",function ($scope, $state, $ionicHistory) {
    $scope.goBack = function() {
-    $ionicHistory.goBack();
+    // $ionicHistory.goBack();
+    $state.go('dashboard.homeScreen');
   }
  $scope.goToDoctorProfileScreen = function() {
    $state.go('doctorProfile');
  }
+ $scope.getCurrentSpecialist = function(result) {
+      if(result == 'ShowAll'){
+         $scope.specialist = '';
+         $scope.popover.hide();
+      }
+      else{
+         $scope.specialist = result;
+         $scope.popover.hide();
+      }
+}
  $scope.doctorsList = [  
    {  
       "doctorID":"DO458",
@@ -20,7 +32,7 @@ angular.module('bookDoctor')
       "emailID":"george@bookdoctor.com",
       "education":"M.D(Doctor of Medicine)",
       "specialist":"Immunology",
-      "ratings":"4"
+      "ratings":"3"
    },
     {  
       "doctorID":"DO459",
@@ -34,7 +46,6 @@ angular.module('bookDoctor')
       "education":"M.D(Doctor of Medicine)",
       "specialist":"Obstetrics and gynecology",
       "ratings":"5"
-
    },
     {  
       "doctorID":"DO460",
@@ -61,7 +72,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Gynecology",
       "ratings":"5"
-
    },
    {  
       "doctorID":"DO462",
@@ -75,7 +85,6 @@ angular.module('bookDoctor')
       "education":"M.D(Doctor of Medicine)",
       "specialist":"General surgery",
       "ratings":"2"
-
    },
    {  
       "doctorID":"DO463",
@@ -89,7 +98,6 @@ angular.module('bookDoctor')
       "education":"Doctor of Osteopathic Medicine (DO)",
       "specialist":"Neurology",
       "ratings":"2"
-
    },
    {  
       "doctorID":"DO464",
@@ -103,7 +111,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Urology",
       "ratings":"5"
-
    },
    {  
       "doctorID":"DO465",
@@ -117,7 +124,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Oncologist",
       "ratings":"1"
-
    },
     {  
       "doctorID":"DO466",
@@ -131,7 +137,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Epidemiologist",
       "ratings":"4"
-
    },
     {  
       "doctorID":"DO467",
@@ -145,7 +150,6 @@ angular.module('bookDoctor')
       "education":"Doctor of Osteopathic Medicine (D.O.)",
       "specialist":"Endocrinologist",
       "ratings":"5"
-
    },
     {  
       "doctorID":"DO468",
@@ -159,7 +163,6 @@ angular.module('bookDoctor')
       "education":"D.O(Doctor of Osteopathic Medicine)",
       "specialist":"Dermatologist",
       "ratings":"3"
-
    },
    {  
       "doctorID":"DO469",
@@ -173,8 +176,8 @@ angular.module('bookDoctor')
       "education":"BDS(Bachelor of Dental Surgery)",
       "specialist":"Dentist",
       "ratings":"4"
-
-   },{  
+   },
+   {  
       "doctorID":"DO470",
       "doctorName":"Charles",
       "age":"32",
@@ -186,7 +189,6 @@ angular.module('bookDoctor')
       "education":"Doctor of Medicine (M.D.)",
       "specialist":"Psychiatrist",
       "ratings":"2"
-
    },
    {  
       "doctorID":"DO471",
@@ -200,7 +202,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Pathologist",
       "ratings":"5"
-
    },
    {  
       "doctorID":"DO472",
@@ -214,7 +215,6 @@ angular.module('bookDoctor')
       "education":"Fellowship of the Royal College of Surgeons (F.R.C.S.)",
       "specialist":"Neurosurgeon",
       "ratings":"1"
-
    },
    {  
       "doctorID":"DO473",
@@ -228,7 +228,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Nephrologist",
       "ratings":"5"
-
    },
    {  
       "doctorID":"DO474",
@@ -242,7 +241,6 @@ angular.module('bookDoctor')
       "education":"Doctor of Osteopathic Medicine (D.O.)",
       "specialist":"Gastroenterologist",
       "ratings":"4"
-
    },
    {  
       "doctorID":"DO475",
@@ -282,7 +280,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Obstetrics and gynecology",
       "ratings":"1"
-
    },
    {  
       "doctorID":"DO478",
@@ -309,7 +306,6 @@ angular.module('bookDoctor')
       "education":"MD",
       "specialist":"Gynecology",
       "ratings":"4"
-
    },
    {  
       "doctorID":"DO480",
@@ -323,7 +319,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"General surgery",
       "ratings":"4"
-
    },
    {  
       "doctorID":"DO481",
@@ -337,7 +332,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Neurology",
       "ratings":"3"
-
    },
    {  
       "doctorID":"DO482",
@@ -351,7 +345,6 @@ angular.module('bookDoctor')
       "education":"MD",
       "specialist":"Urology",
       "ratings":"1"
-
    },
    {  
       "doctorID":"DO483",
@@ -365,7 +358,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Oncologist",
       "ratings":"2"
-
    },
     {  
       "doctorID":"DO484",
@@ -379,7 +371,6 @@ angular.module('bookDoctor')
       "education":"PhD",
       "specialist":"Epidemiologist",
       "ratings":"5"
-
    },
     {  
       "doctorID":"DO485",
@@ -393,7 +384,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Endocrinologist",
       "ratings":"1"
-
    },
     {  
       "doctorID":"DO486",
@@ -407,7 +397,6 @@ angular.module('bookDoctor')
       "education":"M.D(Doctor of Medicine)",
       "specialist":"Dermatologist",
       "ratings":"5"
-
    },
    {  
       "doctorID":"DO487",
@@ -421,8 +410,8 @@ angular.module('bookDoctor')
       "education":"DMS(Doctor of Dental Medicine)",
       "specialist":"Dentist",
       "ratings":"1"
-
-   },{  
+   },
+   {  
       "doctorID":"DO488",
       "doctorName":"TAYLOR",
       "age":"32",
@@ -434,7 +423,6 @@ angular.module('bookDoctor')
       "education":"PhD",
       "specialist":"Psychiatrist",
       "ratings":"5"
-
    },
    {  
       "doctorID":"DO489",
@@ -448,7 +436,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Pathologist",
       "ratings":"3"
-
    },
    {  
       "doctorID":"DO490",
@@ -462,7 +449,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Neurosurgeon",
       "ratings":"2"
-
    },
    {  
       "doctorID":"DO491",
@@ -476,7 +462,6 @@ angular.module('bookDoctor')
       "education":"MD",
       "specialist":"Nephrologist",
       "ratings":"4"
-
    },
    {  
       "doctorID":"DO492",
@@ -490,7 +475,6 @@ angular.module('bookDoctor')
       "education":"MBBS",
       "specialist":"Gastroenterologist",
       "ratings":"2"
-
    },
    {  
       "doctorID":"DO493",
@@ -527,5 +511,16 @@ angular.module('bookDoctor')
       $scope.ratingsCallback = function(rating, index) {
         console.log('Selected rating is : ', rating, ' and the index is : ', index);
       };
+
+       $ionicPopover.fromTemplateUrl('templates/popover.html', {
+            scope: $scope,
+        }).then(function(popover) {
+            $scope.popover = popover;
+        });
+
+        $scope.specialistLists=["ShowAll","Immunology","Obstetrics and gynecology", "Cardiology", "Gynecology"
+        , "General surgery", "Neurology", "Urology", "Oncologist", "Epidemiologist", "Endocrinologist"
+        , "Dermatologist", "Dentist", "Endocrinologist", "Dermatologist", "Nephrologist", "Psychiatrist"
+        , "Pathologist", "Neurosurgeon", "Gastroenterologist", "Ophthalmologist"];
 
 })
