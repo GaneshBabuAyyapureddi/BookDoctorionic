@@ -2,6 +2,7 @@ angular.module('bookDoctor')
 
 .controller("doctorSearchController",function ($scope, $state, $ionicHistory, $ionicPopover) {
    $scope.specialist = "";
+
    $scope.goBack = function() {
     // $ionicHistory.goBack();
     $state.go('dashboard.homeScreen');

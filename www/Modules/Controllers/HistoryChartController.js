@@ -1,4 +1,5 @@
 angular.module('bookDoctor')
+
 .controller("HistoryChartController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory){
  // $scope.profileObject = $stateParams.patientProfile; 
  $scope.profileObject =   
@@ -67,8 +68,7 @@ angular.module('bookDoctor')
     $scope.heartdata = [
         [65, 59, 80, 81, 56, 55, 40]
     ];
-    
-    //$scope.heartdohnutdata = [65, 59, 80, 81, 56, 55, 40]; 
+     //$scope.heartdohnutdata = [65, 59, 80, 81, 56, 55, 40]; 
 
     $scope.heartcolors = ['#68071d'];
 
@@ -236,5 +236,5 @@ angular.module('bookDoctor')
 
         // Function - Will fire on animation completion.
         onAnimationComplete: function(){}
-    }; 
+    };     
 })

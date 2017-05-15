@@ -6,8 +6,8 @@
    <ion-header-bar>
  </ion-header-bar>
 
-   <ion-tabs class="tabs-balanced tabs-icon-left" >
-      <ion-tab title="Current" >
+   <ion-tabs class="tabs-calm tabs-icon-left" >
+      <ion-tab title="General" >
         <ion-view>
           <ion-content ng-controller="DoctorProfileController">
             <div style="position: relative; left: 0; top: 0;"> 
@@ -57,7 +57,33 @@
           </ion-content>
         </ion-view>
       </ion-tab>
-      <ion-tab title="History">
+      <ion-tab title="Review & Ratings">
+        <ion-view>
+          <ion-content>
+            <ion-list>
+              <ion-item-borderless ng-repeat = "patientInfo in patientList" ng-click="goToDoctorProfileScreen()">
+              <div class="card" style=" padding:5px; ">
+                <div class="row">
+                  <div class="col-15">
+                    <div class="item item-avatar">
+                        <img style="width:60px; height:60px;" src="{{patientInfo.profilePic}}">
+                      </div>
+                  </div>
+                  <div class="col-50">                    
+                    <h4 style="color:#000;font-weight:bold;">{{patientInfo.patientName}}</h4>
+                    <h5 style="color:#757575;" >{{patientInfo.comments}}</h5>
+                  </div>
+                  <div class="col-50" style="margin-top:10px;">
+                    <ionic-ratings ratingsobj='patientInfo.rating' index='0'></ionic-ratings>
+                  </div> 
+                </div>
+             </div>
+             </ion-item-borderless>
+            </ion-list>
+          </ion-content>
+        </ion-view>
+      </ion-tab>
+      <ion-tab title="Appointments">
         <ion-view>
           <ion-content>
           </ion-content>
