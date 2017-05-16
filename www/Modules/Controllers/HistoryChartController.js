@@ -1,5 +1,4 @@
 angular.module('bookDoctor')
-
 .controller("HistoryChartController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory){
  // $scope.profileObject = $stateParams.patientProfile; 
  $scope.profileObject =   

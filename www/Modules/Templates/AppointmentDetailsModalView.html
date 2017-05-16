@@ -9,23 +9,23 @@
         <div>
           <label class = "item item-input">
             <span class = "input-label">Doctor Name</span>    
-            <input type="text">
+            <input type="text" value={{data.title}}>
           </label>
           <label class = "item item-input">
             <span class = "input-label">Doctor Speciality</span>   
-            <input type="text" value={{date.title}} >
+            <input type="text" value={{data.title}} >
           </label>
           <label class="item item-input">
             <span class="input-label">Appointment Date</span>
-               <input type="text">
+               <input type="text" value={{data.start}}>
           </label>
           <label class="item item-input">
             <span class="input-label">Appointment Time</span>
-            <input type="text">
+            <input type="text" value={{}}>
           </label>
         </div class= "button-bar" style = "padding: 10px">
           <button class="button button-stable button-calm" style="float: right; margin:10px 10px 5px 0px;" ng-model="event" ng-click="addAppointment(date,option2);closeModal()">Edit Appointment</button>
-          <button class="button button-stable button-calm" style="float: right; margin:10px 10px 5px 0px;" ng-click="closeAppointmentDetails()">Cancel Appointment</button>
+          <button class="button button-stable button-calm" style="float: right; margin:10px 10px 5px 0px;" ng-click="remove(1);closeAppointmentDetails()">Cancel Appointment</button>
       
       </div>
     </form>
