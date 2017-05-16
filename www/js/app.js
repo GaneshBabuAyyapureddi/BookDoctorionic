@@ -107,7 +107,10 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
             }) 
 
            .state('doctorProfile', {
-                url:'/doctorProfile',               
+                url:'/doctorProfile',
+                params: {
+                    'doctorProfile': null
+                },          
                 templateUrl: 'Modules/Templates/DoctorProfile.html',
                 controller:'DoctorProfileController'
             })

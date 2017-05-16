@@ -16,9 +16,8 @@
     <button class="button button-icon icon ion-funnel" style="color: #E4E4E4;" ng-click="popover.show($event)"></button>
    </ion-header-bar>
    <ion-content>
-    
     <ion-list>
-   <ion-item-borderless ng-repeat = "doctor in doctorsList | filter:specialist" ng-click="goToDoctorProfileScreen()">
+   <ion-item-borderless ng-repeat = "doctor in doctorsList | filter:specialist" ng-click="doctorSelected(doctor)">
    <div class="card" style=" padding:5px; ">
    	<div class="row">
    		<div class="col-15 col-center">
@@ -36,5 +35,4 @@
    </div>
    </ion-item-borderless>
 </ion-list>
-  
-   </ion-content>
+</ion-content>

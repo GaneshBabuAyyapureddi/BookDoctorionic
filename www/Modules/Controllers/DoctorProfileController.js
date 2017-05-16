@@ -1,5 +1,13 @@
 angular.module('bookDoctor')
-.controller("DoctorProfileController",function ($scope, $state) {
+.controller("DoctorProfileController",function ($scope, $state, $stateParams) {
+ 
+  $scope.$on('$ionicView.beforeEnter', function(){
+  $scope.profileObject = $stateParams.doctorProfile;
+  console.log( "DoctorProfile"+$scope.profileObject);
+ /* $scope.ratings = $scope.profileObject.ratings;
+  $scope.doctorName = $scope.profileObject.doctorName;
+  $scope.education = $scope.profileObject.education;*/
+  });
   $scope.goBack = function() {
     $state.go('doctorSearch');
   }
@@ -10,7 +18,7 @@ angular.module('bookDoctor')
   "<li>Podiatrist, a doctor who specialises in treating feet</li>"+
   "<li>Surgeon, a doctor who performs surgery</li>";  
 
-  $scope.educationInfo = "Dr Randal A Aaberg completed her MBBS, New York City and underwent training in ECHO from "+
+  $scope.educationInfo = "Dr "+ $scope.profileObject.doctorName +" completed his "+$scope.profileObject.education+", New York City and underwent training in ECHO from "+
   "Chicago, Illinois. Before joining SIMS Hospital, she worked in various hospital like Cartersville Medical Center "+
   "and Effingham Hospital <br> <h5>Professional Competencies of your Doctor:</h5>"+
   "<li>Training PG students at National Board Cardiology</li>"+
@@ -55,13 +63,13 @@ angular.module('bookDoctor')
         // iconOffColor:  'rgb(224, 224, 224)',   
         iconOnColor:"#d62304", 
         iconOffColor: "#ffa4a3",        
-        rating:  4,
+        rating:  $scope.profileObject.ratings,
         minRating:1,
         callback: function(rating) {
           $scope.ratingsCallback(rating);
         }
       };
-
+ 
       $scope.ratingsCallback = function(rating) {
         console.log('Selected rating is : ', rating);
       };

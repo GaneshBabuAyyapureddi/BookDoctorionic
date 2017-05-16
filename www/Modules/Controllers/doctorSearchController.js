@@ -7,9 +7,7 @@ angular.module('bookDoctor')
     // $ionicHistory.goBack();
     $state.go('dashboard.homeScreen');
   }
- $scope.goToDoctorProfileScreen = function() {
-   $state.go('doctorProfile');
- }
+ 
  $scope.getCurrentSpecialist = function(result) {
       if(result == 'ShowAll'){
          $scope.specialist = '';
@@ -522,5 +520,9 @@ angular.module('bookDoctor')
         , "General surgery", "Neurology", "Urology", "Oncologist", "Epidemiologist", "Endocrinologist"
         , "Dermatologist", "Dentist", "Endocrinologist", "Dermatologist", "Nephrologist", "Psychiatrist"
         , "Pathologist", "Neurosurgeon", "Gastroenterologist", "Ophthalmologist"];
+
+        $scope.doctorSelected = function(doctorObject) {
+         $state.go('doctorProfile', {"doctorProfile":doctorObject});
+      }
 
 })
