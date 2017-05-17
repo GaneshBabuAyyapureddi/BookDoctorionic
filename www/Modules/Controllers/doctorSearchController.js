@@ -30,7 +30,43 @@ angular.module('bookDoctor')
       "emailID":"george@bookdoctor.com",
       "education":"M.D(Doctor of Medicine)",
       "specialist":"Immunology",
+      "ratings":"3",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Ethan",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR George is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Olivia",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
       "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Jacob",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"James Wyatt",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Madison",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
     {  
       "doctorID":"DO459",
@@ -43,7 +79,43 @@ angular.module('bookDoctor')
       "emailID":"donald@bookdoctor.com",
       "education":"M.D(Doctor of Medicine)",
       "specialist":"Obstetrics and gynecology",
+      "ratings":"5",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO452",
+      "patientName":"Arthur",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Gilbert",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Donald is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Robert",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
       "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Martin",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Henry Aldrich",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   }]
    },
     {  
       "doctorID":"DO460",
@@ -56,7 +128,43 @@ angular.module('bookDoctor')
       "emailID":"gilbert@bookdoctor.com",
       "education":"Doctor of Medicine (M.D.)",
       "specialist":"Cardiology",
+      "ratings":"3",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Edwin Arnold",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Gilbert is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Jane Austen",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Williams",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Michael",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Shamim Azad",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
       "ratings":"3"
+   }]
    },
    {  
       "doctorID":"DO461",
@@ -69,7 +177,44 @@ angular.module('bookDoctor')
       "emailID":"arthur@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Gynecology",
+      "ratings":"5",
+      "reviewsAndratings":[  
+   
+   {  
+      "patientID":"DO452",
+      "patientName":"Benjamin",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Charles",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Arthur is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Andrew",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
       "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"John Austin",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Ben Carson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   }]
    },
    {  
       "doctorID":"DO462",
@@ -82,7 +227,44 @@ angular.module('bookDoctor')
       "emailID":"robert@bookdoctor.com",
       "education":"M.D(Doctor of Medicine)",
       "specialist":"General surgery",
-      "ratings":"2"
+      "ratings":"2",
+      "reviewsAndratings":[  
+   
+   {  
+      "patientID":"DO452",
+      "patientName":"Lady Marshall",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Masan Mackay",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Lanny Lewis",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Stuart Lyman",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Lesli King",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Robert is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   }]
    },
    {  
       "doctorID":"DO463",
@@ -95,7 +277,43 @@ angular.module('bookDoctor')
       "emailID":"henryaldrich@bookdoctor.com",
       "education":"Doctor of Osteopathic Medicine (DO)",
       "specialist":"Neurology",
-      "ratings":"2"
+      "ratings":"2",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Delilah Knox",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Henry Aldrich is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Camden Duran",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Phylis Jones",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Lesli King",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Hannah Langdon",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO464",
@@ -108,7 +326,44 @@ angular.module('bookDoctor')
       "emailID":"martin@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Urology",
+      "ratings":"5",
+      "reviewsAndratings":[  
+   
+   {  
+      "patientID":"DO452",
+      "patientName":"Shirley Ogdon",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Briyana Sanderson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
       "ratings":"5"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Lanny Lewis",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Martin is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Stefan Simpson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Fiona Roberts",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO465",
@@ -121,7 +376,43 @@ angular.module('bookDoctor')
       "emailID":"edwinarnold@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Oncologist",
-      "ratings":"1"
+      "ratings":"1",
+      "reviewsAndratings":[  
+    {  
+      "patientID":"DO455",
+      "patientName":"Lincoln",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Clara Litte",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Sadie Richards",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Alexander Allio",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Edwin Arnold is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Paige Howell",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   }]
    },
     {  
       "doctorID":"DO466",
@@ -134,7 +425,42 @@ angular.module('bookDoctor')
       "emailID":"shamimazad@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Epidemiologist",
+      "ratings":"4",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Kate Smith",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Shamim Azad is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
       "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Jennifer Smith",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Leo Rockwald",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Brennan Pulson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },{  
+      "patientID":"DO454",
+      "patientName":"Pierce Cohen",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   }]
    },
     {  
       "doctorID":"DO467",
@@ -147,7 +473,43 @@ angular.module('bookDoctor')
       "emailID":"janeausten@bookdoctor.com",
       "education":"Doctor of Osteopathic Medicine (D.O.)",
       "specialist":"Endocrinologist",
+      "ratings":"5",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO452",
+      "patientName":"Brok Jhonson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Gerald Duffy",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Jane Austen is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Laila Castro",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Peter",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
       "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Lily Wright",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
     {  
       "doctorID":"DO468",
@@ -160,7 +522,43 @@ angular.module('bookDoctor')
       "emailID":"michael@bookdoctor.com",
       "education":"D.O(Doctor of Osteopathic Medicine)",
       "specialist":"Dermatologist",
+      "ratings":"3",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO452",
+      "patientName":"Monica",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
       "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Axel Elliot",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Elias Grant",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Michael is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Fernandez",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Ruby Nichols",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO469",
@@ -173,7 +571,44 @@ angular.module('bookDoctor')
       "emailID":"williams@bookdoctor.com",
       "education":"BDS(Bachelor of Dental Surgery)",
       "specialist":"Dentist",
+      "ratings":"4",
+      "reviewsAndratings":[  
+ 
+   {  
+      "patientID":"DO452",
+      "patientName":"Ashton Ryder",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Victoria Reed",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+     {  
+      "patientID":"DO451",
+      "patientName":"Valeria Gardner",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Williams is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
       "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Clark Garcia",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Samuel Evans",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   }]
    },
    {  
       "doctorID":"DO470",
@@ -186,7 +621,43 @@ angular.module('bookDoctor')
       "emailID":"charles@bookdoctor.com",
       "education":"Doctor of Medicine (M.D.)",
       "specialist":"Psychiatrist",
-      "ratings":"2"
+      "ratings":"2",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Prince Wright",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Charles is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+  
+   {  
+      "patientID":"DO453",
+      "patientName":"Aaron Barton",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Issac Clarke",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Hampton",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }, {  
+      "patientID":"DO452",
+      "patientName":"Martin Robinson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   }]
    },
    {  
       "doctorID":"DO471",
@@ -199,7 +670,44 @@ angular.module('bookDoctor')
       "emailID":"benjamin@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Pathologist",
+      "ratings":"5",
+      "reviewsAndratings":[  
+  
+   {  
+      "patientID":"DO452",
+      "patientName":"Sadie Harrington",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Diane Kerr",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
       "ratings":"5"
+   },
+    {  
+      "patientID":"DO451",
+      "patientName":"Liliana French",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Benjamin is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Sandra FitzPatrick",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Dirk Jenkins",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO472",
@@ -212,7 +720,44 @@ angular.module('bookDoctor')
       "emailID":"andrew@bookdoctor.com",
       "education":"Fellowship of the Royal College of Surgeons (F.R.C.S.)",
       "specialist":"Neurosurgeon",
-      "ratings":"1"
+      "ratings":"1",
+      "reviewsAndratings":[  
+  
+   {  
+      "patientID":"DO452",
+      "patientName":"Dyen Myers",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"London Gordon",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Jaxon Washington",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+    {  
+      "patientID":"DO451",
+      "patientName":"Brenda Hawkins",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Andrew is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Gabriel Miller",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO473",
@@ -225,7 +770,44 @@ angular.module('bookDoctor')
       "emailID":"bencarson@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Nephrologist",
+      "ratings":"5",
+      "reviewsAndratings":[  
+   
+   {  
+      "patientID":"DO452",
+      "patientName":"Caroline Tucker",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Tristen Freeman",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Ben Carson is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+    {  
+      "patientID":"DO454",
+      "patientName":"Jean Adams",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Eilana Vargas",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
       "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Ginna Collins",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO474",
@@ -238,7 +820,43 @@ angular.module('bookDoctor')
       "emailID":"johnaustin@bookdoctor.com",
       "education":"Doctor of Osteopathic Medicine (D.O.)",
       "specialist":"Gastroenterologist",
+      "ratings":"4",
+      "reviewsAndratings":[
+        {  
+      "patientID":"DO453",
+      "patientName":"Emma Franklin",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Fae Davis",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR John Austin is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
       "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Jae Parkler",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Jacob Soto",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Alden Watson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO475",
@@ -251,7 +869,43 @@ angular.module('bookDoctor')
       "emailID":"thomasamory@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Ophthalmologist",
+      "ratings":"4",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Mason Jenson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Thomas Amory is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
       "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Olivia Garret",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Shophia",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Aiden Day",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Sean Hughes",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO476",
@@ -264,7 +918,44 @@ angular.module('bookDoctor')
       "emailID":"jacob@bookdoctor.com",
       "education":"PhD(Doctor of Philosophy)",
       "specialist":"Immunology",
+      "ratings":"4",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Alcot Maccoy",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Jacob is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
       "ratings":"4"
+   },
+   
+   {  
+      "patientID":"DO453",
+      "patientName":"Cory Myers",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Janet Gray",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Aileen King",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Gene Hughes",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO477",
@@ -277,7 +968,43 @@ angular.module('bookDoctor')
       "emailID":"gabriel@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Obstetrics and gynecology",
-      "ratings":"1"
+      "ratings":"1",
+      "reviewsAndratings":[ 
+        {  
+      "patientID":"DO453",
+      "patientName":"Robin Reynolds",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Max Parker",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Gabriel is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Joel Cooper",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Garret Jenkins",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Galen Foster",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO478",
@@ -290,7 +1017,44 @@ angular.module('bookDoctor')
       "emailID":"samuel@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Cardiology",
-      "ratings":"2"
+      "ratings":"2",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Daniel Hicks",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Samuel is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   
+   {  
+      "patientID":"DO453",
+      "patientName":"Mira Jones",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Tammy Mullins",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Sara Pender",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Brooklyn Ellis",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO479",
@@ -303,7 +1067,44 @@ angular.module('bookDoctor')
       "emailID":"ethan@bookdoctor.com",
       "education":"MD",
       "specialist":"Gynecology",
+      "ratings":"4",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Ellie Reynolds",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Ethan is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
       "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Grace West",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Maya Russell",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Aileen King",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Peyton Woods",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   }
+   ]
    },
    {  
       "doctorID":"DO480",
@@ -316,7 +1117,43 @@ angular.module('bookDoctor')
       "emailID":"madison@bookdoctor.com",
       "education":"MBBS",
       "specialist":"General surgery",
+      "ratings":"4",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO452",
+      "patientName":"Stan Ward",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+    {  
+      "patientID":"DO451",
+      "patientName":"Renee Ellington",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Madison is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
       "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Charise Phillips",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Aimee Green",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Sebastian",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO481",
@@ -329,7 +1166,43 @@ angular.module('bookDoctor')
       "emailID":"jayden@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Neurology",
+      "ratings":"3",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Isaac Alexander",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Jayden is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Charlie Butler",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+    {  
+      "patientID":"DO452",
+      "patientName":"Evan Washington",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
       "ratings":"3"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Easten Warren",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Robertson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO482",
@@ -342,7 +1215,36 @@ angular.module('bookDoctor')
       "emailID":"jose@bookdoctor.com",
       "education":"MD",
       "specialist":"Urology",
-      "ratings":"1"
+      "ratings":"1",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Robertson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Jose is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Max Hunt",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Kaitlyn Holmes",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Ellie Palmer",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   }]
    },
    {  
       "doctorID":"DO483",
@@ -355,9 +1257,45 @@ angular.module('bookDoctor')
       "emailID":"harper@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Oncologist",
-      "ratings":"2"
+      "ratings":"2",
+      "reviewsAndratings":[ 
+   {  
+      "patientID":"Landon Matthews",
+      "patientName":"Olivia",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Nicholas",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
    },
     {  
+      "patientID":"DO451",
+      "patientName":"Tyler Lane",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Harper is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Ryder Ray",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Staneley",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
+   },
+   {  
       "doctorID":"DO484",
       "doctorName":"Ryan",
       "age":"32",
@@ -368,9 +1306,45 @@ angular.module('bookDoctor')
       "emailID":"ryan@bookdoctor.com",
       "education":"PhD",
       "specialist":"Epidemiologist",
+      "ratings":"5",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO452",
+      "patientName":"Toby Young",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Adan Thompson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
       "ratings":"5"
    },
-    {  
+   {  
+      "patientID":"DO451",
+      "patientName":"Wyatt James",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR Ryan is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Edmund Watson ",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Prince Wright",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
+   },
+   {  
       "doctorID":"DO485",
       "doctorName":"David",
       "age":"36",
@@ -381,9 +1355,46 @@ angular.module('bookDoctor')
       "emailID":"david@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Endocrinologist",
-      "ratings":"1"
+      "ratings":"1",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Anthony",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR David is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+  
+   {  
+      "patientID":"DO453",
+      "patientName":"Mia Martin",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
    },
     {  
+      "patientID":"DO452",
+      "patientName":"Elijah Lee",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Derrick",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Kathy Webster",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
+   },
+   {  
       "doctorID":"DO486",
       "doctorName":"Smith",
       "age":"30",
@@ -394,7 +1405,43 @@ angular.module('bookDoctor')
       "emailID":"smith@bookdoctor.com",
       "education":"M.D(Doctor of Medicine)",
       "specialist":"Dermatologist",
+      "ratings":"5",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Smith",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR George is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Tricia Berry",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
       "ratings":"5"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Trista Avery",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Miles Fleming",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Milly Ellison",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO487",
@@ -407,7 +1454,44 @@ angular.module('bookDoctor')
       "emailID":"miller@bookdoctor.com",
       "education":"DMS(Doctor of Dental Medicine)",
       "specialist":"Dentist",
-      "ratings":"1"
+      "ratings":"1",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Joseph",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR MILLER is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   
+   {  
+      "patientID":"DO453",
+      "patientName":"Lily Wright",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Natalie Hill",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Grace Mitchell",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Vivian Gill ",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO488",
@@ -420,7 +1504,43 @@ angular.module('bookDoctor')
       "emailID":"taylor@bookdoctor.com",
       "education":"PhD",
       "specialist":"Psychiatrist",
+      "ratings":"5",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Hoffman",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR TAYLOR is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Audrey Rowe",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Quinn Chapman",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Leah Norman",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
       "ratings":"5"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Tyler Deleon",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO489",
@@ -433,7 +1553,42 @@ angular.module('bookDoctor')
       "emailID":"anderson@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Pathologist",
+      "ratings":"3",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Molly Larson",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR ANDERSON is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Maria Dunn",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
       "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Harrison",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Daniel Hicks",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },{  
+      "patientID":"DO454",
+      "patientName":"Cameron",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   }]
    },
    {  
       "doctorID":"DO490",
@@ -446,7 +1601,44 @@ angular.module('bookDoctor')
       "emailID":"clark@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Neurosurgeon",
-      "ratings":"2"
+      "ratings":"2",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO451",
+      "patientName":"Philip Goodwin",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR CLARK is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Mira Jones",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Eliot Malone",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Tmmy Mullins",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Max Bolivar",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   }
+   ]
    },
    {  
       "doctorID":"DO491",
@@ -459,7 +1651,50 @@ angular.module('bookDoctor')
       "emailID":"robinson@bookdoctor.com",
       "education":"MD",
       "specialist":"Nephrologist",
+      "ratings":"4",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO454",
+      "patientName":"Robert Winkler",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
       "ratings":"4"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Vincent",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR ROBINSON is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"WALIMBE AMIT",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Alexander",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"Craig Paul",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Jordyn Compos",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    },
    {  
       "doctorID":"DO492",
@@ -472,7 +1707,37 @@ angular.module('bookDoctor')
       "emailID":"nelson@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Gastroenterologist",
-      "ratings":"2"
+      "ratings":"2",
+      "reviewsAndratings":[
+        {  
+      "patientID":"DO455",
+      "patientName":"Madison",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Ethan",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR NELSON is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO452",
+      "patientName":"Olivia",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
+      "ratings":"3"
+   },
+   {  
+      "patientID":"DO453",
+      "patientName":"Jacob",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   }
+   ]
    },
    {  
       "doctorID":"DO493",
@@ -485,7 +1750,43 @@ angular.module('bookDoctor')
       "emailID":"adams@bookdoctor.com",
       "education":"MBBS",
       "specialist":"Ophthalmologist",
+      "ratings":"3",
+      "reviewsAndratings":[  
+   {  
+      "patientID":"DO453",
+      "patientName":"Jacob",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I am having a horrible experience with LifeForce Homeopathy clinic, Vashi, Navi Mumbai. Once these people have taken huge money as their fee, they don't listen to patients at all. I tried to call on their all phone and mobile numbers. I sent emails as well related to my disease status update and getting clinical suggestions but they never respond back. I will never recommend people to go for LifeForce Homeopathy clinic treatment. This is commercial way for earning money.",
+      "ratings":"5"
+   },
+   {  
+      "patientID":"DO451",
+      "patientName":"Ethan",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"DR ADAMS is one of the greatest and intelligent personality .He is fantastic in pain management.The sign and symbol of humanity.He is the right selection of your abnormality. His attittudes are positive .When you face with him you will feel perfect .He writes only those lab tests which is required without that he is not a business man.He writes high quality drugs with low prices or low cost.After visiting him you might feel healthy after a few days .",
+      "ratings":"4"
+   },
+   {  
+      "patientID":"DO454",
+      "patientName":"James Wyatt",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was having eczema for past one year. I saw Dr. Rajesh Shah's successful treatment of eczema and went for diagnosis. He diagnosed me with his homeopathic medicines. It cured my eczema and my skin looks way much better than before. I am so glad that I took treatment from Dr. Rajesh Shah. Other doctors were very much costly and not sure for 100% cure. I will suggest other patients like me to take treatment from Dr. Rajesh Shah.",
+      "ratings":"4"
+   },
+    {  
+      "patientID":"DO452",
+      "patientName":"Olivia",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"My uncle went to him to to get treatment for sprain in the ankles. He was surprised to see the doctor's attitude. The doctor without even asking said to place the leg on the table and twisted it. My uncle's pain went even worse. After he scolded the doctor, the doctor then did the treatment by band-aiding him properly.",
       "ratings":"3"
+   },
+   {  
+      "patientID":"DO455",
+      "patientName":"Madison",
+      "profilePic":"img/doctor_round.jpg",
+      "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
+      "ratings":"5"
+   }]
    }
 ];
 

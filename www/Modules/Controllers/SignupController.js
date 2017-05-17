@@ -13,4 +13,9 @@ angular.module('bookDoctor')
     //$ionicHistory.goBack();
   }
 
+  $scope.goToSignUpConfirm = function(dataForm,data) {
+
+  	 console.log(data);
+  };
+
 });

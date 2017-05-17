@@ -102,6 +102,12 @@
 .my-disable{
     pointer-events:none;
 }
+.review-ellipse{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
 /* Doctor profile Controller - End */
 
 .my-disable{

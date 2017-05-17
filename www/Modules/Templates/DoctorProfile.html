@@ -64,16 +64,16 @@
               <ion-item-borderless ng-repeat = "patientInfo in patientList" ng-click="goToDoctorProfileScreen()">
               <div class="card" style=" padding:5px; ">
                 <div class="row">
-                  <div class="col-15">
+                  <div class="col-10">
                     <div class="item item-avatar">
                         <img style="width:60px; height:60px;" src="{{patientInfo.profilePic}}">
                       </div>
                   </div>
-                  <div class="col-50">                    
+                  <div class="col-67">                    
                     <h4 style="color:#000;font-weight:bold;">{{patientInfo.patientName}}</h4>
-                    <h5 style="color:#757575;" >{{patientInfo.comments}}</h5>
+                    <h5 class="review-ellipse" style="color:#757575;" >{{patientInfo.comments}}</h5>
                   </div>
-                  <div class="col-50" style="margin-top:10px;">
+                  <div class="col-33" style="margin-top:10px;">
                     <ionic-ratings ratingsobj='patientInfo.rating' index='0'></ionic-ratings>
                   </div> 
                 </div>
