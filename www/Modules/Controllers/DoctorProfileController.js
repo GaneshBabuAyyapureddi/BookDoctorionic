@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("DoctorProfileController",function ($scope, $state, $stateParams) {
+.controller("DoctorProfileController",function ($scope, $state, $stateParams,$ionicHistory) {
   
   $scope.$on('$ionicView.beforeEnter', function(){
   $scope.profileObject = $stateParams.doctorProfile;
@@ -27,7 +27,7 @@ angular.module('bookDoctor')
    });
   });
   $scope.goBack = function() {
-    $state.go('doctorSearch');
+    $ionicHistory.goBack();
   }
   
   $scope.speciality = ""+
