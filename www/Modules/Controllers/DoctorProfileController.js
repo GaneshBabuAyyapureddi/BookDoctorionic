@@ -3,9 +3,28 @@ angular.module('bookDoctor')
   
   $scope.$on('$ionicView.beforeEnter', function(){
   $scope.profileObject = $stateParams.doctorProfile;
+
   $scope.ratings = $scope.profileObject.ratings;
   $scope.doctorName = $scope.profileObject.doctorName;
   $scope.education = $scope.profileObject.education;
+  $scope.patientList = $scope.profileObject.reviewsAndratings;
+  console.log($scope.patientList);
+  $scope.patientList.forEach(function(x){
+      x.rating= {
+      iconOn: 'ion-ios-star',    
+      iconOff: 'ion-ios-star-outline',   
+      // iconOnColor: 'rgb(255, 215, 0)',  
+      // iconOffColor:  'rgb(224, 224, 224)',   
+      iconOnColor:"#d62304", 
+      iconOffColor: "#ffa4a3",
+      rating: x.ratings, 
+      minRating: 0,    
+      readOnly: true, // Set to true so user cannot edit rating
+      callback: function(rating) {    //Mandatory
+        // do nothing as read only stars 
+      }
+    }
+   });
   });
   $scope.goBack = function() {
     $state.go('doctorSearch');
@@ -73,7 +92,7 @@ angular.module('bookDoctor')
         console.log('Selected rating is : ', rating);
       };
 
-  $scope.patientList = [  
+  /*$scope.patientList = [  
    {  
       "patientID":"DO451",
       "patientName":"Ethan",
@@ -108,24 +127,9 @@ angular.module('bookDoctor')
       "profilePic":"img/doctor_round.jpg",
       "comments":"I was noticing hair fall problem since the past 6-8 months. To find a solution to this I had joined a couple of facebook groups and read many blogs as well. But nothing worked out. One day I saw a post in a facebook group which was about Dr. Shah's treatment and then searched about it on google. I had approached Dr. Shah 2 months back for treatment and within 2 months my hair fall has reduced tremendously. I must say Dr. Shah's treatment is really good with quick results.",
       "ratings":"5"
-   }];   
+   }];*/   
 
-   $scope.patientList.forEach(function(x){
-      x.rating= {
-      iconOn: 'ion-ios-star',    
-      iconOff: 'ion-ios-star-outline',   
-      // iconOnColor: 'rgb(255, 215, 0)',  
-      // iconOffColor:  'rgb(224, 224, 224)',   
-      iconOnColor:"#d62304", 
-      iconOffColor: "#ffa4a3",
-      rating: x.ratings, 
-      minRating: 0,    
-      readOnly: true, // Set to true so user cannot edit rating
-      callback: function(rating) {    //Mandatory
-        // do nothing as read only stars 
-      }
-    }
-   });
+   
 })
 
 .filter('inSlicesOf', 
