@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true" cache-view="false">
    <!-- <ion-header-bar class="bar bar-header bar-balanced">
      <button class="button button-icon icon ion-android-arrow-back" style="color: #E4E4E4" ng-click="goBack()"></button>
         <div style="color: #FFFFFF;text-align: center;" class="title">ALLERGIES</div>
@@ -6,27 +6,27 @@
    <ion-header-bar>
  </ion-header-bar>
 
-   <ion-tabs class="tabs-balanced tabs-icon-left" >
-      <ion-tab title="Current" >
+   <ion-tabs class="tabs-calm tabs-icon-left" >
+      <ion-tab title="General" >
         <ion-view>
           <ion-content ng-controller="DoctorProfileController">
             <div style="position: relative; left: 0; top: 0;"> 
               <img src="img/profile_bg.jpg" class="profile_back" style="width:100%; height:250px;"/> 
-              <img src="img/doctor_round.jpg" class="round_corner animated zoomIn" style="width:110px; height:110px;"/>
+              <img src="{{profileObject.profilePic}}" class="round_corner animated zoomIn" style="width:110px; height:110px;"/>
               <img src="img/arrow_left_wh.png" class="arrow_back" style="width:25px; height:25px;" ng-click="goBack()">
             </div>
             <div class="text-center" style="margin-top:50px;">
-                <h1 style="text-align: center; color:#757575">Randal A Aaberg</h1>
+                <h1 style="text-align: center; color:#757575">Dr {{profileObject.doctorName}} </h1>
                 <div>
                   <button class="button button-icon" style="text-align: center; color:#1B5E20; ">
                     <i class="icon ion-ios-telephone"></i> 
-                    <span style="margin-left:10px; text-decoration: underline;">+1 734-555-1212</span>
+                    <span style="margin-left:10px; text-decoration: underline;">{{profileObject.mobileNumber}}</span>
                   </button>
                 </div>
                 <div>
                   <button class="button button-icon" style="text-align: center; color:#01579B;">
                     <i class="icon ion-android-mail"></i>
-                    <span style="margin-left:10px; text-decoration: underline;"> bookDoctor@health.in</span>
+                    <span style="margin-left:10px; text-decoration: underline;"> {{profileObject.emailID}}</span>
                   </button>
                 </div>
             </div>
@@ -57,7 +57,33 @@
           </ion-content>
         </ion-view>
       </ion-tab>
-      <ion-tab title="History">
+      <ion-tab title="Review & Ratings">
+        <ion-view>
+          <ion-content>
+            <ion-list>
+              <ion-item-borderless ng-repeat = "patientInfo in patientList" ng-click="goToDoctorProfileScreen()">
+              <div class="card" style=" padding:5px; ">
+                <div class="row">
+                  <div class="col-15">
+                    <div class="item item-avatar">
+                        <img style="width:60px; height:60px;" src="{{patientInfo.profilePic}}">
+                      </div>
+                  </div>
+                  <div class="col-50">                    
+                    <h4 style="color:#000;font-weight:bold;">{{patientInfo.patientName}}</h4>
+                    <h5 style="color:#757575;" >{{patientInfo.comments}}</h5>
+                  </div>
+                  <div class="col-50" style="margin-top:10px;">
+                    <ionic-ratings ratingsobj='patientInfo.rating' index='0'></ionic-ratings>
+                  </div> 
+                </div>
+             </div>
+             </ion-item-borderless>
+            </ion-list>
+          </ion-content>
+        </ion-view>
+      </ion-tab>
+      <ion-tab title="Appointments">
         <ion-view>
           <ion-content>
           </ion-content>

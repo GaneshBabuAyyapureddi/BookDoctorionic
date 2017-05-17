@@ -1,16 +1,19 @@
 angular.module('bookDoctor')
 
+
 .controller("MenuController",function ($scope, $state,$ionicModal) {
+.controller("MenuController",function ($scope, $state,$ionicModal,$http) {
+
   $scope.goToHomeScreen = function() {
     $state.go('dashboard.homeScreen');
   }
   
   $scope.goToPatientProfile = function() {
-    $state.go('tabs.PatientProfile');
+    $state.go('dashboard.patientProfile');
   }
   
    $scope.goToSearchDoctor = function() {
-    $state.go('searchDoctor');
+    $state.go('dashboard.doctorSearch');
   }
 
   $scope.goToNotification = function() {
@@ -22,7 +25,6 @@ angular.module('bookDoctor')
     $scope.goToLogin = function() {
     $state.go('loginPage');
   }
-
 
 $ionicModal.fromTemplateUrl('password-modal.html', {
         scope: $scope,
@@ -38,5 +40,9 @@ $ionicModal.fromTemplateUrl('password-modal.html', {
       $scope.closeModal = function() {
          $scope.passwordModal.hide();
       };
+
+$scope.goToDoctorProfile = function() {
+    $state.go('dashboard.doctorProfile');
+  }
 })
 
