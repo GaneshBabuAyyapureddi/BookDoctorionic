@@ -110,7 +110,7 @@ $ionicPopover.fromTemplateUrl('Modules/Templates/NotificationView.html', {
 });;
 
  $scope.openNotif = function($event) {
-    $http.get('/assets/notifications.json')
+    $http.get('assets/notifications.json')
     .success(function(data) {
     $scope.Notifications = data;
     $scope.notificationPopOver.show($event);
