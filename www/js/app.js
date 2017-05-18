@@ -35,7 +35,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
              .state('dashboard',{
               url: '/dashboard',              
               abstract: true,
-              templateUrl: 'Modules/Templates/menu.html',
+              templateUrl: 'Modules/Templates/Menu.html',
               controller: 'MenuController'     
             })
 
