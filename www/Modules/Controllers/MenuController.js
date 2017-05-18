@@ -1,6 +1,6 @@
 angular.module('bookDoctor')
 
-.controller("MenuController",function ($scope, $state,$ionicModal,$http) {
+.controller("MenuController",function ($scope, $state,$ionicModal,$http,$ionicSideMenuDelegate) {
   $scope.goToHomeScreen = function() {
     $state.go('dashboard.homeScreen');
   }
@@ -24,7 +24,9 @@ $scope.goToDoctorProfile = function() {
     $state.go('dashboard.doctorProfile');
   }
 
-
+$scope.toggleMenu = function() {
+  $ionicSideMenuDelegate.toggleLeft();
+}
 
 
 })
