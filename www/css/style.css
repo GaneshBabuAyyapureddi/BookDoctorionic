@@ -122,3 +122,48 @@
 	font-style:italic;
 	margin-left:5px;
 }
+
+/*Testing UI*/
+.sign-in-form{
+    background: linear-gradient(#68edf9,#f9cfcc,#68edf9);
+    background: -webkit-linear-gradient(to bottom right, #68edf9,#f9cfcc,#68edf9); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right,#68edf9,#f9cfcc,#68edf9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  } 
+
+.background-image {
+  margin-top: 65px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  background-image: url('../img/DoctorBackGroundImg.jpg');
+  background-repeat: no-repeat;
+/*  width: 1200px;
+  height: 800px;*/
+
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+
+   width: 100vw;
+  height: 100vh;
+/*
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);*/
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
