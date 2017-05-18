@@ -18,14 +18,56 @@
 </ion-header-bar>
 <ion-content>
 	<ion-list>
+
+		<ion-item menu-close ng-click="goToHomeScreen()">Home</ion-item>
+		<ion-item menu-close ng-click="goToPatientProfile()">Patient Profile</ion-item>
+		<ion-item menu-close ng-click="searchDoctor()"> Search Doctors </ion-item>
+		<ion-item menu-close ng-click="goToNotification()">Notification</ion-item>
+        <ion-item menu-close ng-click="openPasswordModal()"">Change Password</ion-item>		
+		<ion-item menu-close ng-click="goToLogin()">Logout</ion-item>
+
 		<ion-item menu-close  ui-sref="dashboard.homeScreen" class="item-icon-left"><i class="icon ion-home" style="color: #11c1f3"></i>Home</ion-item>
 		<ion-item menu-close ui-sref="tabs.PatientProfile" class="item-icon-left"><i class="icon ion-person" style="color: #11c1f3"></i>My Profile</ion-item>
 		<ion-item menu-close ui-sref="dashboard.doctorSearch" class="item-icon-left"><i class="icon ion-search" style="color: #11c1f3"></i> Search Doctors </ion-item>
 		<ion-item menu-close ng-click="openNotif($event)" class="item-icon-left"><i class="icon ion-android-notifications" style="color: #11c1f3"></i>Notification</ion-item>
 		<ion-item menu-close ng-click="goToNotification()" class="item-icon-left"><i class="icon ion-settings" style="color: #11c1f3"></i>Settings</ion-item>
 		<ion-item menu-close menu-close ui-sref="loginPage" class="item-icon-left"><i class="icon ion-log-out" style="color: #11c1f3"></i>Logout</ion-item>
+
 	</ion-list>
 	</ion-side-menu>
 
 	</ion-side-menus>
 </ion-content>
+   <script id="password-modal.html" type="text/ng-template">
+      <ion-modal-view>
+       <form novalidate>
+        <ion-header-bar class="bar bar-header bar-calm">
+          <h1 class="title" style="text-align: center;">Change Password</h1>
+           <button class = "button icon icon-right ion-ios-close-outline"
+            ng-click = "closeModal()"></button>
+        </ion-header-bar>
+        <ion-content>
+          <div class="list">
+            <label class="item item-input item-floating-label animated bounceInLeft">
+              <span class="input-label">Old Password</span>
+              <input type="password" placeholder="Old Password">
+            </label>
+            <label class="item item-input item-floating-label animated bounceInRight">
+              <span class="input-label">New Password</span>
+              <input type="password" placeholder="New Password">
+            </label>
+            <label class="item item-input item-floating-label animated bounceInLeft">
+              <span class="input-label">Confirm Password</span>
+              <input type="password" placeholder="Confirm Password">
+            </label>
+          </div>
+
+          <div align="center" style="margin-top:50px">
+            <div class="button-bar button-pill" align="center" style="width:25%">
+              <a class="button button-calm">Submit</a>
+            </div>
+          </div>
+        </ion-content>
+        </form>
+      </ion-modal-view>
+    </script>

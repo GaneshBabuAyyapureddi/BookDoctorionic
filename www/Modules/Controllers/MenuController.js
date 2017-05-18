@@ -1,6 +1,7 @@
 angular.module('bookDoctor')
 
 .controller("MenuController",function ($scope, $state,$ionicModal,$http,$ionicSideMenuDelegate) {
+
   $scope.goToHomeScreen = function() {
     $state.go('dashboard.homeScreen');
   }
@@ -16,9 +17,13 @@ angular.module('bookDoctor')
   $scope.goToNotification = function() {
     $state.go('notification');
   }
+  $scope.goToSettings = function() {
+    $state.go('settings');
+  }
     $scope.goToLogin = function() {
     $state.go('loginPage');
   }
+
 
 $scope.goToDoctorProfile = function() {
     $state.go('dashboard.doctorProfile');
@@ -27,7 +32,6 @@ $scope.goToDoctorProfile = function() {
 $scope.toggleMenu = function() {
   $ionicSideMenuDelegate.toggleLeft();
 }
-
 
 })
 
