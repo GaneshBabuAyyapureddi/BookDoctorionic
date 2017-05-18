@@ -1,7 +1,6 @@
 angular.module('bookDoctor')
 
 
-.controller("MenuController",function ($scope, $state,$ionicModal) {
 .controller("MenuController",function ($scope, $state,$ionicModal,$http) {
 
   $scope.goToHomeScreen = function() {
