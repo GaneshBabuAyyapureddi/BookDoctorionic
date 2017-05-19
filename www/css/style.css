@@ -84,15 +84,10 @@
     top: 0; 
     left: 0; 
 } 
-.arrow_back { 
-    position: absolute; 
-    top: 10px; 
-    left: 10px; 
-}
 .round_corner {
     position: absolute; 
     top: 75%; 
-    left: 45%; 
+    left: 5%; 
     /*border: 3px solid #fff;
     box-shadow: 0 0 5px gray;*/
     border: 3px;
@@ -108,6 +103,14 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 150px;
+    height: 150px;
 }
 /* Doctor profile Controller - End */
 
@@ -140,8 +143,6 @@
   display: block;
   background-image: url('../img/DoctorBackGroundImg.jpg');
   background-repeat: no-repeat;
-/*  width: 1200px;
-  height: 800px;*/
 
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
@@ -149,14 +150,8 @@
   -ms-filter: blur(3px);
   filter: blur(3px);
 
-   width: 100vw;
+  width: 100vw;
   height: 100vh;
-/*
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
-  filter: blur(10px);*/
 }
 
 .content {
@@ -167,3 +162,10 @@
   margin-left: 20px;
   margin-right: 20px;
 }
+
+#map_canvas {
+    width: 670px;
+    height: 400px;
+    background-color: #CCC;
+    }
+
