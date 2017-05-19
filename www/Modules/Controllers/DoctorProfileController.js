@@ -7,6 +7,7 @@ angular.module('bookDoctor')
     $scope.doctorName = $scope.profileObject.doctorName;
     $scope.education = $scope.profileObject.education;
     $scope.patientList = $scope.profileObject.reviewsAndratings;
+    $scope.awardList = $scope.profileObject.awards;
     console.log("patientList :", $scope.patientList);    
     console.log("ratings :", $scope.ratings);
     $scope.patientList.forEach(function(x){
