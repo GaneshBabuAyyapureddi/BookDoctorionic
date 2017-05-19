@@ -134,8 +134,10 @@ angular.module('bookDoctor')
    }];*/   
 
    angular.element(document).ready(function () {
-         initialize();
-      });
+        initialize();
+        // google.maps.event.addDomListener(window, 'load', initialize());
+    });
+
    function initialize(){
       var myLatlng = new google.maps.LatLng(12.9814, 80.2432);
       console.log("latandlong"+JSON.stringify(myLatlng));

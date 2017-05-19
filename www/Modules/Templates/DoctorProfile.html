@@ -4,17 +4,17 @@
         <div style="color: #FFFFFF;text-align: center;" class="title">DOCTOR PROFILE</div>
    </ion-header-bar>
 
-   <ion-tabs class="tabs-calm tabs-icon-left" >
-      <ion-tab title="General" >
-        <ion-view>
-          <ion-content ng-controller="DoctorProfileController">
+   <ion-tabs class="tabs-calm tabs-icon-top" >
+      <ion-tab title="General" icon="ion-help-buoy" style="background-size:40px;">
+        <ion-view ng-controller="DoctorProfileController">
+          <ion-content>
             <div style="position: relative; left: 0; top: 0;"> 
               <img src="img/profile_bg.jpg" class="profile_back" style="width:100%; height:250px;"/> 
               <img src="{{profileObject.profilePic}}" class="round_corner animated zoomIn" style="width:110px; height:110px;"/>
             </div>
             <div class="row" style="margin-top:50px;">
-              <div class="col" style="margin-left:10px;">
-                  <h2 style="margin-left:2px; color:#757575">Dr {{profileObject.doctorName}} </h2>
+              <div class="col" style="margin-left:10%;">
+                  <h3 style="margin-left:2px; color:#757575">Dr {{profileObject.doctorName}} </h3>
                   <div>
                     <button class="button button-icon" style="text-align: center; color:#1B5E20; margin-top:-10px;">
                       <i class="icon ion-ios-telephone"></i> 
@@ -27,11 +27,11 @@
                       <span style="margin-left:10px; text-decoration: underline;"> {{profileObject.emailID}}</span>
                     </button>
                   </div>
-                  <div class="my-disable col-25">
+                  <div class="my-disable col-33" style="margin-left:-5px;">
                     <ionic-ratings ratingsobj='ratingsObject' index='0'></ionic-ratings>
                   </div>
               </div>  
-              <div id="map" class="col" style="margin-right:20px;" data-tap-disabled="true"></div>   
+              <div id="map" class="col-33" style="margin-top:10px; margin-right:10%;" data-tap-disabled="true"></div> 
             </div>       
 
             
@@ -61,7 +61,7 @@
         </ion-view>
 
       </ion-tab>
-      <ion-tab title="Review & Ratings">
+      <ion-tab title="Review & Ratings" icon="ion-person-stalker">
         <ion-view>
           <ion-content>
             <ion-list>
@@ -87,7 +87,7 @@
           </ion-content>
         </ion-view>
       </ion-tab>
-      <ion-tab title="Appointments">
+      <ion-tab title="Appointments" icon="ion-calendar">
         <ion-view>
           <ion-content>
           </ion-content>
