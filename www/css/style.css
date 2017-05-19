@@ -46,12 +46,13 @@
   border-bottom: 3px solid green;
 }
 #centerCard {
-	display: block;
+	  display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
     width:50%;
     height:40%;
+    opacity: 0.85;
 }
 #loginInput {
     background: #FFFFFF;
@@ -83,15 +84,10 @@
     top: 0; 
     left: 0; 
 } 
-.arrow_back { 
-    position: absolute; 
-    top: 10px; 
-    left: 10px; 
-}
 .round_corner {
     position: absolute; 
     top: 75%; 
-    left: 45%; 
+    left: 5%; 
     /*border: 3px solid #fff;
     box-shadow: 0 0 5px gray;*/
     border: 3px;
@@ -108,6 +104,14 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 150px;
+    height: 150px;
+}
 /* Doctor profile Controller - End */
 
 .my-disable{
@@ -122,3 +126,46 @@
 	font-style:italic;
 	margin-left:5px;
 }
+
+/*Testing UI*/
+.sign-in-form{
+    background: linear-gradient(#68edf9,#f9cfcc,#68edf9);
+    background: -webkit-linear-gradient(to bottom right, #68edf9,#f9cfcc,#68edf9); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right,#68edf9,#f9cfcc,#68edf9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  } 
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  background-image: url('../img/DoctorBackGroundImg.jpg');
+  background-repeat: no-repeat;
+
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#map_canvas {
+    width: 670px;
+    height: 400px;
+    background-color: #CCC;
+    }
+
