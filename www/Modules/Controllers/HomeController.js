@@ -115,8 +115,8 @@ $ionicPopover.fromTemplateUrl('Modules/Templates/NotificationView.html', {
     $scope.Notifications = data;
     $scope.notificationPopOver.show($event);
     })
-    .error(function() {
-      console.log('could not find notifications.json');
+    .error(function(error) {
+      console.log('could not find notifications.json'+error);
     });
  };
 

@@ -1,12 +1,13 @@
 angular.module('bookDoctor')
 .controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory) {
     
-  // $scope.$on('$ionicView.beforeEnter', function(){
+  //$scope.$on('$ionicView.beforeEnter', function(){
     $scope.profileObject = $stateParams.doctorProfile;
     $scope.ratings = $scope.profileObject.ratings;
     $scope.doctorName = $scope.profileObject.doctorName;
     $scope.education = $scope.profileObject.education;
     $scope.patientList = $scope.profileObject.reviewsAndratings;
+    $scope.awardList = $scope.profileObject.awards;
     console.log("patientList :", $scope.patientList);    
     console.log("ratings :", $scope.ratings);
     $scope.patientList.forEach(function(x){
@@ -61,7 +62,7 @@ angular.module('bookDoctor')
   "<li>Training BSc cardiac Technology at MGR University</li>"+
   "<li>Assisting PG students for Dissertations and paper presentation</li>";
 
-  $scope.awardList = [
+  /*$scope.awardList = [
   {
     "title":"Excellence in preventive health", "data":"For demonstrable success in health promotion or secondary prevention:<br>"+
     "<li> Billion Hearts Beating Foundation, Apollo Hospitals Group (Ravinder Uberoi)</li>"+
@@ -90,7 +91,7 @@ angular.module('bookDoctor')
     "title":"Innovation in healthcare technology", "data":"For innovation that has improved the outcomes and experience of patients:<br>"+
     "<li>Novel rapid test kits for visceral leishmaniasis, All India Institute of Medical Sciences, New Delhi (Sarman Singh)</li>"+
     "<li>Bhattacharjee pupil expansion ring, Kolkata (Suven Bhattacharjee)</li>"
-  }];
+  }];*/
  
  
  
