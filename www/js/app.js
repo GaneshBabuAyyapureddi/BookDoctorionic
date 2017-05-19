@@ -3,7 +3,8 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.bootstrap', 'ionic-ratings'])
+
+angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'ionic-ratings','ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -34,7 +35,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
              .state('dashboard',{
               url: '/dashboard',              
               abstract: true,
-              templateUrl: 'Modules/Templates/menu.html',
+              templateUrl: 'Modules/Templates/Menu.html',
               controller: 'MenuController'     
             })
 
@@ -47,16 +48,16 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                   }
                 }                                  
             })
-            .state('dashboard.patientProfile', {
-                url:'/patientProfile',   
-                views: {
-                  'menuContent': {
-                   templateUrl: 'Modules/Templates/PatientProfile.html',
-                   controller:'PatientProfileController'
-                  }
-                }               
+            // .state('dashboard.patientProfile', {
+            //     url:'/patientProfile',   
+            //     views: {
+            //       'menuContent': {
+            //        templateUrl: 'Modules/Templates/PatientProfile.html',
+            //        controller:'PatientProfileController'
+            //       }
+            //     }               
 
-            }) 
+            // }) 
             .state('dashboard.doctorSearch', {
                 url:'/doctorSearch', 
                 views: {
@@ -67,13 +68,6 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                 }                  
                
             }) 
-            /*.state('doctorProfile', {
-                url:'/doctorProfile',               
-                templateUrl: 'Modules/Templates/Profile.html',
-                controller:'ProfileController'
-            })
-
-            }) */
 
             .state('loginPage', {
                 url: '/loginPage',
@@ -81,23 +75,11 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                 controller: 'loginController'
             })
             
-            // .state('homeScreen',{
-            //   url: '/homeScreen',
-            //     templateUrl: 'Modules/Templates/home.html',
-            //     controller: 'homeController'
-
-            // })
             .state('signupScreen',{
               url: '/signupScreen',
                 templateUrl: 'Modules/Templates/Signup.html',
                 controller: 'signupController'
             })
-
-            // .state('dashboard.doctorSearch', {
-            //     url:'/doctorSearch',               
-            //     templateUrl: 'Modules/Templates/DoctorSearch.html',
-            //     controller:'doctorSearchController'
-            // }) 
 
            .state('forgotPassword', {
                 url:'forgotPassword',               
@@ -128,24 +110,18 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                       }
            })
 
-        //    .state('tabs.PatientProfile', {
-        //      url: '/GeneralPatientProfile',
-        //      views: {
-        //       'GeneralPatientProfile-tab': {
-        //       templateUrl: 'Modules/Templates/GeneralPatientProfile.html',
-        //      controller:'generalPatientProfileController'
-        //             }
-        //            }
-        //         })
-        // .state('tabs.PatientProfile', {
-        //      url: '/PatientProfile',
-        //      views: {
-        //       'PatientProfile-tab': {
-        //       templateUrl: 'Modules/Templates/PatientProfile.html',
-        //       controller:'patientProfileController'
-        //             }
-        //            }
-        //         })
+        .state('tabs.PatientProfile', {
+             url: '/PatientProfile',
+             views: {
+              // 'menuContent': {
+              'PatientProfile-tab': {
+              templateUrl: 'Modules/Templates/PatientProfile.html',
+              controller:'PatientProfileController'
+                    }
+                   }
+                // }
+               
+                })
            .state('tabs.HistoryChart', {
              url: '/HistoryChart',
              views: {
@@ -155,15 +131,6 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                     }
                    }
                 })
-        // .state('dashboard.PatientProfile', {
-        //      url: '/PatientProfile',
-        //      views: {
-        //       'PatientProfile-tab': {
-        //       templateUrl: 'Modules/Templates/PatientProfile.html',
-        //       controller:'PatientProfileController'
-        //             }
-        //            }
-        //         })
 
          .state('tabs.Allergies', {
              url: '/Allergies',

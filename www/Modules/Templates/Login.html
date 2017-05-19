@@ -3,8 +3,9 @@
         <div style="color: #FFFFFF;text-align: center;" class="title">LOGIN</div>
    </ion-header-bar>
    <ion-content>
-   <div>
-   	<img src="img/AppLogo.jpeg" class="centerImage">
+   <div class="background-image"></div>
+   <div class="content">
+   	<img src="img/AppLogo.png" class="centerImage">
 	<p class="centerText"><span style="color: #d62304; font-size: 25px;font-weight: bold;">Book</span><span style="color: #11c1f3; font-size: 25px;font-weight: bold;">Doctor</span></p>
      <div class="list card" id="centerCard">
 		  <div class="item item-body" align="center">
@@ -12,7 +13,7 @@
 		     <br>
 		     <input type="password" placeholder="Password" id="loginInput" ng-model="password">
 		     <br>
-		     <button class="button button-calm" ng-click="goToHomeScreen(username)" style="width: 70%;margin-top: 10px;"> Login </button>
+		     <button class="button button-assertive" ng-click="load(username,password)" style="width: 70%;margin-top: 10px;"> Login </button>
 		     <br>
 		     <button class="button button-clear button-calm" ng-click="goToSignup()" style="text-decoration:underline;float:left;margin-top: 10px;">Signup
 		     </button>
