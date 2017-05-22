@@ -40,7 +40,10 @@
 
             <div class="card">
               <h4 style="margin-left:15px;">Education</h4>
-              <p style="margin-left:25px; margin-right:15px;" ng-bind-html="educationInfo"></p>
+              <p style="margin-left:25px; margin-right:15px;">{{educationalObject.title}}</p>
+              <h5 style="margin-left:15px;">Professional Competencies of your Doctor:</h5>
+              <li ng-repeat="i in educationalObject.competancy" style="margin-left:25px; margin-right:15px;">{{i.title}}
+                  </li>
             </div>
             
             <div class="card">
