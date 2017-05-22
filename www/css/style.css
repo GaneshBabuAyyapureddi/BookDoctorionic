@@ -168,4 +168,9 @@
     height: 400px;
     background-color: #CCC;
     }
-
+.center_img {
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+}
