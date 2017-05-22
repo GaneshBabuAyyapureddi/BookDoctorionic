@@ -1,6 +1,6 @@
-angular.module('bookDoctor')
+var app = angular.module('bookDoctor')
 
-.controller("PatientProfileController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory){
+.controller("PatientProfileController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory,$ionicSideMenuDelegate){
      $scope.goBack = function() {
 	 $state.go('dashboard.homeScreen');
     }
@@ -22,4 +22,16 @@ angular.module('bookDoctor')
       {name:"City:",value:"Atlanta"},
       {name:"Address:",value:"No 8, abc Avenue, Houston-12"} //  {name:"profilePic",value:"img/Mark.jpeg"}, 
             ];
-})
+
+       $scope.openMenu = function () {
+       $ionicSideMenuDelegate.toggleLeft();
+      }
+  
+   $scope.leftButtons = [{
+            type: 'button-icon icon ion-navicon',
+            tap: function(e) {
+                $scope.toggleMenu();
+            }
+        }];
+
+});

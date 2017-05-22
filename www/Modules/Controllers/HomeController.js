@@ -6,12 +6,12 @@ var showAppointmentDetails;
 /*Add appointment modal view*/
 var specialityArray = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",
 "Neurologist","General Physician"];
-var doctorsArray = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr. Ramarajan"],
-["Dr. Ramarajan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
-["Dr.Seshasayee","Dr. Ramarajan","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
-["Dr.Balaji","Dr.Seshasayee","Dr. Ramarajan","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
-["Dr.Srinivasan","Dr.Seshasayee","Dr.Balaji","Dr. Ramarajan","Dr.Avinash","Dr.Mohan"],
-["Dr.Avinash","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr. Ramarajan","Dr.Mohan"]];
+var doctorsArray = [["Dr.George","Dr.Donald","Dr.Gilbert","Dr.Henry Aldrich","Dr.Edwin Arnold","Dr. Jane Austen"],
+["Dr. Jane Austen","Dr.Edwin Arnold","Dr.Gilbert","Dr.Donald","Dr.Henry Aldrich","Dr.George"],
+["Dr.Edwin Arnold","Dr. Jane Austen","Dr.Thomas Amory","Dr.Henry Aldrich","Dr.Jane Austen","Dr.George"],
+["Dr.Jane Austen","Dr.Gilbert","Dr. Henry Aldrich","Dr.Donald","Dr.George","Dr.Edwin Arnold"],
+["Dr.Edwin Arnold","Dr.Gilbert","Dr.Henry Aldrich","Dr. John Austin","Dr.Jane Austen","Dr.Thomas Amory"],
+["Dr.Jane Austen","Dr.Edwin Arnold","Dr.Donald","Dr.Gilbert","Dr. John Austin","Dr.Henry Aldrich"]];
 
     $scope.options1 = specialityArray;
     $scope.options2 = []; // we'll get these later

@@ -55,8 +55,8 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
             //        controller:'PatientProfileController'
             //       }
             //     }               
-
             // }) 
+
             .state('dashboard.doctorSearch', {
                 url:'/doctorSearch', 
                 views: {
@@ -109,7 +109,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar','ui.
                       }
            })
 
-        .state('tabs.PatientProfile', {
+        .state('tabs.patientProfile', {
              url: '/PatientProfile',
              views: {
               'PatientProfile-tab': {
