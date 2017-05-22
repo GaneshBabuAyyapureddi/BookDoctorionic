@@ -36,8 +36,13 @@ var app = angular.module('bookDoctor')
                 $scope.toggleMenu();
             }
         }];
-
+    $scope.toggleMenu = function() {
+                $scope.sideMenuController.toggleLeft();
+            }
+    
 });
+
+
 
 $scope.readData = function(){
 
