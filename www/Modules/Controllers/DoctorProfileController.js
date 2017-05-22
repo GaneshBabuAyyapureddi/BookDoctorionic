@@ -8,7 +8,8 @@ angular.module('bookDoctor')
     $scope.education = $scope.profileObject.education;
     $scope.patientList = $scope.profileObject.reviewsAndratings;
     $scope.awardList = $scope.profileObject.awards;
-    console.log("patientList :", $scope.patientList);    
+    $scope.specialityDescriptionList = $scope.profileObject.specialityDescription;
+    console.log("patientList :", $scope.specialityDescriptionList);    
     console.log("ratings :", $scope.ratings);
     $scope.patientList.forEach(function(x){
         x.rating= {
@@ -49,11 +50,11 @@ angular.module('bookDoctor')
     $ionicHistory.goBack();
   }
   
-  $scope.speciality = ""+
+  /*$scope.speciality = ""+
   "<li>Anesthesiologist, a doctor who gives anaesthesia to patients</li>"+
   "<li>Ophthalmologist, a doctor who specialises in treating eyes</li>"+
   "<li>Podiatrist, a doctor who specialises in treating feet</li>"+
-  "<li>Surgeon, a doctor who performs surgery</li>";  
+  "<li>Surgeon, a doctor who performs surgery</li>";  */
 
   $scope.educationInfo = "Dr "+ $scope.doctorName +" completed his "+$scope.education+", New York City and underwent training in ECHO from "+
   "Chicago, Illinois. Before joining SIMS Hospital, she worked in various hospital like Cartersville Medical Center "+

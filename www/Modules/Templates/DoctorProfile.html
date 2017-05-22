@@ -41,7 +41,9 @@
             
             <div class="card">
               <h4 style="margin-left:15px;">Specialists</h4>
-              <p style="margin-left:25px; margin-right:15px;" ng-bind-html="speciality"></p>
+              <!-- <p style="margin-left:25px; margin-right:15px;" ng-bind-html="speciality"></p> -->
+               <li ng-repeat="i in specialityDescriptionList" style="margin-left:25px; margin-right:15px;">{{i.title}}
+                  </li>
             </div>
 
             <h3 style="color:#1B5E20; margin-left:25px; margin-top:50px;">AWARDS:</h3>
