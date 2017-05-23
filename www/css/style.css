@@ -112,6 +112,7 @@
     width: 100%;
     height: 120px;
 }
+
 /* Doctor profile Controller - End */
 
 .my-disable{
@@ -174,3 +175,9 @@ border-radius:15px;
 }
 /*Buy Medicine Screen end*/
 
+.center_img {
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+}

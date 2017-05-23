@@ -97,6 +97,55 @@ angular.module('bookDoctor')
       // Add poliline - ends
       $scope.map = map;
     }
+
+    $scope.appointmentList = [
+  {
+    "appointmentDate":"2017-05-22",
+    "image":"img/tick_green.png", 
+    "message":"Your appointment has been approved",
+    "modifyValue":true,
+    "rateValue":false
+  },
+  {
+    "appointmentDate":"2017-05-21",
+    "image":"img/close_red.png", 
+    "message":"Your appointment has been cancelled",
+    "modifyValue":false,
+    "rateValue":true
+  },
+  {
+    "appointmentDate":"2017-05-20",
+    "image":"img/waiting.png", 
+    "message":"Your appointment is in progress",
+    "modifyValue":true,
+    "rateValue":false
+  },
+  {
+    "appointmentDate":"2017-05-23",
+    "image":"img/close_red.png", 
+    "message":"Your appointment has been cancelled",
+    "modifyValue":false,
+    "rateValue":true
+  },
+  {
+    "appointmentDate":"2017-05-24",
+    "image":"img/tick_green.png", 
+    "message":"Your appointment has been approved",
+    "modifyValue":true,
+    "rateValue":false
+  }
+  ];
+
+  $scope.edit = function(appointmentDate){
+    var date = new Date();
+    var FromDate = date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
+    if (appointmentDate == FromDate) {
+      alert("Your appointment approved today so, could not edit");
+    }else{
+      alert("Edit success");
+    }
+    
+  }
    
 })
 

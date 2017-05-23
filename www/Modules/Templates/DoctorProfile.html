@@ -5,7 +5,7 @@
    </ion-header-bar>
 
    <ion-tabs class="tabs-calm tabs-icon-top" >
-      <ion-tab title="General" icon="ion-help-buoy" style="background-size:40px;">
+      <ion-tab title="General" icon="ion-help-buoy">
         <ion-view ng-controller="DoctorProfileController">
           <ion-content>
             <div style="position: relative; left: 0; top: 0;"> 
@@ -33,10 +33,6 @@
               </div>  
               <div id="map" class="col-33" style="margin-top:10px; margin-right:10%;" data-tap-disabled="true"></div> 
             </div>       
-
-            
-
-            <!-- <div id="map" data-tap-disabled="true"></div>    -->
 
             <div class="card">
               <h4 style="margin-left:15px;">Education</h4>
@@ -72,16 +68,16 @@
           <ion-content>
             <ion-list>
               <ion-item-borderless ng-repeat = "patientInfo in patientList" ng-click="goToDoctorProfileScreen()">
-              <div class="card" style=" padding:5px; ">
+              <div class="card" style="padding:5px;">
                 <div class="row">
-                  <div class="col-10">
-                    <div class="item item-avatar">
-                        <img style="width:60px; height:60px;" src="{{patientInfo.profilePic}}">
+                  <div class="col-15 col-center">
+                    <div class="item item-avatar" padding="false">
+                        <img style="max-width: 55px; max-height: 55px; margin-top:-10px;" src="{{patientInfo.profilePic}}">
                       </div>
                   </div>
                   <div class="col-67">                    
-                    <h4 style="color:#000;font-weight:bold;">{{patientInfo.patientName}}</h4>
-                    <h5 class="review-ellipse" style="color:#757575;" >{{patientInfo.comments}}</h5>
+                    <h5 class="review-ellipse" style="color:#616161;">{{patientInfo.comments}}</h5>
+                    <h6 style="color:#9E9E9E;" >Reviewed by {{patientInfo.patientName}} ,Date and Time</h6>
                   </div>
                   <div class="col-33" style="margin-top:10px;">
                     <ionic-ratings ratingsobj='patientInfo.rating' index='0'></ionic-ratings>
@@ -96,6 +92,28 @@
       <ion-tab title="Appointments" icon="ion-calendar">
         <ion-view>
           <ion-content>
+            <ion-list>
+              <ion-item-borderless ng-repeat = "appointments in appointmentList" ng-click="goToDoctorProfileScreen()">
+                <div class="card" style="padding:5px;">
+                  <div class="item item-avatar" text-center>
+                    <img src="{{appointments.image}}">
+                    <h2>{{appointments.message}}</h2>              
+                    <div class="item-icon-right" style="margin-top:10px" ng-show="appointments.modifyValue"> 
+                      <div class="icon">
+                        <span class="ion-edit" style="font-size:20px; padding:10px;" ng-click="edit(appointments.appointmentDate)"> </span>
+                         &nbsp;&nbsp;
+                        <span class="ion-android-delete" style="font-size:20px; padding:10px;"></span>
+                      </div>
+                    </div>
+                    <div style="float:right;" ng-show="appointments.rateValue">
+                      <span>Rate It</span>
+                      <i class="ion-android-star"></i>
+                      <i class="ion-android-star"></i>
+                    </div>
+                  </div>
+                </div>
+               </ion-item-borderless>
+            </ion-list>
           </ion-content>
         </ion-view>
       </ion-tab>

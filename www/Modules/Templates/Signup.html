@@ -7,9 +7,10 @@
       <div class="list card" style="width:70%; margin-left: auto; margin-right: auto;">
          <div class="item item-body" >
             <form name="dataForm" novalidate="" >
-               <div class="item" align="center">
-                  <img src="http://www.vitalimages.com/wp-content/uploads/young-joey.jpg" style="width: 20%;
-                     height:60%;" ng-click="getPhoto()">
+                <div class="item item-avatar">
+                  <img src="{{imgURI}}" class="center_img"  style="
+                     width: 160px; height: 160px;" ng-click="getPhoto()">
+                 <!-- <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" class="center_img"  style=" width: 160px; height: 160px;" ng-click="getPhoto()"> -->
                </div>
                
                <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.fullname.$invalid && dataForm.fullname.$touched , 'no-errors' : dataForm.fullname.$valid}">
