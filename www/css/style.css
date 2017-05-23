@@ -168,4 +168,9 @@
     height: 400px;
     background-color: #CCC;
     }
+/*Buy Medicine Screen start*/
+label#rounded{
+border-radius:15px; 
+}
+/*Buy Medicine Screen end*/
 
