@@ -1,0 +1,69 @@
+<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menu-content>
+<ion-nav-bar class="bar-stable">
+<ion-nav-back-button>
+</ion-nav-back-button>
+ 
+<ion-nav-buttons side="Menu">
+<button class="button button-icon button-clear ion-navicon" menu-toggle="left" ng-click="toggleMenu()">
+</button>
+</ion-nav-buttons>
+</ion-nav-bar>
+<ion-nav-view name="menuContent"></ion-nav-view>
+
+
+    <ion-tabs class="tabs-icon-top tabs-calm">
+
+          <ion-tab title="Dashboard" icon="ion-home" href="#/tab/PatientProfile">
+            <ion-nav-view name="PatientProfile-tab"></ion-nav-view>
+          </ion-tab>
+
+         <!--  <ion-tab title="About" icon="ion-ios-information" href="#/tab/about">
+            <ion-nav-view name="about-tab"></ion-nav-view>
+          </ion-tab> -->
+
+            <ion-tab title="Medical Reports" icon="ion-ios-analytics-outline" href="#/tab/HistoryChart">
+            <ion-nav-view name="HistoryChart-tab"></ion-nav-view>
+          </ion-tab> 
+ 
+           <ion-tab title="Allergies" icon="ion-ios-barcode-outline" href="#/tab/Allergies">
+            <ion-nav-view name="Allergies-tab"></ion-nav-view>
+          </ion-tab>
+
+          <ion-tab title="LabResults" icon="ion-ios-albums-outline" href="#/tab/LabResults">
+            <ion-nav-view name="LabResults-tab"></ion-nav-view>
+          </ion-tab>
+
+          <ion-tab title="Immunization" icon="ion-ios-list-outline" href="#/tab/Immunization">
+            <ion-nav-view name="Immunization-tab"></ion-nav-view>
+          </ion-tab>
+          
+          <!--  <ion-tab title="Visits" icon="ion-ios-information" href="#/tab/Visits">
+            <ion-nav-view name="Visits-tab"></ion-nav-view>
+          </ion-tab> -->
+          
+          <!-- <ion-tab title="Sign-Out" icon="ion-log-out" href="#/sign-in">
+          </ion-tab>
+ -->
+        </ion-tabs>
+</ion-side-menu-content>
+ 
+<ion-side-menu side="left">
+<ion-header-bar class="bar-calm">
+<h1 class="title">MENU</h1>
+</ion-header-bar>
+<ion-content>
+  <ion-list>
+    <ion-item menu-close  ui-sref="dashboard.homeScreen" class="item-icon-left"><i class="icon ion-home" style="color: #11c1f3"></i>Home</ion-item>
+    <ion-item menu-close ui-sref="tabs.PatientProfile" class="item-icon-left"><i class="icon ion-person" style="color: #11c1f3"></i>My Profile</ion-item>
+    <ion-item menu-close ui-sref="dashboard.doctorSearch" class="item-icon-left"><i class="icon ion-search" style="color: #11c1f3"></i> Search Doctors </ion-item>
+    <ion-item menu-close ng-click="goToBuyMedicine()" class="item-icon-left"><i class="icon ion-medkit" style="color: #11c1f3"></i>Buy Medicine</ion-item>
+  <!--  <ion-item menu-close ng-click="openNotif($event)" class="item-icon-left"><i class="icon ion-android-notifications" style="color: #11c1f3"></i>Notification</ion-item> -->
+    <ion-item menu-close ng-click="goToSettings()" class="item-icon-left"><i class="icon ion-settings" style="color: #11c1f3"></i>Settings</ion-item>
+    <ion-item menu-close menu-close ui-sref="loginPage" class="item-icon-left"><i class="icon ion-log-out" style="color: #11c1f3"></i>Logout</ion-item>
+
+  </ion-list>
+  </ion-side-menu>
+
+  </ion-side-menus>
+</ion-content>
