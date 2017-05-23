@@ -1,6 +1,6 @@
 angular.module('bookDoctor')
 
-.controller("signupController",function ($scope, $state,  $cordovaSQLite, $ionicHistory, $cordovaCamera) {
+.controller("signupController",function ($scope, $state,  $cordovaSQLite, $ionicHistory, $cordovaCamera, $ionicActionSheet) {
    $scope.imgURI="http://www.vitalimages.com/wp-content/uploads/young-joey.jpg";
  
   $scope.submit = function(username) {
@@ -12,30 +12,44 @@ angular.module('bookDoctor')
      $scope.goBack = function() {
      $state.go('loginPage');
     //$ionicHistory.goBack();
-  }
-  // Below comment code for open the camera when tap on image ... has to do
-                // $scope.takePhoto = function () {
-                //   var options = {
-                //     quality: 75,
-                //     destinationType: Camera.DestinationType.DATA_URL,
-                //     sourceType: Camera.PictureSourceType.CAMERA,
-                //     allowEdit: true,
-                //     encodingType: Camera.EncodingType.JPEG,
-                //     targetWidth: 300,
-                //     targetHeight: 300,
-                //     popoverOptions: CameraPopoverOptions,
-                //     saveToPhotoAlbum: false
-                // };
+      }
+               
+      $scope.getPhoto = function() {
+
+      // Show the action sheet
+      var showActionSheet = $ionicActionSheet.show({
+         buttons: [
+        { text: '<i class="icon ion-camera"></i> Take Photo' },
+        { text: '<i class="icon ion-image"></i> Open Gallery' },
+        ],
+      
+         titleText: 'Upload Photo',
+      
+         buttonClicked: function(index) {
+            if(index === 0) {
+                var options = {
+                    quality: 75,
+                    destinationType: Camera.DestinationType.DATA_URL,
+                    sourceType: Camera.PictureSourceType.CAMERA,
+                    allowEdit: true,
+                    encodingType: Camera.EncodingType.JPEG,
+                    targetWidth: 300,
+                    targetHeight: 300,
+                    popoverOptions: CameraPopoverOptions,
+                    saveToPhotoAlbum: false
+                };
    
-                //     $cordovaCamera.getPicture(options).then(function (imageData) {
-                //         $scope.imgURI = "data:image/jpeg;base64," + imageData;
-                //     }, function (err) {
-                //         // An error occured. Show a message to the user
-                //     });
-                // }
-                
-                $scope.getPhoto = function () {
-                  var options = {
+                    $cordovaCamera.getPicture(options).then(function (imageData) {
+                        $scope.imgURI = "data:image/jpeg;base64," + imageData;
+                    }, function (err) {
+                        // An error occured. Show a message to the user
+                    });
+                    return true;
+            }
+
+        
+            if(index === 1) {
+                var options = {
                     quality: 75,
                     destinationType: Camera.DestinationType.DATA_URL,
                     sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
@@ -52,7 +66,12 @@ angular.module('bookDoctor')
                     }, function (err) {
                         // An error occured. Show a message to the user
                     });
-                }  
+                    return true;
+            }
+         },
+      });
+   }
+                  
 
   $scope.goToSignUpConfirm = function(form,signUpDetails) {
 
