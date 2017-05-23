@@ -170,8 +170,8 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                 })*/
                 .state('settings', {
                 url: '/settings',
-                templateUrl: 'Modules/Templates/settings.html',
-                controller: 'settingsController'
+                templateUrl: 'Modules/Templates/Settings.html',
+                controller: 'SettingsController'
             })
         $urlRouterProvider.otherwise('/loginPage');
 })
