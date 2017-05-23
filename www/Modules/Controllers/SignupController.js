@@ -67,10 +67,10 @@ angular.module('bookDoctor')
 
 
         
-$cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS signUpPatientDetails (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, mail TEXT, password TEXT, patient_id INTEGER,code INTEGER, mobile TEXT,emergency_mobile TEXT,Age TEXT,DOB TEXT, BloodGroup TEXT, Address TEXT, Street TEXT, Locality TEXT,City TEXT,Gender TEXT)');
+$cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS signUpPatientDetails (id INTEGER PRIMARY KEY AUTOINCREMENT, imageUrl TEXT, name TEXT, mail TEXT, password TEXT, patient_id INTEGER,code INTEGER, mobile TEXT,emergency_mobile TEXT,Age TEXT,DOB TEXT, BloodGroup TEXT, Address TEXT, Street TEXT, Locality TEXT,City TEXT,Gender TEXT)');
 
 
-       $cordovaSQLite.execute(db, 'INSERT INTO signUpPatientDetails(name, mail, password, patient_id, code, mobile, emergency_mobile, Age, DOB, BloodGroup, Address, Street, Locality, City,Gender) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', [signUpDetails.fullname,signUpDetails.mail,signUpDetails.password,signUpDetails.PatientId,signUpDetails.code,signUpDetails.Primarymobileno,signUpDetails.secondarymobileno,signUpDetails.age,signUpDetails.dob,signUpDetails.bloodgroup,signUpDetails.address,signUpDetails.street,signUpDetails.locality,signUpDetails.city,signUpDetails.gender])
+       $cordovaSQLite.execute(db, 'INSERT INTO signUpPatientDetails(imageUrl,name, mail, password, patient_id, code, mobile, emergency_mobile, Age, DOB, BloodGroup, Address, Street, Locality, City,Gender) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', [$scope.imgURI,signUpDetails.fullname,signUpDetails.mail,signUpDetails.password,signUpDetails.PatientId,signUpDetails.code,signUpDetails.Primarymobileno,signUpDetails.secondarymobileno,signUpDetails.age,signUpDetails.dob,signUpDetails.bloodgroup,signUpDetails.address,signUpDetails.street,signUpDetails.locality,signUpDetails.city,signUpDetails.gender])
             .then(function(result) {
              //   $scope.statusMessage = "Message saved successful, cheers!";
                  alert("Signup done successfully");
