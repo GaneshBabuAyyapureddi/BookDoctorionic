@@ -32,6 +32,9 @@ $scope.goToDoctorProfile = function() {
 $scope.toggleMenu = function() {
   $ionicSideMenuDelegate.toggleLeft();
 }
+$scope.goToBuyMedicine = function() {
+  $state.go('dashboard.buyMedicine');
+}
 
 })
 
