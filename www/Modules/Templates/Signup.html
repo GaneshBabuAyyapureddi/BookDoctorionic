@@ -33,10 +33,22 @@
                   <div ng-message="required" >Patient's id is required.</div>
                </div>
 
-               <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.gender.$invalid  && dataForm.gender.$touched, 'no-errors' : dataForm.gender.$valid}">
+               <!-- <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.gender.$invalid  && dataForm.gender.$touched, 'no-errors' : dataForm.gender.$valid}">
                <span class="input-label">Gender</span>
                <input type="text" name="gender" placeholder="Gender" ng-model="data.gender" required>
-               </label>
+               </label> -->
+
+               <label class = "item item-input item-select">
+                  <div class = "input-label">
+                      Gender
+                  </div>
+   
+                   <select>
+                     <option selected>Male</option>
+                     <option >Female</option>
+                   </select>
+               </label>  
+
                <div class="error-container" ng-show="dataForm.gender.$invalid && dataForm.gender.$touched" ng-messages="dataForm.gender.$error">
                   <div ng-message="required" >Gender required.</div>
                </div>
@@ -66,23 +78,23 @@
                </div>
 
                <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.Primarymobileno.$invalid  && dataForm.Primarymobileno.$touched, 'no-errors' : dataForm.Primarymobileno.$valid}">
-               <span class="input-label">PrimaryMobile</span>
+               <span class="input-label">Mobile</span>
                <input type="text" name="Primarymobileno" placeholder="PrimaryMobile" ng-model="data.Primarymobileno" ng-minlength="10" ng-maxlength="10" required>
                </label>
            
                <div class="error-container">
-                  <div ng-show="dataForm.Primarymobileno.$error.required" >PrimaryMobile required.</div>
+                  <div ng-show="dataForm.Primarymobileno.$error.required" >Mobile required.</div>
                   <div ng-show="dataForm.Primarymobileno.$error.minlength" >Mobile Number length to be 10 digits.</div>
                   <div ng-show="dataForm.Primarymobileno.$error.maxlength">Mobile Number length to be 10 digits.</div>
                </div> 
 
                <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.secondarymobileno.$invalid  && dataForm.secondarymobileno.$touched, 'no-errors' : dataForm.secondarymobileno.$valid}">
-               <span class="input-label">SecondaryMobile</span>
+               <span class="input-label">Alternative Mobile</span>
                <input type="text" name="secondarymobileno" placeholder="SecondaryMobile" ng-model="data.secondarymobileno" ng-minlength="10"  ng-maxlength="10" required>
                </label>
             
                 <div class="error-container">
-                  <div ng-show="dataForm.secondarymobileno.$error.required" >SecondaryMobile required.</div>
+                  <div ng-show="dataForm.secondarymobileno.$error.required" >Mobile required.</div>
                   <div ng-show="dataForm.secondarymobileno.$error.minlength" >Mobile Number length to be 10 digits.</div>
                   <div ng-show="dataForm.secondarymobileno.$error.maxlength">Mobile Number length to be 10 digits.</div>
                </div> 
@@ -148,9 +160,22 @@
                </div>   
                <br>
                <div class="list">
+                   <label class="item item-input item-select">
                      <div class="input-label" >
                         Health Care Centre
                      </div>
+                     <select >
+                        <option>Memorial Sloan Kettering Cancer Center</option>
+                        <option>Barnes-Jewish Hospital</option>
+                        <option>Fortis Hospital</option>
+                        <option>Mayo Clinic</option>
+                        <option>UCLA Medical Center</option>
+                        <option selected>Johns Hopkins Hospital</option>
+                        <option>Alaska Native Medical Center</option>
+                        <option>Kanakanak Hospital</option>
+                        <option>South Peninsula Hospital</option>
+                     </select>
+                  </label>
                </div>
                <div class="col text-center">
                   <button class="button button-assertive" type="submit" style="width: 70%;" ng-click="goToSignUpConfirm(dataForm,data)"> Sign Up </button>
