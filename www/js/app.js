@@ -178,10 +178,14 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                     }
                    }
                 })*/
-                .state('settings', {
+                .state('dashboard.settings', {
                 url: '/settings',
-                templateUrl: 'Modules/Templates/Settings.html',
-                controller: 'SettingsController'
+                 views: {
+                  'menuContent': {
+                    templateUrl: 'Modules/Templates/Settings.html',
+                    controller: 'SettingsController'
+                }
+            }
             })
         $urlRouterProvider.otherwise('/loginPage');
 })
