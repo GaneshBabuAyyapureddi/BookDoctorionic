@@ -183,6 +183,11 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                 templateUrl: 'Modules/Templates/settings.html',
                 controller: 'settingsController'
             })
+            .state('rateUsScreen', {
+                url:'rateUsScreen',               
+                templateUrl: 'Modules/Templates/rateUs.html',
+                controller:'rateUsController'
+            }) 
         $urlRouterProvider.otherwise('/loginPage');
 })
 
