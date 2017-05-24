@@ -68,6 +68,16 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                 }                  
                
             }) 
+            .state('dashboard.buyMedicine', {
+                url:'/buyMedicine', 
+                views: {
+                  'menuContent': {
+                    templateUrl: 'Modules/Templates/BuyMedicine.html',
+                    //controller:'doctorSearchController'
+                  }
+                }                  
+               
+            }) 
 
             .state('loginPage', {
                 url: '/loginPage',
@@ -98,7 +108,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
             .state('tabs', {
                 url: '/tab',
                 abstract: true,
-                templateUrl: 'Modules/Templates/tabs.html'
+                templateUrl: 'Modules/Templates/tabMenu.html'
              //   controller:'tabsController'
            })
             .state('tabs.about', {
