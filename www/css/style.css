@@ -73,9 +73,9 @@
 .ionic_ratings .read_only {
   pointer-events:none !important;
 }
-.ionic_ratings .icon {
+/*.ionic_ratings .icon {
     font-size: 20px;
-  }
+  }*/
 /* Ratings Style - End */
 
 /* Doctor profile Controller - Start */
@@ -106,13 +106,23 @@
 }
 .scroll {
     height: 100%;
-}
- 
+} 
 #map {
     width: 100%;
     height: 120px;
 }
-
+.center_content> *
+{
+     display: flex;
+     align-items: center;
+}
+.commentsDesign {
+  height:auto;
+  width:100%;
+  color:#999;
+  min-height: 80px;
+  padding: 10px;
+}
 /* Doctor profile Controller - End */
 
 .my-disable{
