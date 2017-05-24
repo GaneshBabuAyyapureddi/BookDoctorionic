@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("labResultsController", function($scope, $state,$stateParams,$ionicModal,$ionicHistory){
+.controller("labResultsController", function($scope, $state,$stateParams,$ionicModal,$ionicHistory,$cordovaPrinter){
     $scope.profileObject = $stateParams.patientProfile;
     $scope.goBack = function() {
      // $state.go('patientProfile',{"patientProfile":$scope.profileObject});
@@ -28,11 +28,11 @@ angular.module('bookDoctor')
     }
 
     $scope.print = function(src) {
-     /*   if($cordovaPrinter.isAvailable()) {
+        if($cordovaPrinter.isAvailable()) {
             $cordovaPrinter.print(src);
         } else {
             alert("Printing is not available on device");
-        }*/
+        }
     }
 
     $scope.persons = [{"src":"img/LabResult1.jpg", "date":"04/04/2017","time":"10:33 AM"},
