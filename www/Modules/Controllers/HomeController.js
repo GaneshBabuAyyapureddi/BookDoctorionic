@@ -1,6 +1,6 @@
 
 var app = angular.module('bookDoctor')
-.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter) {
+.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter,$cordovaSQLite) {
 
 var showAppointmentDetails;
 /*Add appointment modal view*/
@@ -64,14 +64,74 @@ $scope.timeNow.setHours(hour,minutes,0,0);
 /* add custom event*/
 //var appointment = {title: 'Appointment',start: new Date(sely,selm,seld)}
 $scope.addAppointment = function(dateobj,timeObj,doctorName) {
+  var date = dateobj;
+  var time = timeObj;
+  var doctor = doctorName;
+  $scope.insertAppointment(date,time,doctor);
   $scope.events.push(
     {
       title: 'You have an Appointment with ' + doctorName,
-      start: new Date(y, m, dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0),
-      end: new Date(y, m, dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0)
+      start: new Date(dateobj.getFullYear(), dateobj.getMonth(), dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0),
+      end: new Date(dateobj.getFullYear(), dateobj.getMonth(), dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0)
   });
 };
 
+/* Insert appointment into DB*/
+ $scope.insertAppointment =  function(dateobj,timeObj,doctorName){
+    $scope.alertStatus = 'Insert Prescription done';
+     var db;
+      try {
+        db = $cordovaSQLite.openDB('myapp.db',1);
+      } catch (error) {
+        alert(error);
+      }
+        
+    $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS Appointments (patient_id TEXT, appointment_title TEXT, doctorName TEXT,speciality TEXT, startYear TEXT, startMonth TEXT, startDay TEXT, startHour TEXT, startMin TEXT)');
+    var month = dateobj.getMonth();
+    var day = dateobj.getDate();
+    var year = dateobj.getFullYear();
+    var hour = timeObj.getHours();
+    var min = timeObj.getMinutes();
+
+    $cordovaSQLite.execute(db, 'INSERT INTO Appointments(patient_id, appointment_title, doctorName, speciality, startYear, startMonth, startDay, startHour, startMin ) VALUES (?,?,?,?,?,?,?,?,?)',
+      ["100","You Have Appointnment with",doctorName,"ent",year,month,day,hour,min])
+              .then(function(result) {
+                  $scope.fetchAppointments();
+              }, function(error) {
+                   $scope.alertStatus = "Error on saving: " + error.message;
+              })
+
+    alert($scope.alertStatus);
+    $scope.alertStatus = "Insert Appointment done";
+  }
+
+/* Read all appointment from DB*/
+    $scope.fetchAppointments = function() {
+    var db;
+
+        try {
+            db = $cordovaSQLite.openDB({name:"myapp.db",location:'default'});   
+        } catch (error) {
+            alert(error);
+        }
+        
+        // Execute SELECT statement to load message from database.
+        $cordovaSQLite.execute(db, 'SELECT * FROM Appointments')
+                  .then(
+                function(res) {
+                  var arr = [];
+                    if (res.rows.length > 0) {
+                        for (var i =0; i < res.rows.length; i++) {
+                          arr.push(res.rows.item(i));
+                        }
+                        console.log(arr);                        
+                    }
+                },
+                function(error) {
+                    // window.alert(error.message);
+                }
+            );
+  }
 
 
 /* Add appointment modal view */
