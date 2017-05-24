@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="false">
  <!-- Modal for entering medicines -->
   <script id="create-patientReportModal.html" type="text/ng-template">
     <ion-modal-view>
@@ -8,7 +8,7 @@
         <button class = "button icon icon-right ion-ios-close-outline"
             ng-click = "closeModal()"></button>
       </ion-header-bar>
-      <ion-content>
+      <ion-content >
       
         <div class="col"><input type="text" placeholder="Heart Rate       ie 193/min" id="medicalHistoryInputTagStyle" ng-model="heartRate"></div>
         <div class="col"><input type="text" placeholder="BP       ie 120/80" id="medicalHistoryInputTagStyle" ng-model="bp"></div>
@@ -25,32 +25,33 @@
   </script>
 
     <ion-header-bar class="bar bar-header bar-calm">
-      <button class="button button-icon icon ion-android-arrow-back" style="color: #E4E4E4" ng-click="goBack()"></button>
+     <!--  <button class="button button-icon icon ion-android-arrow-back" style="color: #E4E4E4" ng-click="goBack()"></button> -->
       <div style="color: #FFFFFF;text-align: center;" class="title">Medical History</div>
     </ion-header-bar>
-    <ion-content>
-    <div style="background-color: #515561;" class="row">
+    <ion-content ng-init="readData()">
+    <div style="background-color: #515561;" class="row" ng-repeat="profileObject in patientDetails">
       <div class = "col1" style="width:175px;margin-left:75px; color: #FFFFFF;">
         <div padding="false" class="item-avatar" >
-        <img style="margin-left:75px; width:100% ; height:100%; max-width: 60px; max-height: 60px ;" ng-src={{profileObject.profilePic}}>
+        <img style="margin-left:75px; width:50px ; height:50px; max-width: 60px; max-height: 60px ;" ng-src={{profileObject.imageUrl}}>
         </div>
         <div>
-        <div style="text-transform: uppercase;">{{profileObject.patientName}}</div>
-        <div>{{profileObject.gender}} {{profileObject.age}} years</div>
-        <div>DOB: {{profileObject.dateOfBirth}}</div>
+        <div style="text-transform: uppercase;">{{profileObject.name}}</div>
+        <div>{{profileObject.Gender}} {{profileObject.Age}} years</div>
+        <div>DOB: {{profileObject.DOB}}</div>
         </div>
       </div>
       <div class = "col2" style="width:220px;margin-top:35px;color: #FFFFFF;">
-        <div padding="false">MMH ID : {{profileObject.patientID}}</div>
-        <div>BG: {{profileObject.bloodGroup}}</div>
-        <div style="margin-left:-30px;"><img width="20px" height="20px" align="left" style="margin-right: 5px;" ng-src="img/Location.png"/></div><div>{{profileObject.address}}</div>
-        <div>Downtown,</div>
-        <div>NewJersey</div>
+        <div padding="false">Patient ID : {{profileObject.patient_id}}</div>
+        <div>BG: {{profileObject.BloodGroup}}</div>
+        <div style="margin-left:-30px;"><img width="20px" height="20px" align="left" style="margin-right: 5px;" ng-src="img/Location.png"/></div><div>{{profileObject.Address}}</div>
+        <div>{{profileObject.Street}}</div>
+         <div>{{profileObject.Locality}}</div>
+        <div>{{profileObject.City}}</div>
       </div>
       <div class = "col3" style="width:120px;margin-top:35px;color: #FFFFFF;">
         <div>
           <img width="20px" height="20px" align="left" style="margin-right: 5px;" ng-src="img/Phone.png"/>
-          {{profileObject.mobileNumber}}
+          {{profileObject.mobile}}
         </div>
         <br>
         <div>

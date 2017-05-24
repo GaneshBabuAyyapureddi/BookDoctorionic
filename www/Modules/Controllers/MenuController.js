@@ -34,6 +34,7 @@ $scope.toggleMenu = function() {
 }
 $scope.goToBuyMedicine = function() {
   $state.go('dashboard.buyMedicine');
+  alert('Work in Progress');
 }
 
 })
