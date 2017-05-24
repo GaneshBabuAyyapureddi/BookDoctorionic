@@ -1,6 +1,6 @@
 angular.module('bookDoctor')
 
-.controller("PatientProfileController", function($scope, $state, $ionicModal,$cordovaSQLite, $stateParams,$ionicHistory,$rootScope){
+.controller("PatientProfileController", function($scope, $state, $ionicModal,$cordovaSQLite, $stateParams,$ionicHistory,$rootScope, $ionicSideMenuDelegate){
      $scope.goBack = function() {
 	 $state.go('dashboard.homeScreen');
     }
@@ -59,5 +59,6 @@ $scope.readData = function(){
             );
     
 }
+
 
 })
