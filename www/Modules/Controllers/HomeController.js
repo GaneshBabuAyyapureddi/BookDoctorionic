@@ -6,12 +6,12 @@ var showAppointmentDetails;
 /*Add appointment modal view*/
 var specialityArray = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",
 "Neurologist","General Physician"];
-var doctorsArray = [["Dr.Mohan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr. Ramarajan"],
-["Dr. Ramarajan","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
-["Dr.Seshasayee","Dr. Ramarajan","Dr.Balaji","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
-["Dr.Balaji","Dr.Seshasayee","Dr. Ramarajan","Dr.Srinivasan","Dr.Avinash","Dr.Mohan"],
-["Dr.Srinivasan","Dr.Seshasayee","Dr.Balaji","Dr. Ramarajan","Dr.Avinash","Dr.Mohan"],
-["Dr.Avinash","Dr.Seshasayee","Dr.Balaji","Dr.Srinivasan","Dr. Ramarajan","Dr.Mohan"]];
+var doctorsArray = [["Dr.George","Dr.Donald","Dr.Gilbert","Dr.Henry Aldrich","Dr.Edwin Arnold","Dr. Jane Austen"],
+["Dr. Jane Austen","Dr.Edwin Arnold","Dr.Gilbert","Dr.Donald","Dr.Henry Aldrich","Dr.George"],
+["Dr.Edwin Arnold","Dr. Jane Austen","Dr.Thomas Amory","Dr.Henry Aldrich","Dr.Jane Austen","Dr.George"],
+["Dr.Jane Austen","Dr.Gilbert","Dr. Henry Aldrich","Dr.Donald","Dr.George","Dr.Edwin Arnold"],
+["Dr.Edwin Arnold","Dr.Gilbert","Dr.Henry Aldrich","Dr. John Austin","Dr.Jane Austen","Dr.Thomas Amory"],
+["Dr.Jane Austen","Dr.Edwin Arnold","Dr.Donald","Dr.Gilbert","Dr. John Austin","Dr.Henry Aldrich"]];
 
     $scope.options1 = specialityArray;
     $scope.options2 = []; // we'll get these later
@@ -186,12 +186,12 @@ $scope.eventSource = {
 };
 /* event source that contains custom events on the scope */
 $scope.events = [
-  {title: 'All Day Event',start: new Date(y, m, 1)},
-  {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-  {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
-  {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
-  {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
-  {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
+  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2), backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29), backgroundColor:'#f47a42',borderColor:'#f47a42'}
 ];
 /* event source that calls a function on every view switch */
 $scope.eventsF = function (start, end, timezone, callback) {

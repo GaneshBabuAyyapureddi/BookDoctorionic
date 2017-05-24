@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory) {
+.controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup) {
     
   //$scope.$on('$ionicView.beforeEnter', function(){
     $scope.profileObject = $stateParams.doctorProfile;
@@ -46,6 +46,10 @@ angular.module('bookDoctor')
   
   $scope.goBack = function() {
     $ionicHistory.goBack();
+  }
+
+  $scope.rateMe = function() {
+    $state.go('rateUsScreen');
   }
   
    angular.element(document).ready(function () {
@@ -136,16 +140,43 @@ angular.module('bookDoctor')
   }
   ];
 
-  $scope.edit = function(appointmentDate){
+  $scope.editValue = function(appointmentDate){
     var date = new Date();
     var FromDate = date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
     if (appointmentDate == FromDate) {
-      alert("Your appointment approved today so, could not edit");
+      alert("Your appointment date is today so, could not edit");
     }else{
       alert("Edit success");
-    }
-    
+    }    
   }
+
+  $scope.deleteValue = function(appointmentDate){
+    var date = new Date();
+    var FromDate = date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
+    if (appointmentDate == FromDate) {
+      alert("Your appointment date is today so, could not delete");
+    }else{
+      // alert("Edit success");
+      $scope.showConfirm();
+    }    
+  }
+
+  $scope.showConfirm = function() {
+  
+      var confirmPopup = $ionicPopup.confirm({
+         title: 'Confirmation',
+         template: 'Are you sure to delete?'
+      });
+
+      confirmPopup.then(function(res) {
+         if(res) {
+            console.log('Sure!');
+         } else {
+            console.log('Not sure!');
+         }
+      });
+    
+   };
    
 })
 
