@@ -186,12 +186,12 @@ $scope.eventSource = {
 };
 /* event source that contains custom events on the scope */
 $scope.events = [
-  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false},
-  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false},
-  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false},
-  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
-  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29)}
+  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2), backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
+  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29), backgroundColor:'#f47a42',borderColor:'#f47a42'}
 ];
 /* event source that calls a function on every view switch */
 $scope.eventsF = function (start, end, timezone, callback) {
