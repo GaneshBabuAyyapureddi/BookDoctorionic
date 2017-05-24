@@ -173,6 +173,11 @@
 label#rounded{
 border-radius:15px; 
 }
+#centerAlign_LR {
+  width:70%;
+  margin-left:auto;
+  margin-right:auto;
+}
 /*Buy Medicine Screen end*/
 
 .center_img {
