@@ -67,13 +67,14 @@ $scope.addAppointment = function(dateobj,timeObj,doctorName) {
   var date = dateobj;
   var time = timeObj;
   var doctor = doctorName;
-  $scope.insertAppointment(date,time,doctor);
+ 
   $scope.events.push(
     {
       title: 'You have an Appointment with ' + doctorName,
       start: new Date(dateobj.getFullYear(), dateobj.getMonth(), dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0),
       end: new Date(dateobj.getFullYear(), dateobj.getMonth(), dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0)
   });
+   $scope.insertAppointment(date,time,doctor);
 };
 
 /* Insert appointment into DB*/
@@ -96,7 +97,7 @@ $scope.addAppointment = function(dateobj,timeObj,doctorName) {
     $cordovaSQLite.execute(db, 'INSERT INTO Appointments(patient_id, appointment_title, doctorName, speciality, startYear, startMonth, startDay, startHour, startMin ) VALUES (?,?,?,?,?,?,?,?,?)',
       ["100","You Have Appointnment with",doctorName,"ent",year,month,day,hour,min])
               .then(function(result) {
-                  $scope.fetchAppointments();
+                  //$scope.fetchAppointments();
               }, function(error) {
                    $scope.alertStatus = "Error on saving: " + error.message;
               })
@@ -246,12 +247,12 @@ $scope.eventSource = {
 };
 /* event source that contains custom events on the scope */
 $scope.events = [
-  {title: 'All Day Event',start: new Date(y, m, 1)},
-  {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-  {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
-  {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
-  {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
-  {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
+  {title: 'You have an appointmentment with Dr.Edwin Arnold',start: new Date(y, m, 1,10,0,0),allDay: false},
+  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
+  {title: 'You have an appointmentment with Dr. John Austin',start: new Date(y, m, d - 3, 16, 0),allDay: false},
+  {title: 'You have an appointmentment with Dr.Henry Aldrich',start: new Date(y, m, d + 4, 16, 0),allDay: false},
+  {title: 'You have an appointmentment with Dr. John Austin',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
+  {title: 'You have an appointmentment with Dr.Thomas Amory',start: new Date(y, m, 28),end: new Date(y, m, 29)}
 ];
 /* event source that calls a function on every view switch */
 $scope.eventsF = function (start, end, timezone, callback) {
