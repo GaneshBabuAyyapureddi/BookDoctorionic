@@ -1,7 +1,7 @@
 angular.module('bookDoctor')
 
 .controller("signupController",function ($scope, $state,  $cordovaSQLite, $ionicHistory, $cordovaCamera, $ionicActionSheet) {
-   $scope.imgURI="http://www.vitalimages.com/wp-content/uploads/young-joey.jpg";
+   $scope.imgURI="img/plus-button1.png";
  
   $scope.submit = function(username) {
  
