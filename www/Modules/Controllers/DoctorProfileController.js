@@ -106,35 +106,35 @@ angular.module('bookDoctor')
   {
     "appointmentDate":"2017-05-22",
     "image":"img/tick_green.png", 
-    "message":"Your appointment has been approved",
+    "message":"Appointment Scheduled and approved on 2017-05-22",
     "modifyValue":true,
     "rateValue":false
   },
   {
     "appointmentDate":"2017-05-21",
     "image":"img/close_red.png", 
-    "message":"Your appointment has been cancelled",
+    "message":"Your appointment scheduled on 2017-05-21 has been cancelled by this Doctor",
     "modifyValue":false,
     "rateValue":true
   },
   {
     "appointmentDate":"2017-05-20",
     "image":"img/waiting.png", 
-    "message":"Your appointment is in progress",
+    "message":"Appointment scheduled on 2017-05-20",
     "modifyValue":true,
     "rateValue":false
   },
   {
     "appointmentDate":"2017-05-23",
     "image":"img/close_red.png", 
-    "message":"Your appointment has been cancelled",
+    "message":"Your appointment scheduled on 2017-05-23 has been cancelled by this Doctor",
     "modifyValue":false,
     "rateValue":true
   },
   {
     "appointmentDate":"2017-05-24",
     "image":"img/tick_green.png", 
-    "message":"Your appointment has been approved",
+    "message":"Appointment Scheduled and approved on 2017-05-22",
     "modifyValue":true,
     "rateValue":false
   }
