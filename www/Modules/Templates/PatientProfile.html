@@ -1,93 +1,105 @@
-<ion-view hide-nav-bar="false" class="bar-balanced" >
-   <!-- <ion-header-bar>
-      <div style="color: #FFFFFF;text-align: center;" class="title">Patient Profile</div>
-      </ion-header-bar> -->
-   <ion-nav-bar class="navi-bar" >
+<ion-view hide-nav-bar="false">
+    <ion-nav-bar class="navi-bar" >
       <ion-nav-buttons side="left">  
-         <button class="button  button-icon light icon icon-left ion-navicon" menu-toggle="left" ng-click="toggleMenu()"></button>  
+         <button class="button  button-icon light icon icon-left ion-navicon" menu-toggle="left" ></button>  
       </ion-nav-buttons>
    </ion-nav-bar >
    <ion-header-bar class="bar bar-header bar-calm">
-      <!--  <button class="button button-icon icon ion-android-arrow-back" style="color: #E4E4E4" ng-click="goBack()"></button> -->
-      <div style="color: #FFFFFF;text-align: center;" class="title">Patient Profile</div>
+    <!--  <button class="button button-icon icon ion-android-arrow-back" style="color: #E4E4E4" ng-click="goBack()"></button> -->
+        <div style="color: #FFFFFF;text-align: center;" class="title">Dashboard</div>
    </ion-header-bar>
-   <ion-content ng-init="readData()">
-      <!--<ion-tabs class="tabs-positive tabs-icon-top">
-         <ion-tab title="General" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">Tab 1 content</ion-tab>
-         <ion-tab title="Prescription" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">Tab 2 content</ion-tab>
-         <ion-tab title="Allergies" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">Tab 3 content</ion-tab>
-         <ion-tab title="Visits" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">Tab 3 content</ion-tab>
-         </ion-tabs>-->
-      <div  class="card" style="margin-top:30px;margin-left:100px; width:750px;">
-         <div  class="row">
-            <div class = "col1" style="margin-left:75px; ">
-            <div ng-repeat="person in patientDetails" >
-               <div padding="false" class="item-thumbnail" >
-                  <img style="margin-left:75px; margin-top:30px; width:200px ; height:200px; " src="{{person.imageUrl}}">
-               </div>
-               </div>
+          <ion-content ng-init="readData()">
+          <div ng-repeat="profileObject in patientDetails">
+            <div style="position: relative; left: 0; top: 0;"> 
+              <img src="img/patientimg.jpg" class="profile_back" style="width:100%; height:250px;"/> 
+              <img src="{{profileObject.imageUrl}}" class="round_corner animated zoomIn" style="width:110px; height:110px;margin-left:36%;"/>
             </div>
-            <div class = "col2" style="margin-left:75px; margin-top:30px;">
-               <div  class="item item-divider">
-                  <h4>General Details</h4>
+            <div class="row" style="margin-top:50px;">
+              <div class="col">
+                  <h3 style="color:#757575;text-align: center;">{{profileObject.name}}</h3>
+                 <!--  <div>
+                    <button class="button button-icon" style="text-align: center; color:#1B5E20; margin-top:-10px;">
+                      <i class="icon ion-ios-telephone"></i> 
+                      <span style="margin-left:10px; text-decoration: underline;">{{profileObject.mobile}}</span>
+                    </button>
+                  </div>
+                  <div>
+                    <button class="button button-icon" style="text-align: center; color:#01579B; margin-top:-10px;">
+                      <i class="icon ion-android-mail"></i>
+                      <span style="margin-left:10px; text-decoration: underline;"> {{profileObject.mail}}</span>
+                    </button>
+                  </div>
+                  <div class="my-disable col-33" style="margin-left:-5px;">
+                    <ionic-ratings ratingsobj='ratingsObject' index='0' style="font-size: 20px;"></ionic-ratings>
+                  </div> -->
+              </div>            
+            </div>       
+
+            <div class="card" id="centerAlign_patient_dashboard">
+<!--               <h4 style="margin-left:15px;">General Details</h4> -->
+               <div  class="item item-divider" style="text-align: center;">
+                  <h3>General Details</h3>
                </div>
-               <div ng-repeat="person in patientDetails" >
-                  <div class="row" id="patient-profile-row-margin">
+               <div class="row" id="patient-profile-row-margin">
                      <div >Patient Name:</div>
-                     <div id="patient-profile-row-value-margin">{{person.name}}</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.name}}</div>
                   </div>
                   <div class="row" id="patient-profile-row-margin">
                      <div >Patient ID:</div>
-                     <div id="patient-profile-row-value-margin">{{person.patient_id}}</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.patient_id}}</div>
                   </div>
                   <div class="row" id="patient-profile-row-margin">
                      <div >Gender:</div>
-                     <div id="patient-profile-row-value-margin">{{person.Gender}}</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.Gender}}</div>
                   </div>
                   <div class="row" id="patient-profile-row-margin">
-                     <div >Date Of Birth:</div>
-                     <div id="patient-profile-row-value-margin">{{person.DOB}}</div>
+                     <div >DOB:</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.DOB}}</div>
                   </div>
                   <div class="row" id="patient-profile-row-margin">
                      <div >Age:</div>
-                     <div id="patient-profile-row-value-margin">{{person.Age}}</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.Age}}</div>
                   </div>
                   <div class="row" id="patient-profile-row-margin">
                      <div >Blood Group:</div>
-                     <div id="patient-profile-row-value-margin">{{person.BloodGroup}}</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.BloodGroup}}</div>
                   </div>
+            </div>
+            
+            <div class="card" id="centerAlign_patient_dashboard">
+<!--               <h4 style="margin-left:15px;">Contact Details</h4 -->
+              <div  class="item item-divider" style="text-align: center;">
+                  <h3>Contact Details</h3>
                </div>
-               <div  class="item item-divider">
-                  <h4>Contact Details</h4>
-               </div>
-               <div ng-repeat="contactInfo in patientDetails" >
-                  <div class="row" id="patient-profile-row-margin">
-                     <div >Primary Mobile Number:</div>
-                     <div id="patient-profile-row-value-margin">{{contactInfo.mobile}}</div>
+              <div class="row" id="patient-profile-row-margin">
+                     <i class="icon ion-ios-telephone" style="color:#1B5E20; margin-right:10px;"></i> 
+                     <div >Mobile Number:</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.mobile}}</div>
                   </div>
-                  <div class="row" id="patient-profile-row-margin">
+              <!--     <div class="row" id="patient-profile-row-margin">
                      <div >Emergency Mobile Number:</div>
-                     <div id="patient-profile-row-value-margin">{{contactInfo.emergency_mobile}}</div>
-                  </div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.emergency_mobile}}</div>
+                  </div> -->
                   <div class="row" id="patient-profile-row-margin">
+                   <i class="icon ion-android-mail" style=" color:#1B5E20; margin-right:10px;"></i>
                      <div >Email ID:</div>
-                     <div id="patient-profile-row-value-margin">{{contactInfo.mail}}</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.mail}}</div>
                   </div>
                   <div class="row" id="patient-profile-row-margin">
+                  <i class="icon ion-android-globe" style=" color:#1B5E20; margin-right:10px;"></i> 
                      <div >Address:</div>
-                     <div id="patient-profile-row-value-margin">{{contactInfo.Address}}</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.Address}}</div>
                   </div>
-                  <div class="row" id="patient-profile-row-margin">
+                 <!--  <div class="row" id="patient-profile-row-margin">
                      <div >Street:</div>
-                     <div id="patient-profile-row-value-margin">{{contactInfo.Street}}</div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.Street}}</div>
                   </div>
                   <div class="row" id="patient-profile-row-margin">
                      <div >City:</div>
-                     <div id="patient-profile-row-value-margin">{{contactInfo.City}}</div>
-                  </div>
-               </div>
+                     <div id="patient-profile-row-value-margin">{{profileObject.City}}</div>
+                  </div> -->
             </div>
-         </div>
-      </div>
-   </ion-content>
-</ion-view>
+
+            </div>
+          </ion-content>
+</ion-view>   

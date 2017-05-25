@@ -131,6 +131,7 @@
 #patient-profile-row-margin{
     margin-top:5px;
     margin-bottom:5px;
+    margin-left:15px;
 }
 
 #patient-profile-row-value-margin{
@@ -185,6 +186,11 @@ border-radius:15px;
 }
 #centerAlign_LR {
   width:70%;
+  margin-left:auto;
+  margin-right:auto;
+}
+#centerAlign_patient_dashboard {
+  width:50%;
   margin-left:auto;
   margin-right:auto;
 }
