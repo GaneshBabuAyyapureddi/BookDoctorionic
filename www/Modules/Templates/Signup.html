@@ -20,10 +20,21 @@
             
 
                <div class="error-container">
-                  <div ng-show="dataForm.fullname.$error.required" >Patient's Name is required.</div>
+                  <div ng-show="dataForm.fullname.$touched && dataForm.fullname.$error.required" >Patient's Name is required.</div>
                   <div ng-show="dataForm.fullname.$error.minlength" >User Name is too short.</div>
                   <div ng-show="dataForm.fullname.$error.maxlength">User Name is too long.</div>
                </div> 
+
+              <!--  <div class="error-container">
+                  <div ng-show="dataForm.fullname.$touched && dataForm.fullname.$error.required" >Patient's Name is required.</div>
+                  <div ng-show="dataForm.fullname.$error.minlength" >User Name is too short.</div>
+                  <div ng-show="dataForm.fullname.$error.maxlength">User Name is too long.</div>
+               </div>  -->
+             <!--   <div class="error-container" ng-show="dataForm.PatientId.$touched" ng-messages="dataForm.fullname.$error.maxlength && dataForm.fullname.$error.required && dataForm.fullname.$error.minlength" ">
+                  <div ng-message="required" >Name is required.</div>
+                  <div ng-message="minlength" >User Name is too short.</div>
+                  <div ng-message="maxlength">User Name is too long.</div>
+               </div> -->
 
                 <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.PatientId.$invalid  && dataForm.PatientId.$touched, 'no-errors' : dataForm.PatientId.$valid}">
                <span class="input-label">PatientID</span>
@@ -38,8 +49,8 @@
                <input type="text" name="gender" placeholder="Gender" ng-model="data.gender" required>
                </label> -->
 
-               <label class = "item item-input item-select">
-                  <div class = "input-label">
+               <label class = "item item-input item-select " >
+                  <div class = "input-label" >
                       Gender
                   </div>
    
@@ -79,16 +90,23 @@
 
                <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.Primarymobileno.$invalid  && dataForm.Primarymobileno.$touched, 'no-errors' : dataForm.Primarymobileno.$valid}">
                <span class="input-label">Mobile</span>
-               <input type="text" name="Primarymobileno" placeholder="PrimaryMobile" ng-model="data.Primarymobileno" ng-minlength="10" ng-maxlength="10" required>
+               <input type="text" name="Primarymobileno" placeholder="Mobile" ng-model="data.Primarymobileno" ng-minlength="10" ng-maxlength="10" required>
                </label>
            
-               <div class="error-container">
+               <!-- <div class="error-container">
                   <div ng-show="dataForm.Primarymobileno.$error.required" >Mobile required.</div>
                   <div ng-show="dataForm.Primarymobileno.$error.minlength" >Mobile Number length to be 10 digits.</div>
                   <div ng-show="dataForm.Primarymobileno.$error.maxlength">Mobile Number length to be 10 digits.</div>
+               </div>  -->
+
+                <div class="error-container">
+                  <div ng-show="dataForm.Primarymobileno.$touched && dataForm.Primarymobileno.$error.required" >Mobile required.</div>
+                  <div ng-show="dataForm.Primarymobileno.$error.minlength" >Mobile Number length to be 10 digits.</div>
+                  <div ng-show="dataForm.Primarymobileno.$error.maxlength">Mobile Number length to be 10 digits.
+                  </div>
                </div> 
 
-               <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.secondarymobileno.$invalid  && dataForm.secondarymobileno.$touched, 'no-errors' : dataForm.secondarymobileno.$valid}">
+               <!-- <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.secondarymobileno.$invalid  && dataForm.secondarymobileno.$touched, 'no-errors' : dataForm.secondarymobileno.$valid}">
                <span class="input-label">Alternative Mobile</span>
                <input type="text" name="secondarymobileno" placeholder="SecondaryMobile" ng-model="data.secondarymobileno" ng-minlength="10"  ng-maxlength="10" required>
                </label>
@@ -97,7 +115,7 @@
                   <div ng-show="dataForm.secondarymobileno.$error.required" >Mobile required.</div>
                   <div ng-show="dataForm.secondarymobileno.$error.minlength" >Mobile Number length to be 10 digits.</div>
                   <div ng-show="dataForm.secondarymobileno.$error.maxlength">Mobile Number length to be 10 digits.</div>
-               </div> 
+               </div>  -->
 
 
 
@@ -106,10 +124,14 @@
                <input type="email" name="mail" placeholder="Mail" ng-model="data.mail" required>
                </label>
               
-               <div class="error-container">
+               <!-- <div class="error-container">
                   <div ng-show="dataForm.mail.$error.required" >Mail ID is requirede required.</div>
                   <div ng-show="dataForm.mail.$error.$invalid" >Your email address is invalid.</div>
-               </div>
+               </div> -->
+                <div class="error-container">
+                  <div ng-show="dataForm.mail.$touched && dataForm.mail.$error.required" >Mail ID is requirede required.</div>
+                  <div ng-show="dataForm.mail.$error.$invalid" >Your email address is invalid.</div>
+               </div> 
 
                <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.address.$invalid  && dataForm.address.$touched, 'no-errors' : dataForm.address.$valid}">
                <span class="input-label">Address</span>
@@ -119,7 +141,7 @@
                   <div ng-message="required" >Address is required.</div>              
                   </div>
 
-               <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.street.$invalid  && dataForm.street.$touched, 'no-errors' : dataForm.street.$valid}">
+              <!--  <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.street.$invalid  && dataForm.street.$touched, 'no-errors' : dataForm.street.$valid}">
                <span class="input-label">Street</span>
                <input type="text" name="street" placeholder="Street" ng-model="data.street" required>
                </label>
@@ -141,7 +163,7 @@
                </label>
                <div class="error-container" ng-show="dataForm.city.$invalid && dataForm.city.$touched" ng-messages="dataForm.city.$error">
                   <div ng-message="required" >City required.</div>
-               </div>
+               </div> -->
                
                <label class="item item-input item-floating-label animated fadeInLeft" ng-class="{ 'has-errors' : dataForm.code.$invalid && dataForm.code.$touched, 'no-errors' : dataForm.code.$valid}">
                <span class="input-label">Authorization Code</span>
