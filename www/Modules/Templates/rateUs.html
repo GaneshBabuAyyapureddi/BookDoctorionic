@@ -1,0 +1,26 @@
+<ion-view hide-nav-bar="true" cache-view="false">
+   <ion-header-bar class="bar bar-header bar-calm">
+     <button class="button button-icon icon ion-android-arrow-back" style="color: #E4E4E4" ng-click="goBack()"></button>
+        <div style="color: #FFFFFF;text-align: center;" class="title">RATE US</div>
+   </ion-header-bar>
+   <ion-view >
+   		<ion-content style="background-color:#f2f2f2;" class="center_content">
+	        <div class="card" style="margin:0px 20% 0px 20%">
+	          <h4 class="text-center" style="color:#999;  margin: 30px auto 0px auto;">Your appointment dated on 2017-05-23 has been completed successfully. </h4>
+	          <div class="card" style="width:70%; margin: 20px auto 20px auto; ">
+	            <textarea class="commentsDesign" placeholder="Your comments" ng-model="commentsValue"></textarea>
+	          </div>
+	          <div style="margin:30px 7% 0px 7%;">
+	            <hr style="border-top: 1px dashed #8c8b8b;">
+	          </div>
+	          <div class="row">
+	            <ionic-ratings ratingsobj='ratingsObject' index="0" class="col-70 animated rubberBand" style="margin:15px 0px 0px 35%; font-size: 40px;"></ionic-ratings>
+	            <div class="col">
+	              <img src="{{starImage}}" style="width:60px; height:60px; margin:10px 0px 0px 30px;" ng-show="starImageShowHide"></img>
+	            </div>
+	          </div>
+	          <button class="button button-calm" ng-click="closeModal()" style="width: 50%; margin:20px 0px 0px 25%;"> Submit </button>
+	          <h6 class="text-center" style="color:#b7b7b7; padding:20px;">Please take a few minutes to give us feedback about our service by filling in this short Customer Feedback Form. We are conducting this research in order to measure your level of satisfaction with the quality of our service.</h6>
+	        </div>
+       </ion-content>
+   </ion-view >

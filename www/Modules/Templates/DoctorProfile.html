@@ -28,7 +28,7 @@
                     </button>
                   </div>
                   <div class="my-disable col-33" style="margin-left:-5px;">
-                    <ionic-ratings ratingsobj='ratingsObject' index='0'></ionic-ratings>
+                    <ionic-ratings ratingsobj='ratingsObject' index='0' style="font-size: 20px;"></ionic-ratings>
                   </div>
               </div>  
               <div id="map" class="col-33" style="margin-top:10px; margin-right:10%;" data-tap-disabled="true"></div> 
@@ -80,7 +80,7 @@
                     <h6 style="color:#9E9E9E;" >Reviewed by {{patientInfo.patientName}} ,Date and Time</h6>
                   </div>
                   <div class="col-33" style="margin-top:10px;">
-                    <ionic-ratings ratingsobj='patientInfo.rating' index='0'></ionic-ratings>
+                    <ionic-ratings ratingsobj='patientInfo.rating' index='0' style="font-size: 20px;"></ionic-ratings>
                   </div> 
                 </div>
              </div>
@@ -100,12 +100,12 @@
                     <h2>{{appointments.message}}</h2>              
                     <div class="item-icon-right" style="margin-top:10px" ng-show="appointments.modifyValue"> 
                       <div class="icon">
-                        <span class="ion-edit" style="font-size:20px; padding:10px;" ng-click="edit(appointments.appointmentDate)"> </span>
+                        <span class="ion-edit" style="font-size:20px; padding:10px;" ng-click="editValue(appointments.appointmentDate)"> </span>
                          &nbsp;&nbsp;
-                        <span class="ion-android-delete" style="font-size:20px; padding:10px;"></span>
+                        <span class="ion-android-delete" style="font-size:20px; padding:10px;" ng-click="deleteValue(appointments.appointmentDate)"></span>
                       </div>
                     </div>
-                    <div style="float:right;" ng-show="appointments.rateValue">
+                    <div style="float:right;" ng-show="appointments.rateValue" ng-click="rateMe()">
                       <span>Rate It</span>
                       <i class="ion-android-star"></i>
                       <i class="ion-android-star"></i>

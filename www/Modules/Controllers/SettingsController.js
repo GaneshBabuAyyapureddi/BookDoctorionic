@@ -1,6 +1,6 @@
 angular.module('bookDoctor')
 
-.controller("settingsController",function ($scope,$cordovaSQLite,$cordovaToast, $state,$rootScope,$ionicModal,$ionicHistory,$ionicPopup) {
+.controller("SettingsController",function ($scope,$cordovaSQLite,$cordovaToast, $state,$rootScope,$ionicModal,$ionicHistory,$ionicPopup) {
 
   $scope.goBack = function() {
    $state.go('dashboard.homeScreen');

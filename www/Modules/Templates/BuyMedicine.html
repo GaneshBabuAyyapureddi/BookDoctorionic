@@ -8,17 +8,35 @@
         <div style="color: #FFFFFF;text-align: center;" class="title">BUY MEDICINE</div>
    </ion-header-bar>
 <ion-content>
-	<div class="list list-inset">
-			<label id = "rounded" class="item item-input">
-			<i class="icon ion-ios-search"></i>
-			
-			<input type="Search" placeholder="Medicine Search Search" ng-model="searchText.patientName" id="searchField" value=searchText.patientName>
-			<!-- <button class="button button-balanced" ng-click="searchButtonClicked()">Search</button> -->
-			</label>
-			<div style="z-index: 1;" class="list" ng-show="searchText.patientName.length">
-				<ul>
-					<li class="item" ng-repeat="item in buyMedicineList | filter:searchText:strict" ng-click="patientSelected(item)"> {{item.patientName}}</li>
-				</ul>
-       		 </div>
-	</div>
+<div id="centerAlign_LR">
+    <div class="list list-inset">
+      <label id = "rounded" class="item item-input">
+      <i class="icon ion-ios-search"></i>
+      
+      <input type="Search" placeholder="Medicine Search" ng-model="searchText.patientName" id="searchField" value=searchText.patientName>
+      <!-- <button class="button button-balanced" ng-click="searchButtonClicked()">Search</button> -->
+      </label>
+      <div style="z-index: 1;" class="list" ng-show="searchText.patientName.length">
+        <ul>
+          <li class="item" ng-repeat="item in patientsList | filter:searchText:strict" ng-click="patientSelected(item)"> {{item.patientName}}</li>
+        </ul>
+           </div>
+    </div>
+	<label class="item item-input item-select" id="spinnerAlign_LR"; style="color:#000000; margin-top:30px;">
+                <div class="input-label" >
+                  Home Checkup Machine
+                </div>
+          <select ng-model="data.vaccineType">
+            <option>BP Monitor</option>
+            <option selected>Sugar Test Kit</option>
+            <option>Digital Weight Scale</option>
+            <option>Glucometer</option>
+            <option>Pulse Oximeters</option>
+            <option>Thermometer</option>
+          </select>
+        </label>
+		<div id="centerAlign_LR">
+          <button class="button button-block button-balanced" style="margin-top:50px; margin-bottom:30px" ng-click="addDetails(data)">Buy</button>
+        </div>
+        </div>
 </ion-content>
