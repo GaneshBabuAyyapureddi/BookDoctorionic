@@ -1,6 +1,6 @@
 
 var app = angular.module('bookDoctor')
-.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter) {
+.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter,$cordovaSQLite) {
 
 var showAppointmentDetails;
 /*Add appointment modal view*/
@@ -64,14 +64,75 @@ $scope.timeNow.setHours(hour,minutes,0,0);
 /* add custom event*/
 //var appointment = {title: 'Appointment',start: new Date(sely,selm,seld)}
 $scope.addAppointment = function(dateobj,timeObj,doctorName) {
+  var date = dateobj;
+  var time = timeObj;
+  var doctor = doctorName;
+ 
   $scope.events.push(
     {
       title: 'You have an Appointment with ' + doctorName,
-      start: new Date(y, m, dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0),
-      end: new Date(y, m, dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0)
+      start: new Date(dateobj.getFullYear(), dateobj.getMonth(), dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0),
+      end: new Date(dateobj.getFullYear(), dateobj.getMonth(), dateobj.getDate(),timeObj.getHours(),timeObj.getMinutes(),0)
   });
+   $scope.insertAppointment(date,time,doctor);
 };
 
+/* Insert appointment into DB*/
+ $scope.insertAppointment =  function(dateobj,timeObj,doctorName){
+    $scope.alertStatus = 'Insert Prescription done';
+     var db;
+      try {
+        db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});
+      } catch (error) {
+        alert(error);
+      }
+        
+    $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS Appointments (patient_id TEXT, appointment_title TEXT, doctorName TEXT,speciality TEXT, startYear TEXT, startMonth TEXT, startDay TEXT, startHour TEXT, startMin TEXT)');
+    var month = dateobj.getMonth();
+    var day = dateobj.getDate();
+    var year = dateobj.getFullYear();
+    var hour = timeObj.getHours();
+    var min = timeObj.getMinutes();
+
+    $cordovaSQLite.execute(db, 'INSERT INTO Appointments(patient_id, appointment_title, doctorName, speciality, startYear, startMonth, startDay, startHour, startMin ) VALUES (?,?,?,?,?,?,?,?,?)',
+      ["100","You Have Appointnment with",doctorName,"ent",year,month,day,hour,min])
+              .then(function(result) {
+                  $scope.fetchAppointments();
+              }, function(error) {
+                   $scope.alertStatus = "Error on saving: " + error.message;
+              })
+
+    alert($scope.alertStatus);
+    $scope.alertStatus = "Insert Appointment done";
+  }
+
+/* Read all appointment from DB*/
+    $scope.fetchAppointments = function() {
+    var db;
+
+        try {
+            db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});   
+        } catch (error) {
+            alert(error);
+        }
+        
+        // Execute SELECT statement to load message from database.
+        $cordovaSQLite.execute(db, 'SELECT * FROM Appointments')
+                  .then(
+                function(res) {
+                  var arr = [];
+                    if (res.rows.length > 0) {
+                        for (var i =0; i < res.rows.length; i++) {
+                          arr.push(res.rows.item(i));
+                        }
+                        console.log(arr);                        
+                    }
+                },
+                function(error) {
+                    // window.alert(error.message);
+                }
+            );
+  }
 
 
 /* Add appointment modal view */
@@ -186,12 +247,21 @@ $scope.eventSource = {
 };
 /* event source that contains custom events on the scope */
 $scope.events = [
+
+  // {title: 'You have an appointmentment with Dr.Edwin Arnold',start: new Date(y, m, 1,10,0,0),allDay: false},
+  // {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
+  // {title: 'You have an appointmentment with Dr. John Austin',start: new Date(y, m, d - 3, 16, 0),allDay: false},
+  // {title: 'You have an appointmentment with Dr.Henry Aldrich',start: new Date(y, m, d + 4, 16, 0),allDay: false},
+  // {title: 'You have an appointmentment with Dr. John Austin',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
+  // {title: 'You have an appointmentment with Dr.Thomas Amory',start: new Date(y, m, 28),end: new Date(y, m, 29)}
+
   {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
   {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2), backgroundColor:'#f47a42',borderColor:'#f47a42'},
   {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
   {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
   {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
   {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29), backgroundColor:'#f47a42',borderColor:'#f47a42'}
+
 ];
 /* event source that calls a function on every view switch */
 $scope.eventsF = function (start, end, timezone, callback) {

@@ -137,6 +137,7 @@
 #patient-profile-row-margin{
     margin-top:5px;
     margin-bottom:5px;
+    margin-left:15px;
 }
 
 #patient-profile-row-value-margin{
@@ -194,6 +195,11 @@ border-radius:15px;
   margin-left:auto;
   margin-right:auto;
 }
+#centerAlign_patient_dashboard {
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+}
 /*Buy Medicine Screen end*/
 
 .center_img {
@@ -202,3 +208,32 @@ border-radius:15px;
     right: 0;
     margin:0 auto;
 }
+
+.float-button {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 30px;
+  padding: 30px;
+  font-size: 40px;
+  background: $warning;
+  position: fixed;
+  bottom: 20px; /* Adjust to where you want it */
+  right: 20px; /* Adjust to where you want it */
+  z-index: 9999;
+ }
+
+ .float-button .height_fix {
+   margin-top: 100%;
+ }
+
+ .float-button .content {
+   position: absolute;
+   left: 0;
+   top: 50%;
+   height: 100%;
+   width: 100%;
+   text-align: center;
+   margin-top: -20px; /* Note, this must be half the font size */
+   color: $light;
+   }

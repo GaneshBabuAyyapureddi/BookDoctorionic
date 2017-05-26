@@ -29,70 +29,61 @@
 
    <script id="password-modal.html" type="text/ng-template">
       <ion-modal-view>
-       <form novalidate>
         <ion-header-bar class="bar bar-header bar-calm">
           <h1 class="title" style="text-align: center;">Change Password</h1>
-           <button class = "button icon icon-right ion-ios-close-outline"
+           <button class = "button button-icon icon-right ion-ios-close-outline"
             ng-click = "closePasswordModal()"></button>
         </ion-header-bar>
         <ion-content>
-<form novalidate name="profileForm" ng-class="{ 'ng-pwd-mismatch' : (newCustomer.password != newCustomer.confPassword && !newCustomer.isRegistered) }" ng-submit="saveUserPersonalInfo()">
-          <div class="list">
-
- <ion-item item="item" class="item-input cust-form-item"  ng-hide="newCustomer.isRegistered">
-                    <input type="password" placeholder="Old Password *" name="ccoldpwd" id="ccoldpwd" ng-model="newCustomer.oldpassword" required ng-minlength="8" ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/"/>
-                    
-                    <i class="icon ion-android-checkmark" ng-hide="profileForm.ccoldpwd.$invalid"></i>
-
-                    <i class="icon ion-ios7-information" ng-show="profileForm.ccoldpwd.$invalid && profileForm.ccoldpwd.$dirty"></i>
-
-                </ion-item>
-
-
-       <ion-item item="item" class="item-input cust-form-item"  ng-hide="newCustomer.isRegistered">
-                    <input type="password" placeholder="New Password *" name="ccpwd" id="ccpwd" ng-model="newCustomer.password" required ng-minlength="8" ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/"/>
-                    
-                    <i class="icon ion-android-checkmark" ng-hide="profileForm.ccpwd.$invalid"></i>
-
-                    <i class="icon ion-ios7-information" ng-show="profileForm.ccpwd.$invalid && profileForm.ccpwd.$dirty"></i>
-
-                </ion-item>
-
-
-                <ion-item item="item" class="item-input cust-form-item"  ng-hide="newCustomer.isRegistered">
-                    <input type="password" placeholder="Confirm Password *" name="ccrepwd" id="ccrepwd" ng-model="newCustomer.confPassword" required ng-minlength="8"/>
-                    
-                    <i class="icon ion-android-checkmark" ng-hide="profileForm.ccrepwd.$invalid || (newCustomer.password != newCustomer.confPassword)"></i>
-
-                    <i class="icon ion-ios7-information" ng-show="profileForm.ccrepwd.$invalid && profileForm.ccrepwd.$dirty && (newCustomer.password != newCustomer.confPassword)"></i>
-
-                </ion-item>
+          <form novalidate name="profileForm" ng-class="{ 'ng-pwd-mismatch' : (newCustomer.password != newCustomer.confPassword && !newCustomer.isRegistered) }" ng-submit="saveUserPersonalInfo()">
+                <div class="card" style="margin-left: auto;margin-right: auto;">
 
 
 
-            <!-- <label class="item item-input item-floating-label animated bounceInLeft">
-              <span class="input-label">Old Password</span>
-              <input type="password" placeholder="Old Password">
-            </label>
-            <label class="item item-input item-floating-label animated bounceInRight">
-              <span class="input-label">New Password</span>
-              <input type="password" placeholder="New Password">
-            </label>
-            <label class="item item-input item-floating-label animated bounceInLeft">
-              <span class="input-label">Confirm Password</span>
-              <input type="password" placeholder="Confirm Password">
-            </label>
- -->
-          </div>
+                   <label class="item item-input item-floating-label " style="width=90%;"  ng-class="{ 'has-errors' : profileForm.oldPassword.$invalid && profileForm.oldPassword.$touched , 'no-errors' : profileForm.oldPassword.$valid}">
+                       <span class="input-label" >Old Password</span>
+                       <input type='password' style="height: 35px; width=90%;" name="oldPassword" placeholder="Old Password *" ng-model="data.oldPassword" ng-minlength="5" required>
 
-          <div align="center" style="margin-top:50px">
-            <div class="button-bar button-pill" align="center" style="width:25%">
-              <a class="button button-calm">Submit</a>
-            </div>
-          </div>
-          </form>
+                        
+                    </label>
+                    <div class="error-container">
+                          <div  style="text-align: center;" ng-show="profileForm.oldPassword.$error.required" >Please enter your old password</div>
+                          <div  style="text-align: center;" ng-show="profileForm.oldPassword.$error.minlength" >Not a valid password</div>
+                       </div>
+                        
+
+                       <label class="item item-input item-floating-label " ng-class="{ 'has-errors' : profileForm.newPassword.$invalid && profileForm.newPassword.$touched , 'no-errors' : profileForm.newPassword.$valid}">
+                       <span class="input-label">New Password</span>
+                       <input type='password' style="height: 35px; width:70%;" name="newPassword" placeholder="New Password *" ng-model="data.newPassword" ng-minlength="5" required>
+
+                       
+                       </label>
+                    <div class="error-container">
+                          <div  style="text-align: center;" ng-show="profileForm.newPassword.$error.required" >Please enter your new password</div>
+                          <div  style="text-align: center;" ng-show="profileForm.newPassword.$error.minlength" >Not a valid password</div>
+                       </div> 
+                        
+
+                        <label class="item item-input item-floating-label " ng-class="{ 'has-errors' : profileForm.confPassword.$invalid && profileForm.confPassword.$touched , 'no-errors' : profileForm.confPassword.$valid}">
+                       <span class="input-label">Confirm Password</span>
+                       <input type='password' style="height: 35px; width:70%;" name="confPassword" placeholder="Confirm Password *" ng-model="data.confPassword" ng-minlength="5" required>
+                       
+                       </label>
+                    <div class="error-container">
+                          <div  style="text-align: center;" ng-show="profileForm.confPassword.$error.required" >Please confirm your new password</div>
+                          <div ng-show="profileForm.confPassword.$error.minlength" >Not a valid password</div>
+                       </div>
+                        
+
+
+                <div align="center" style="margin-top:50px">
+                  <button type = "submit" class="button button-assertive" style="width: 70%;margin:10px;"  ng-click="validatePassword(data)">Submit</button>
+                </div>
+                </div>
+
+                
         </ion-content>
-        </form>
+      
       </ion-modal-view>
     </script>
 
