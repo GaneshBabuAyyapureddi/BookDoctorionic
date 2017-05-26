@@ -108,8 +108,8 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
             .state('tabs', {
                 url: '/tab',
                 abstract: true,
-                templateUrl: 'Modules/Templates/tabMenu.html'
-             //   controller:'tabsController'
+                templateUrl: 'Modules/Templates/tabMenu.html',
+                controller: 'MenuController' 
            })
             .state('tabs.about', {
                url: '/about',

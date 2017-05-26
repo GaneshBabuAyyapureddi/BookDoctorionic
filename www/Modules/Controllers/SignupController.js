@@ -1,7 +1,7 @@
 angular.module('bookDoctor')
 
 .controller("signupController",function ($scope, $state,  $cordovaSQLite, $ionicHistory, $cordovaCamera, $ionicActionSheet) {
-   $scope.imgURI="http://www.vitalimages.com/wp-content/uploads/young-joey.jpg";
+   $scope.imgURI="img/plus-button1.png";
  
   $scope.submit = function(username) {
  
@@ -22,7 +22,7 @@ angular.module('bookDoctor')
         { text: '<i class="icon ion-camera"></i> Take Photo' },
         { text: '<i class="icon ion-image"></i> Open Gallery' },
         ],
-      
+         destructiveText: 'Cancel',
          titleText: 'Upload Photo',
       
          buttonClicked: function(index) {
@@ -69,6 +69,10 @@ angular.module('bookDoctor')
                     return true;
             }
          },
+          destructiveButtonClicked: function() {
+            return true;
+         }
+
       });
    }
                   
