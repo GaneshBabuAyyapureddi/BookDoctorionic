@@ -2,6 +2,7 @@ angular.module('bookDoctor')
 
 .controller("SettingsController",function ($scope,$cordovaSQLite,$cordovaToast, $state,$rootScope,$ionicModal,$ionicHistory,$ionicPopup) {
 
+var myOldPassword;
   $scope.goBack = function() {
    $state.go('dashboard.homeScreen');
    // $ionicHistory.goBack();
@@ -102,7 +103,10 @@ var confirmPopup = $ionicPopup.confirm({
       });
 
       $scope.openPasswordModal = function() {
+        $scope.fetchPassword();
+        console.log(myOldPassword);
         $scope.passwordModal.show();
+
       };
 
       $scope.closePasswordModal = function() {
@@ -125,6 +129,78 @@ var confirmPopup = $ionicPopup.confirm({
       };
 
 
+    /* Read user password from DB*/
+    $scope.fetchPassword = function() {
+    var db;
+
+        try {
+            db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});   
+        } catch (error) {
+            alert(error);
+        }
+        
+        // Execute SELECT statement to load message from database.
+        $cordovaSQLite.execute(db, 'SELECT * FROM signUpPatientDetails')
+                  .then(
+                function(res) {
+                  var arr = [];
+                    if (res.rows.length > 0) {
+                        for (var i =0; i < res.rows.length; i++) {
+                          arr.push(res.rows.item(i));
+                        }
+                        console.log(arr);                        
+                        myOldPassword = arr[0].password;
+                        
+                    }
+                },
+                function(error) {
+                    // window.alert(error.message);
+                }
+            );
+  }
+
+
+  /* Update user password from DB*/
+    $scope.updatePassword = function(newPassword) {
+    var db;
+
+        try {
+            db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});   
+        } catch (error) {
+            alert(error);
+        }
+        
+        // Execute SELECT statement to load message from database.
+        $cordovaSQLite.execute(db, "UPDATE signUpPatientDetails SET password ='" + newPassword + "' WHERE patient_id='123'")
+                  .then(
+                function(result) {
+                  alert("password updated");
+                },
+                function(error) {
+                    // window.alert(error.message);
+                }
+            );
+  }
+
+  $scope.validatePassword = function(data){
+    if(data.oldPassword === myOldPassword){ 
+        if(data.newPassword === data.confPassword){
+            $scope.updatePassword(data.newPassword);
+        }else{
+          alert("password missmatch");
+        }
+    }else{
+      alert("Old password is incorrect");
+    }
+  }
+
+
+
 })
+
+
+
+
+
 
 

@@ -82,7 +82,7 @@ $scope.addAppointment = function(dateobj,timeObj,doctorName) {
     $scope.alertStatus = 'Insert Prescription done';
      var db;
       try {
-        db = $cordovaSQLite.openDB('myapp.db',1);
+        db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});
       } catch (error) {
         alert(error);
       }
@@ -97,7 +97,7 @@ $scope.addAppointment = function(dateobj,timeObj,doctorName) {
     $cordovaSQLite.execute(db, 'INSERT INTO Appointments(patient_id, appointment_title, doctorName, speciality, startYear, startMonth, startDay, startHour, startMin ) VALUES (?,?,?,?,?,?,?,?,?)',
       ["100","You Have Appointnment with",doctorName,"ent",year,month,day,hour,min])
               .then(function(result) {
-                  //$scope.fetchAppointments();
+                  $scope.fetchAppointments();
               }, function(error) {
                    $scope.alertStatus = "Error on saving: " + error.message;
               })
@@ -111,7 +111,7 @@ $scope.addAppointment = function(dateobj,timeObj,doctorName) {
     var db;
 
         try {
-            db = $cordovaSQLite.openDB({name:"myapp.db",location:'default'});   
+            db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});   
         } catch (error) {
             alert(error);
         }
