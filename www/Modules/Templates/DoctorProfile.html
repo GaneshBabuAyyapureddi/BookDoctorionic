@@ -95,20 +95,21 @@
             <ion-list>
               <ion-item-borderless ng-repeat = "appointments in appointmentList" ng-click="goToDoctorProfileScreen()">
                 <div class="card" style="padding:5px;">
-                  <div class="item item-avatar" text-center>
-                    <img src="{{appointments.image}}">
-                    <h2>{{appointments.message}}</h2>              
-                    <div class="item-icon-right" style="margin-top:10px" ng-show="appointments.modifyValue"> 
-                      <div class="icon">
+                  <div class="item" text-center>
+                    <h2>Your appointment scheduled with Dr. {{doctorName}} on {{appointments.appointmentDate}}, {{appointments.appointmentTime}} {{ appointments.message}}</h2>              
+                    <div style="position:relative; min-height:25px;"> 
+                      <div class="icon" style="position:absolute; right:90px;" ng-show="appointments.modifyValue"> 
                         <span class="ion-edit" style="font-size:20px; padding:10px;" ng-click="editValue(appointments.appointmentDate)"> </span>
                          &nbsp;&nbsp;
                         <span class="ion-android-delete" style="font-size:20px; padding:10px;" ng-click="deleteValue(appointments.appointmentDate)"></span>
                       </div>
-                    </div>
-                    <div style="float:right;" ng-show="appointments.rateValue" ng-click="rateMe()">
-                      <span>Rate It</span>
-                      <i class="ion-android-star"></i>
-                      <i class="ion-android-star"></i>
+                        <div style="position:absolute; right:90px;" ng-show="appointments.rateValue" ng-click="rateMe()">
+                          <span>Rate It</span>
+                          <i class="ion-android-star"></i>
+                          <i class="ion-android-star"></i>
+                        </div>
+                        <button class="button button-small {{appointments.buttonColor}}" style="position:absolute; right:5px; width:70px;">{{appointments.status}} </button>
+                      </div>  
                     </div>
                   </div>
                 </div>
