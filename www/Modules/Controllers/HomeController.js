@@ -1,7 +1,7 @@
-
+//var appTheme = "#11c1f3";
 var app = angular.module('bookDoctor')
-.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter,$cordovaSQLite) {
-
+.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter,$cordovaSQLite,$rootScope) {
+$rootScope.appTheme ="#11c1f3";
 var showAppointmentDetails;
 /*Add appointment modal view*/
 var specialityArray = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",

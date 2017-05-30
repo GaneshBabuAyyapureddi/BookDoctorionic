@@ -1,6 +1,5 @@
 angular.module('bookDoctor')
 .controller("BuyMedicineController",function ($scope, $state, $stateParams, $ionicHistory) {
-	alert('Work in Progress');
 	$scope.goBack = function() {
     // $ionicHistory.goBack();
     	$state.go('dashboard.homeScreen');

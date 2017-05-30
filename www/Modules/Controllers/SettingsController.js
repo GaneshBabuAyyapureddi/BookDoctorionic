@@ -1,7 +1,9 @@
+var appTheme = "#11c1f3";
+var tabsTheme = "#11c1f3";
 angular.module('bookDoctor')
 
-.controller("SettingsController",function ($scope,$cordovaSQLite,$cordovaToast, $state,$rootScope,$ionicModal,$ionicHistory,$ionicPopup) {
-
+.controller("SettingsController",function ($scope,$cordovaSQLite,$cordovaToast, $state,$rootScope,$ionicModal,$ionicHistory,$ionicPopup, $window) {
+ 
 var myOldPassword;
   $scope.goBack = function() {
    $state.go('dashboard.homeScreen');
@@ -50,7 +52,32 @@ var confirmPopup = $ionicPopup.confirm({
 
       confirmPopup.then(function(res) {
          if(res) {
-          $scope.themeModal.hide();
+            $scope.appTheme = '#11c1f3';
+            $rootScope.appTheme = $scope.appTheme;
+            $scope.tabsTheme = "calm";
+            $rootScope.tabsTheme = $scope.tabsTheme;
+            $scope.themeModal.hide();
+              // $state.go('loginPage');
+         } else {
+            console.log('Not sure!');
+         }
+      });
+    // confirm("Do you want to change your theme to Blue?", "title", "buttonLabels");
+  }
+  $scope.yellowDialog = function(){
+  
+  var confirmPopup = $ionicPopup.confirm({
+         title: 'Change your Theme',
+         template: 'Do you want to change your theme to Yellow?'
+      });
+
+      confirmPopup.then(function(res) {
+         if(res) {
+            $scope.appTheme = '#ffc900';
+            $rootScope.appTheme = $scope.appTheme;
+             $scope.tabsTheme = "energized";
+             $rootScope.tabsTheme = $scope.tabsTheme;
+            $scope.themeModal.hide();
               // $state.go('loginPage');
          } else {
             console.log('Not sure!');
@@ -67,7 +94,11 @@ var confirmPopup = $ionicPopup.confirm({
 
       confirmPopup.then(function(res) {
          if(res) {
-          $scope.themeModal.hide();
+            $scope.appTheme = '#ef473a';
+            $rootScope.appTheme = $scope.appTheme;
+             $scope.tabsTheme = "assertive";
+             $rootScope.tabsTheme = $scope.tabsTheme;
+            $scope.themeModal.hide();
            // $cordovaToast.show('Theme changed to Red', 'long', 'center');
               // $state.go('loginPage');
          } else {
@@ -85,7 +116,11 @@ var confirmPopup = $ionicPopup.confirm({
 
       confirmPopup.then(function(res) {
          if(res) {
-          $scope.themeModal.hide();
+           $scope.appTheme = '#33cd5f';
+           $rootScope.appTheme = $scope.appTheme;
+            $scope.tabsTheme = "balanced";
+            $rootScope.tabsTheme = $scope.tabsTheme;
+           $scope.themeModal.hide();
               // $state.go('loginPage');
 
          } else {
@@ -94,7 +129,6 @@ var confirmPopup = $ionicPopup.confirm({
       });
     // confirm("Do you want to change your theme to Green?", "title", "buttonLabels");
   }
-
   $ionicModal.fromTemplateUrl('password-modal.html', {
         scope: $scope,
         animation: 'slide-in-up'

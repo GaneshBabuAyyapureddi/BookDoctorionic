@@ -1,25 +1,25 @@
 <ion-view hide-nav-bar="true">
-   <ion-header-bar class="bar bar-header bar-calm">
+   <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}}">
         <div style="color: #FFFFFF;text-align: center;" class="title">LOGIN</div>
    </ion-header-bar>
    <ion-content scroll="true">
    <div class="background-image"></div>
    <div class="content">
    	<img src="img/AppLogo.png" class="centerImage">
-	<p class="centerText"><span style="color: #d62304; font-size: 25px;font-weight: bold;">Book</span><span style="color: #11c1f3; font-size: 25px;font-weight: bold;">Doctor</span></p>
+	<p class="centerText"><span style="color: #d62304; font-size: 25px;font-weight: bold;">Book</span><span style="color:{{appTheme}}; font-size: 25px;font-weight: bold;">Doctor</span></p>
      <div class="list card" id="centerCard">
 		  <div class="item item-body" align="center">
-		     <input type="text" placeholder="Username" id="loginInput" ng-model="username">
+		     <input type="text" placeholder="Username" id="loginInput" style="border: solid 1px {{appTheme}};" ng-model="username">
 		     <br>
-		     <input type="password" placeholder="Password" id="loginInput" ng-model="password">
+		     <input type="password" placeholder="Password" id="loginInput" style="border: solid 1px {{appTheme}};" ng-model="password">
 		     <br>
 		     <button class="button button-assertive" ng-click="load(username,password)" style="width: 70%;margin-top: 10px;"> Login </button>
 		     <br>
 		     <button class="button button-assertive" ng-click="loadguestPage()" style="width: 70%;margin-top: 10px;"> Guest User </button>
 		     <br>
-		     <button class="button button-clear button-calm" ng-click="goToSignup()" style="text-decoration:underline;float:left;margin-top: 10px;">Signup
+		     <button class="button button-clear button-calm" ng-click="goToSignup()" style="text-decoration:underline;float:left;margin-top: 10px;color:{{appTheme}}">Signup
 		     </button>
-		     <button class="button button-clear button-calm" ng-click="goToForgotPassword()" style="text-decoration:underline;float:right;margin-top: 10px;">Forgot password</button>
+		     <button class="button button-clear button-calm" ng-click="goToForgotPassword()" style="text-decoration:underline;float:right;margin-top: 10px;color:{{appTheme}}">Forgot password</button>
 		  </div>
 	</div>
 	</div>

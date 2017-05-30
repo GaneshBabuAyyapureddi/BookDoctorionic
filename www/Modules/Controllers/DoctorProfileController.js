@@ -107,7 +107,7 @@ angular.module('bookDoctor')
     "appointmentDate":"2017-05-28",
     "appointmentTime":"5.00 PM",
     "image":"img/tick_green.png", 
-    "message":" and it is waiting for approval",
+    "message":"Appointment Scheduled and approved on 2017-05-22",
     "modifyValue":true,
     "rateValue":false, 
     "status":"Scheduled",
