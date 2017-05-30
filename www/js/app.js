@@ -188,6 +188,11 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                 templateUrl: 'Modules/Templates/rateUs.html',
                 controller:'rateUsController'
             }) 
+            .state('guestUserScreen', {
+                url:'guestUserScreen',               
+                templateUrl: 'Modules/Templates/guestUser.html',
+                controller:'guestUserController'
+            }) 
         $urlRouterProvider.otherwise('/loginPage');
 })
 

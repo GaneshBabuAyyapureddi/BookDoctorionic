@@ -12,6 +12,9 @@ angular.module('bookDoctor')
   $scope.goToForgotPassword = function() {
     $state.go('forgotPassword');
   }
+   $scope.loadguestPage = function() {
+    $state.go('guestUserScreen');
+  }
 
 
 
