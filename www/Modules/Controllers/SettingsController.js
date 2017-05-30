@@ -120,7 +120,7 @@ var confirmPopup = $ionicPopup.confirm({
       });
     // confirm("Do you want to change your theme to Green?", "title", "buttonLabels");
   }
-
+console.log("rootScope in SettingsController.........."+ $rootScope.appTheme);
   $ionicModal.fromTemplateUrl('password-modal.html', {
         scope: $scope,
         animation: 'slide-in-up'
