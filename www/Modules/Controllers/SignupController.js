@@ -1,8 +1,10 @@
 angular.module('bookDoctor')
 
 .controller("signupController",function ($scope, $state,  $cordovaSQLite, $ionicHistory, $cordovaCamera, $ionicActionSheet) {
-   $scope.imgURI="http://www.vitalimages.com/wp-content/uploads/young-joey.jpg";
- 
+   $scope.imgURI="img/plus-button1.png";
+   $scope.selectedGenderPlaceHolderVal = "Gender";
+   $scope.id = "name";
+
   $scope.submit = function(username) {
  
         alert("Thanks " + username);
@@ -78,6 +80,7 @@ angular.module('bookDoctor')
                   
 
   $scope.goToSignUpConfirm = function(form,signUpDetails) {
+   //alert(signUpDetails.selectedGenderVal)
 
     if(form.$valid) {
      console.log('Image URI: expected'+signUpDetails.fullname+ ' '+signUpDetails.mail);   // Print image URI
@@ -105,5 +108,13 @@ $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS signUpPatientDetails (id 
     console.log("error");
 
   };
+  /* Change Gender drop down */
+  $scope.OnSelectedGenderChange = function(selectedGenderVal){
+   $scope.selectedGenderVal = selectedGenderVal;
+  angular.element(document.getElementById($scope.id)).addClass("textplaceholdercoloractive");
+  }
+
+
+  
 
 });

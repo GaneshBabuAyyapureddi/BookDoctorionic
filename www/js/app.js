@@ -56,8 +56,8 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
             //        controller:'PatientProfileController'
             //       }
             //     }               
-
             // }) 
+
             .state('dashboard.doctorSearch', {
                 url:'/doctorSearch', 
                 views: {
@@ -120,7 +120,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                       }
            })
 
-        .state('tabs.PatientProfile', {
+        .state('tabs.patientProfile', {
              url: '/PatientProfile',
              views: {
               // 'menuContent': {
@@ -191,6 +191,11 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                 url:'rateUsScreen',               
                 templateUrl: 'Modules/Templates/rateUs.html',
                 controller:'rateUsController'
+            }) 
+            .state('guestUserScreen', {
+                url:'guestUserScreen',               
+                templateUrl: 'Modules/Templates/guestUser.html',
+                controller:'guestUserController'
             }) 
         $urlRouterProvider.otherwise('/loginPage');
 })

@@ -1,6 +1,9 @@
 angular.module('bookDoctor')
 
 .controller("loginController",function ($scope,$cordovaSQLite, $state,$rootScope) {
+  $rootScope.appTheme = "#11c1f3";
+  
+ console.log("rootScope in loginController.........."+ $rootScope.appTheme);
   $scope.goToHomeScreen = function() {
     $state.go('dashboard.homeScreen');
   }
@@ -11,6 +14,9 @@ angular.module('bookDoctor')
 
   $scope.goToForgotPassword = function() {
     $state.go('forgotPassword');
+  }
+   $scope.loadguestPage = function() {
+    $state.go('guestUserScreen');
   }
 
 
