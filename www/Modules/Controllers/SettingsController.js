@@ -1,5 +1,6 @@
 var appTheme = "#11c1f3";
 var tabsTheme = "#11c1f3";
+var combinationTheme = "#ef473a";
 angular.module('bookDoctor')
 
 .controller("SettingsController",function ($scope,$cordovaSQLite,$cordovaToast, $state,$rootScope,$ionicModal,$ionicHistory,$ionicPopup, $window) {
@@ -56,6 +57,8 @@ var confirmPopup = $ionicPopup.confirm({
             $rootScope.appTheme = $scope.appTheme;
             $scope.tabsTheme = "calm";
             $rootScope.tabsTheme = $scope.tabsTheme;
+            $scope.combinationTheme = "#ef473a";
+            $rootScope.combinationTheme = $scope.combinationTheme;
             $scope.themeModal.hide();
               // $state.go('loginPage');
          } else {
@@ -77,6 +80,8 @@ var confirmPopup = $ionicPopup.confirm({
             $rootScope.appTheme = $scope.appTheme;
              $scope.tabsTheme = "energized";
              $rootScope.tabsTheme = $scope.tabsTheme;
+             $scope.combinationTheme = "#7c6262";
+            $rootScope.combinationTheme = $scope.combinationTheme;
             $scope.themeModal.hide();
               // $state.go('loginPage');
          } else {
@@ -98,6 +103,8 @@ var confirmPopup = $ionicPopup.confirm({
             $rootScope.appTheme = $scope.appTheme;
              $scope.tabsTheme = "assertive";
              $rootScope.tabsTheme = $scope.tabsTheme;
+             $scope.combinationTheme = "#72ffc6";
+            $rootScope.combinationTheme = $scope.combinationTheme;
             $scope.themeModal.hide();
            // $cordovaToast.show('Theme changed to Red', 'long', 'center');
               // $state.go('loginPage');
@@ -120,6 +127,8 @@ var confirmPopup = $ionicPopup.confirm({
            $rootScope.appTheme = $scope.appTheme;
             $scope.tabsTheme = "balanced";
             $rootScope.tabsTheme = $scope.tabsTheme;
+            $scope.combinationTheme = "#cd3571";
+            $rootScope.combinationTheme = $scope.combinationTheme;
            $scope.themeModal.hide();
               // $state.go('loginPage');
 

@@ -28,8 +28,8 @@
           <input type="time" ng-model ="timeNow" value={{timeNow}}>
         </label>
    		</div class= "button-bar" style = "padding: 10px">
-      <button class="button button-stable button-assertive" style="float: right; margin:10px 10px 5px 0px;" ng-model="event" ng-click="addAppointment(date,timeNow,option2);closeModal()">Add appointment</button>
-   		<button class="button button-stable button-assertive" style="float: right; margin:10px 10px 5px 0px;" ng-click="closeModal()">Cancel</button>
+      <button class="button button-stable button-assertive" style="float: right; margin:10px 10px 5px 0px;background-color:{{combinationTheme}}" ng-model="event" ng-click="addAppointment(date,timeNow,option2);closeModal()">Add appointment</button>
+   		<button class="button button-stable button-assertive" style="float: right; margin:10px 10px 5px 0px;background-color:{{combinationTheme}}" ng-click="closeModal()">Cancel</button>
 		  
       </div>
     </form>
