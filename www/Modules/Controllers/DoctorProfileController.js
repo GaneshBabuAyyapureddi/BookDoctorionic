@@ -259,7 +259,7 @@ angular.module('bookDoctor')
     if (appointmentDate == FromDate) {
       alert("Your appointment date is today so, could not edit");
     }else{      
-      alert($scope.date);
+      // alert($scope.date);
       $scope.openModal();
       $scope.date = new Date();
       $scope.appointmentTitle = "Edit Appointment";
