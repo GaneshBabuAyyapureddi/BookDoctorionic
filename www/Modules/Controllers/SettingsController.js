@@ -1,4 +1,5 @@
 var appTheme = "#11c1f3";
+var tabsTheme = "#11c1f3";
 angular.module('bookDoctor')
 
 .controller("SettingsController",function ($scope,$cordovaSQLite,$cordovaToast, $state,$rootScope,$ionicModal,$ionicHistory,$ionicPopup, $window) {
@@ -53,6 +54,8 @@ var confirmPopup = $ionicPopup.confirm({
          if(res) {
             $scope.appTheme = '#11c1f3';
             $rootScope.appTheme = $scope.appTheme;
+            $scope.tabsTheme = "calm";
+            $rootScope.tabsTheme = $scope.tabsTheme;
             $scope.themeModal.hide();
               // $state.go('loginPage');
          } else {
@@ -72,6 +75,8 @@ var confirmPopup = $ionicPopup.confirm({
          if(res) {
             $scope.appTheme = '#ffc900';
             $rootScope.appTheme = $scope.appTheme;
+             $scope.tabsTheme = "energized";
+             $rootScope.tabsTheme = $scope.tabsTheme;
             $scope.themeModal.hide();
               // $state.go('loginPage');
          } else {
@@ -91,6 +96,8 @@ var confirmPopup = $ionicPopup.confirm({
          if(res) {
             $scope.appTheme = '#ef473a';
             $rootScope.appTheme = $scope.appTheme;
+             $scope.tabsTheme = "assertive";
+             $rootScope.tabsTheme = $scope.tabsTheme;
             $scope.themeModal.hide();
            // $cordovaToast.show('Theme changed to Red', 'long', 'center');
               // $state.go('loginPage');
@@ -111,6 +118,8 @@ var confirmPopup = $ionicPopup.confirm({
          if(res) {
            $scope.appTheme = '#33cd5f';
            $rootScope.appTheme = $scope.appTheme;
+            $scope.tabsTheme = "balanced";
+            $rootScope.tabsTheme = $scope.tabsTheme;
            $scope.themeModal.hide();
               // $state.go('loginPage');
 
@@ -120,7 +129,6 @@ var confirmPopup = $ionicPopup.confirm({
       });
     // confirm("Do you want to change your theme to Green?", "title", "buttonLabels");
   }
-console.log("rootScope in SettingsController.........."+ $rootScope.appTheme);
   $ionicModal.fromTemplateUrl('password-modal.html', {
         scope: $scope,
         animation: 'slide-in-up'
