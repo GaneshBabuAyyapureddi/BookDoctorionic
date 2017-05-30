@@ -27,7 +27,7 @@
         <div style="color: #FFFFFF;text-align: center;" class="title">Dashboard</div>
    </ion-header-bar>
           <ion-content ng-init="readData()">
-          <div ng-repeat="profileObject in patientDetails">
+       <div ng-repeat="profileObject in patientDetails">       
             <div style="position: relative; left: 0; top: 0;"> 
               <img src="img/patientimg.jpg" class="profile_back" style="width:100%; height:250px;"/> 
               <img src="{{profileObject.imageUrl}}" class="round_corner animated zoomIn" style="width:110px; height:110px;margin-left:36%;"/>
@@ -58,29 +58,41 @@
                <div  class="item item-divider" style="text-align: center;">
                   <h3>General Details</h3>
                </div>
+               <div  id="inner">
                <div class="row" id="patient-profile-row-margin">
                      <div >Patient Name:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.name}}</div>
                   </div>
+                  </div>
+                   <div  id="inner">
                   <div class="row" id="patient-profile-row-margin">
                      <div >Patient ID:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.patient_id}}</div>
                   </div>
+                  </div>
+                   <div  id="inner">
                   <div class="row" id="patient-profile-row-margin">
                      <div >Gender:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.Gender}}</div>
                   </div>
+                   </div>
+                     <div  id="inner">
                   <div class="row" id="patient-profile-row-margin">
                      <div >DOB:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.DOB}}</div>
                   </div>
+                  </div>
+                    <div  id="inner">
                   <div class="row" id="patient-profile-row-margin">
                      <div >Age:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.Age}}</div>
                   </div>
+                  </div>
+                    <div  id="inner">
                   <div class="row" id="patient-profile-row-margin">
                      <div >Blood Group:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.BloodGroup}}</div>
+                  </div>
                   </div>
             </div>
             
@@ -89,24 +101,30 @@
               <div  class="item item-divider" style="text-align: center;">
                   <h3>Contact Details</h3>
                </div>
+                 <div  id="inner">
               <div class="row" id="patient-profile-row-margin">
                      <i class="icon ion-ios-telephone" style="color:#1B5E20; margin-right:10px;"></i> 
                      <div >Mobile Number:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.mobile}}</div>
                   </div>
+                  </div>
               <!--     <div class="row" id="patient-profile-row-margin">
                      <div >Emergency Mobile Number:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.emergency_mobile}}</div>
                   </div> -->
+                    <div  id="inner">
                   <div class="row" id="patient-profile-row-margin">
                    <i class="icon ion-android-mail" style=" color:#1B5E20; margin-right:10px;"></i>
                      <div >Email ID:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.mail}}</div>
                   </div>
+                  </div>
+                   <div  id="inner">
                   <div class="row" id="patient-profile-row-margin">
                   <i class="icon ion-android-globe" style=" color:#1B5E20; margin-right:10px;"></i> 
                      <div >Address:</div>
                      <div id="patient-profile-row-value-margin">{{profileObject.Address}}</div>
+                  </div>
                   </div>
                  <!--  <div class="row" id="patient-profile-row-margin">
                      <div >Street:</div>
