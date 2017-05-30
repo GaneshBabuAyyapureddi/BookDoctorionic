@@ -31,7 +31,10 @@ var doctorsArray = [["Dr.George","Dr.Donald","Dr.Gilbert","Dr.Henry Aldrich","Dr
 //$scope.todayDate = $filter("date")(Date.now(), 'yyyy-MM-dd');
 //$scope.date = $filter("date")(Date.now(), 'yyyy-MM-dd');
 
-$scope.date = new Date()
+$scope.date = new Date();
+$scope.appointmentTitle = "Book Appointment";
+$scope.specialityShow = true;
+$scope.doctorShow = true;
 
 /*Date Picker*/
 var todayDate = new Date();
