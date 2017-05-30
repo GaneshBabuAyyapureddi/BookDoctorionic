@@ -13,18 +13,18 @@
 </ion-side-menu-content>
  
 <ion-side-menu side="left">
-<ion-header-bar class="bar-calm">
+<ion-header-bar class="bar-calm" style="background-color:{{appTheme}}">
 <h1 class="title">MENU</h1>
 </ion-header-bar>
 <ion-content>
 	<ion-list>
-		<ion-item menu-close  ui-sref="dashboard.homeScreen" class="item-icon-left"><i class="icon ion-home" style="color: #11c1f3"></i>Home</ion-item>
-		<ion-item menu-close ui-sref="tabs.patientProfile" class="item-icon-left"><i class="icon ion-person" style="color: #11c1f3"></i>My Profile</ion-item>
-		<ion-item menu-close ui-sref="dashboard.doctorSearch" class="item-icon-left"><i class="icon ion-search" style="color: #11c1f3"></i> Search Doctors </ion-item>
-		<ion-item menu-close ng-click="goToBuyMedicine()" class="item-icon-left"><i class="icon ion-medkit" style="color: #11c1f3"></i>Buy Medicine</ion-item>
+		<ion-item menu-close  ui-sref="dashboard.homeScreen" class="item-icon-left"><i class="icon ion-home" style="color:{{appTheme}}"></i>Home</ion-item>
+		<ion-item menu-close ui-sref="tabs.patientProfile" class="item-icon-left"><i class="icon ion-person" style="color:{{appTheme}}"></i>My Profile</ion-item>
+		<ion-item menu-close ui-sref="dashboard.doctorSearch" class="item-icon-left"><i class="icon ion-search" style="color:{{appTheme}}"></i> Search Doctors </ion-item>
+		<ion-item menu-close ng-click="goToBuyMedicine()" class="item-icon-left"><i class="icon ion-medkit" style="color:{{appTheme}}"></i>Buy Medicine</ion-item>
 	<!-- 	<ion-item menu-close ng-click="openNotif($event)" class="item-icon-left"><i class="icon ion-android-notifications" style="color: #11c1f3"></i>Notification</ion-item> -->
-		<ion-item menu-close ng-click="goToSettings()" class="item-icon-left"><i class="icon ion-settings" style="color: #11c1f3"></i>Settings</ion-item>
-		<ion-item menu-close menu-close ui-sref="loginPage" class="item-icon-left"><i class="icon ion-log-out" style="color: #11c1f3"></i>Logout</ion-item>
+		<ion-item menu-close ng-click="goToSettings()" class="item-icon-left"><i class="icon ion-settings" style="color:{{appTheme}}"></i>Settings</ion-item>
+		<ion-item menu-close menu-close ui-sref="loginPage" class="item-icon-left"><i class="icon ion-log-out" style="color:{{appTheme}}"></i>Logout</ion-item>
 
 	</ion-list>
 	</ion-side-menu>
@@ -34,7 +34,7 @@
    <script id="password-modal.html" type="text/ng-template">
       <ion-modal-view>
        <form novalidate>
-        <ion-header-bar class="bar bar-header bar-calm">
+        <ion-header-bar class="bar bar-header " style="background-color:{{appTheme}}">
           <h1 class="title" style="text-align: center;">Change Password</h1>
            <button class = "button icon icon-right ion-ios-close-outline"
             ng-click = "closeModal()"></button>
