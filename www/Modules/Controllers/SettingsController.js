@@ -1,5 +1,5 @@
 var appTheme = "#11c1f3";
-var tabsTheme = "#11c1f3";
+var tabsTheme = "calm";
 var combinationTheme = "#ef473a";
 angular.module('bookDoctor')
 
@@ -48,7 +48,8 @@ var confirmPopup = $ionicPopup.confirm({
   
   var confirmPopup = $ionicPopup.confirm({
          title: 'Change your Theme',
-         template: 'Do you want to change your theme to Blue?'
+         template: 'Do you want to change your theme to Blue?',
+         cssClass:'style'
       });
 
       confirmPopup.then(function(res) {
