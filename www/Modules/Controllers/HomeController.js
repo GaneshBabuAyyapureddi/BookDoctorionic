@@ -249,6 +249,7 @@ $scope.eventSource = {
         currentTimezone: 'America/Chicago' // an option!
 };
 /* event source that contains custom events on the scope */
+console.log("Inside HomeController combinationTheme:: "+ $rootScope.combinationTheme);
 $scope.events = [
 
   // {title: 'You have an appointmentment with Dr.Edwin Arnold',start: new Date(y, m, 1,10,0,0),allDay: false},
@@ -258,12 +259,12 @@ $scope.events = [
   // {title: 'You have an appointmentment with Dr. John Austin',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
   // {title: 'You have an appointmentment with Dr.Thomas Amory',start: new Date(y, m, 28),end: new Date(y, m, 29)}
 
-  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2), backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29), backgroundColor:'#f47a42',borderColor:'#f47a42'}
+  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2), backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29), backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme}
 
 ];
 /* event source that calls a function on every view switch */
