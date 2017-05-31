@@ -261,7 +261,7 @@ angular.module('bookDoctor')
     }else{      
       // alert($scope.date);
       $scope.openModal();
-      $scope.date = new Date();
+      $scope.date = new Date(appointmentDate);
       $scope.appointmentTitle = "Edit Appointment";
       $scope.specialityShow = false;
       $scope.doctorShow = false;
@@ -274,7 +274,8 @@ angular.module('bookDoctor')
       //   month = "0" + month;
       // };
       // var day = todayDate.getDate();
-      $scope.todayDate = appointmentDate;
+      // $scope.todayDate = year + "-" + month + "-" + day;
+      // $scope.todayDate = appointmentDate;
 
       /*Time Picker*/
       $scope.timeNow=new Date();
