@@ -6,16 +6,16 @@
    <div class="background-image"></div>
    <div class="content">
    	<img src="img/AppLogo.png" class="centerImage">
-	<p class="centerText"><span style="color: #d62304; font-size: 25px;font-weight: bold;">Book</span><span style="color:{{appTheme}}; font-size: 25px;font-weight: bold;">Doctor</span></p>
+	<p class="centerText"><span style="color: {{combinationTheme}}; font-size: 25px;font-weight: bold;">Book</span><span style="color:{{appTheme}}; font-size: 25px;font-weight: bold;">Doctor</span></p>
      <div class="list card" id="centerCard">
 		  <div class="item item-body" align="center">
 		     <input type="text" placeholder="Username" id="loginInput" style="border: solid 1px {{appTheme}};" ng-model="username">
 		     <br>
 		     <input type="password" placeholder="Password" id="loginInput" style="border: solid 1px {{appTheme}};" ng-model="password">
 		     <br>
-		     <button class="button button-assertive" ng-click="load(username,password)" style="width: 70%;margin-top: 10px;"> Login </button>
+		     <button class="button button-assertive" ng-click="load(username,password)" style="width: 70%;margin-top: 10px;background-color:{{combinationTheme}}"> Login </button>
 		     <br>
-		     <button class="button button-assertive" ng-click="loadguestPage()" style="width: 70%;margin-top: 10px;"> Guest User </button>
+		     <button class="button button-assertive" ng-click="loadguestPage()" style="width: 70%;margin-top: 10px;background-color:{{combinationTheme}}"> Guest User </button>
 		     <br>
 		     <button class="button button-clear button-calm" ng-click="goToSignup()" style="text-decoration:underline;float:left;margin-top: 10px;color:{{appTheme}}">Signup
 		     </button>

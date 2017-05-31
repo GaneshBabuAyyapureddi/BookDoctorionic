@@ -2,8 +2,9 @@ angular.module('bookDoctor')
 
 .controller("loginController",function ($scope,$cordovaSQLite, $state,$rootScope) {
   $rootScope.appTheme = "#11c1f3";
-  
- console.log("rootScope in loginController.........."+ $rootScope.appTheme);
+  $rootScope.tabsTheme="calm";
+  $rootScope.combinationTheme = "#ef473a";
+ console.log("rootScope in loginController.........."+ $rootScope.appTheme + " combi :: "+$rootScope.combinationTheme);
   $scope.goToHomeScreen = function() {
     $state.go('dashboard.homeScreen');
   }
