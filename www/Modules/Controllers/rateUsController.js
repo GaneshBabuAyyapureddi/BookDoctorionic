@@ -1,5 +1,6 @@
 angular.module('bookDoctor')
 .controller("rateUsController",function ($scope, $state, $stateParams, $ionicHistory) {
+  $scope.rateUsDate = $stateParams.selectedDate;
 	$scope.goBack = function() {
     	$ionicHistory.goBack();
   	}
