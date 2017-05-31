@@ -178,13 +178,20 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                     }
                    }
                 })*/
-                .state('settings', {
+                .state('dashboard.settings', {
                 url: '/settings',
-                templateUrl: 'Modules/Templates/Settings.html',
-                controller: 'SettingsController'
+                 views: {
+                  'menuContent': {
+                    templateUrl: 'Modules/Templates/Settings.html',
+                    controller: 'SettingsController'
+                }
+            }
             })
             .state('rateUsScreen', {
-                url:'rateUsScreen',               
+                url:'rateUsScreen',        
+                params: {
+                   'selectedDate': 'Doctor'
+                },       
                 templateUrl: 'Modules/Templates/rateUs.html',
                 controller:'rateUsController'
             }) 

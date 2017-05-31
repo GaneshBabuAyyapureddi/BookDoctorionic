@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup) {
+.controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $ionicModal) {
     
   //$scope.$on('$ionicView.beforeEnter', function(){
     $scope.profileObject = $stateParams.doctorProfile;
@@ -48,8 +48,8 @@ angular.module('bookDoctor')
     $ionicHistory.goBack();
   }
 
-  $scope.rateMe = function() {
-    $state.go('rateUsScreen');
+  $scope.rateMe = function(rateUsDate) {
+    $state.go('rateUsScreen', {'selectedDate':rateUsDate});
   }
   
    angular.element(document).ready(function () {
@@ -107,7 +107,7 @@ angular.module('bookDoctor')
     "appointmentDate":"2017-05-28",
     "appointmentTime":"5.00 PM",
     "image":"img/tick_green.png", 
-    "message":" and it is waiting for approval",
+    "message":"Appointment Scheduled and approved on 2017-05-22",
     "modifyValue":true,
     "rateValue":false, 
     "status":"Scheduled",
@@ -258,8 +258,29 @@ angular.module('bookDoctor')
     var FromDate = date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
     if (appointmentDate == FromDate) {
       alert("Your appointment date is today so, could not edit");
-    }else{
-      alert("Edit success");
+    }else{      
+      // alert($scope.date);
+      $scope.openModal();
+      $scope.date = new Date();
+      $scope.appointmentTitle = "Edit Appointment";
+      $scope.specialityShow = false;
+      $scope.doctorShow = false;
+
+      /*Date Picker*/
+      // var todayDate = new Date();
+      // var year = todayDate.getFullYear();
+      // var month = todayDate.getMonth()+1;
+      // if (month<10){
+      //   month = "0" + month;
+      // };
+      // var day = todayDate.getDate();
+      $scope.todayDate = appointmentDate;
+
+      /*Time Picker*/
+      $scope.timeNow=new Date();
+      var hour = $scope.timeNow.getHours();
+      var minutes = $scope.timeNow.getMinutes();
+      $scope.timeNow.setHours(hour,minutes,0,0);
     }    
   }
 
@@ -290,6 +311,36 @@ angular.module('bookDoctor')
       });
     
    };
+
+   /* Add appointment modal view */
+  $ionicModal.fromTemplateUrl('Modules/Templates/AddAppointmentModalView.html', {
+      scope: $scope
+      }).then(function(modal) {
+        $scope.addAppointmentModal = modal;
+      });
+      $scope.openModal = function() {
+          $scope.addAppointmentModal.show();
+      };
+
+      $scope.closeModal = function() {
+          $scope.addAppointmentModal.hide();
+      };
+
+
+      $scope.$on('$destroy', function() {
+          // $scope.modal.remove();
+      });
+
+      $scope.$on('modal.hidden', function() {
+          // Execute action
+      });
+
+      $scope.$on('modal.removed', function() {
+          // Execute action
+      });
+
+
+  
    
 })
 
