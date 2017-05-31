@@ -247,6 +247,16 @@ border-radius:15px;
 .textplaceholdercoloractive{
   color: #454545;
 }
+
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  padding-top: 80px;
+}
+/*.padding {
+  margin: 50px 0;
+}*/
 /*.popup-buttons .button.activated{
   background-color: #d62304;
 }*/
