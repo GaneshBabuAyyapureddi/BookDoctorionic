@@ -48,8 +48,8 @@ angular.module('bookDoctor')
     $ionicHistory.goBack();
   }
 
-  $scope.rateMe = function() {
-    $state.go('rateUsScreen');
+  $scope.rateMe = function(rateUsDate) {
+    $state.go('rateUsScreen', {'selectedDate':rateUsDate});
   }
   
    angular.element(document).ready(function () {
@@ -328,7 +328,7 @@ angular.module('bookDoctor')
 
 
       $scope.$on('$destroy', function() {
-          $scope.modal.remove();
+          // $scope.modal.remove();
       });
 
       $scope.$on('modal.hidden', function() {
