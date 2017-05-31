@@ -16,7 +16,9 @@ var myOldPassword;
    // $ionicHistory.goBack();
   }
 
-
+  $scope.openHelpModal = function(){
+    console.log("Inside help.............");
+  }
   $scope.goEditProfile = function() {
    $state.go('tabs.PatientProfile');
    // $ionicHistory.goBack();
@@ -31,7 +33,14 @@ var confirmPopup = $ionicPopup.confirm({
 
       confirmPopup.then(function(res) {
          if(res) {
+          
+          $rootScope.isLogOut = true;
+          console.log("Inside SettingsController... logout clicked....."+$rootScope.isLogOut);
               $state.go('loginPage');
+
+         // $ionicHistory.clearCache();
+      $ionicHistory.clearHistory();
+           
          } else {
             console.log('Not sure!');
          }
@@ -153,7 +162,8 @@ var confirmPopup = $ionicPopup.confirm({
 
       };
 
-      $scope.closePasswordModal = function() {
+      $scope.closePasswordModal = function(event) {
+        console.log("Inside close... "+ data.username + "... "+ data.password);
          $scope.passwordModal.hide();
       };
 
