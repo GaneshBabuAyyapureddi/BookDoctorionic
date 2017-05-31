@@ -267,13 +267,13 @@ angular.module('bookDoctor')
       $scope.doctorShow = false;
 
       /*Date Picker*/
-      var todayDate = new Date();
-      var year = todayDate.getFullYear();
-      var month = todayDate.getMonth()+1;
-      if (month<10){
-        month = "0" + month;
-      };
-      var day = todayDate.getDate();
+      // var todayDate = new Date();
+      // var year = todayDate.getFullYear();
+      // var month = todayDate.getMonth()+1;
+      // if (month<10){
+      //   month = "0" + month;
+      // };
+      // var day = todayDate.getDate();
       $scope.todayDate = appointmentDate;
 
       /*Time Picker*/
