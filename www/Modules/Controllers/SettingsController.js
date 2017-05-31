@@ -25,8 +25,8 @@ var myOldPassword;
   $scope.showLogoutConfirm = function(){
 
 var confirmPopup = $ionicPopup.confirm({
-         title: 'Title',
-         template: 'Are you sure?'
+         title: 'Logout',
+         template: 'Are you want to logout?'
       });
 
       confirmPopup.then(function(res) {
@@ -104,7 +104,7 @@ var confirmPopup = $ionicPopup.confirm({
             $rootScope.appTheme = $scope.appTheme;
              $scope.tabsTheme = "assertive";
              $rootScope.tabsTheme = $scope.tabsTheme;
-             $scope.combinationTheme = "#72ffc6";
+             $scope.combinationTheme = "#11c1f3";
             $rootScope.combinationTheme = $scope.combinationTheme;
             $scope.themeModal.hide();
            // $cordovaToast.show('Theme changed to Red', 'long', 'center');
@@ -239,12 +239,5 @@ var confirmPopup = $ionicPopup.confirm({
   }
 
 
-
 })
-
-
-
-
-
-
 
