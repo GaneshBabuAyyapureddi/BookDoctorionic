@@ -16,7 +16,6 @@ var myOldPassword;
    // $ionicHistory.goBack();
   }
 
-
   $scope.goEditProfile = function() {
    $state.go('tabs.PatientProfile');
    // $ionicHistory.goBack();
@@ -25,13 +24,18 @@ var myOldPassword;
   $scope.showLogoutConfirm = function(){
 
 var confirmPopup = $ionicPopup.confirm({
-         title: 'Title',
-         template: 'Are you sure?'
+         title: 'Logout',
+         template: 'Are you want to logout?'
       });
 
       confirmPopup.then(function(res) {
          if(res) {
+          
               $state.go('loginPage');
+
+         // $ionicHistory.clearCache();
+      $ionicHistory.clearHistory();
+           
          } else {
             console.log('Not sure!');
          }
@@ -104,7 +108,7 @@ var confirmPopup = $ionicPopup.confirm({
             $rootScope.appTheme = $scope.appTheme;
              $scope.tabsTheme = "assertive";
              $rootScope.tabsTheme = $scope.tabsTheme;
-             $scope.combinationTheme = "#72ffc6";
+             $scope.combinationTheme = "#11c1f3";
             $rootScope.combinationTheme = $scope.combinationTheme;
             $scope.themeModal.hide();
            // $cordovaToast.show('Theme changed to Red', 'long', 'center');
@@ -153,7 +157,7 @@ var confirmPopup = $ionicPopup.confirm({
 
       };
 
-      $scope.closePasswordModal = function() {
+      $scope.closePasswordModal = function(event) {
          $scope.passwordModal.hide();
       };
 
@@ -172,6 +176,20 @@ var confirmPopup = $ionicPopup.confirm({
          $scope.themeModal.hide();
       };
 
+// for help tab
+  $ionicModal.fromTemplateUrl('open-help.html',{
+    scope: $scope
+  }).then(function(modal) {
+        $scope.helpModal = modal;
+      });
+
+      $scope.openHelpModal = function() {
+        $scope.helpModal.show();
+      };
+
+      $scope.closeHelpModal = function(event) {
+         $scope.helpModal.hide();
+      };
 
     /* Read user password from DB*/
     $scope.fetchPassword = function() {
@@ -239,12 +257,5 @@ var confirmPopup = $ionicPopup.confirm({
   }
 
 
-
 })
-
-
-
-
-
-
 
