@@ -1,13 +1,10 @@
-var isLogOut = false;
 angular.module('bookDoctor')
 
 .controller("loginController",function ($scope,$cordovaSQLite, $state,$rootScope) {
   $rootScope.appTheme = "#11c1f3";
   $rootScope.tabsTheme="calm";
   $rootScope.combinationTheme = "#ef473a";
-  $scope.isLogOut=false;
-  $rootScope.isLogOut = $scope.isLogOut;
- console.log("rootScope in loginController isLogOut.........."+ $rootScope.isLogOut);
+   
   $scope.goToHomeScreen = function() {
     $state.go('dashboard.homeScreen');
   }
@@ -22,15 +19,6 @@ angular.module('bookDoctor')
    $scope.loadguestPage = function() {
     $state.go('guestUserScreen');
   }
-  if($rootScope.isLogOut){
-  // $('#loginInput').setText(' ');
-    console.log("Inside if session............" + $rootScope.isLogOut);
-  }else{
-   // $('#loginInput').setText(' ');
-    console.log("Inside else session............" + $rootScope.isLogOut);
-  }
-
-
     $scope.load = function(username,pass) {
     	if(username === "demouser")
     	{

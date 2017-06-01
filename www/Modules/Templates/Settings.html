@@ -18,7 +18,7 @@
     <div class="item item-icon-right" ng-click="openThemeModal()">Change Theme
       <i class="icon ion-ios-arrow-right" style="font-size: 25px;"></i>
     </div>
-    <div class="item item-icon-right" onclick="openHelpModal()">Help
+    <div class="item item-icon-right" ng-click="openHelpModal()">Help
       <i class="icon ion-ios-arrow-right" style="font-size: 25px;"></i>
     </div>
     <li class="item item-toggle">Notification
@@ -136,6 +136,20 @@
     <div class="item item-icon-right" ng-click="greenDialog()">Green Theme
       <i class="icon ion-ios-arrow-right" style="font-size: 25px;"></i>
     </div>
+    </ion-content>
+      </ion-modal-view>
+    </script>
+
+     <script id="open-help.html" type="text/ng-template">
+      <ion-modal-view>
+      <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}}" >
+          <h1 class="title" style="text-align: center;">Help</h1>
+           <button class = "button icon icon-right ion-ios-close-outline" style="background-color:{{appTheme}}"
+            ng-click = "closeHelpModal()"></button>
+        </ion-header-bar>
+     <ion-content>
+      
+      <h3> Welcome to Help screen...</h3>
     </ion-content>
       </ion-modal-view>
     </script>

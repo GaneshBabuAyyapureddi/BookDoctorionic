@@ -249,7 +249,6 @@ $scope.eventSource = {
         currentTimezone: 'America/Chicago' // an option!
 };
 /* event source that contains custom events on the scope */
-console.log("Inside HomeController combinationTheme:: "+ $rootScope.combinationTheme);
 $scope.events = [
 
   // {title: 'You have an appointmentment with Dr.Edwin Arnold',start: new Date(y, m, 1,10,0,0),allDay: false},
