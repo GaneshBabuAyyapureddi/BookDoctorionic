@@ -17,7 +17,7 @@ angular.module('bookDoctor')
     $state.go('forgotPassword');
   }
    $scope.loadguestPage = function() {
-    $state.go('guestUserScreen');
+    $state.go('guestUserScreen',{'fromWhere':'Guest User'});
   }
     $scope.load = function(username,pass) {
     	if(username === "demouser")

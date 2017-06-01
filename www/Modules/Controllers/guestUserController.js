@@ -1,8 +1,8 @@
 angular.module('bookDoctor')
 
-.controller("guestUserController",function ($scope, $state, $ionicHistory, $ionicSlideBoxDelegate) {
+.controller("guestUserController",function ($scope, $state, $stateParams, $ionicHistory, $ionicSlideBoxDelegate) {
 
-
+    $scope.title=$stateParams.fromWhere;
   $scope.goBack = function() {
     $ionicHistory.goBack();
   }
