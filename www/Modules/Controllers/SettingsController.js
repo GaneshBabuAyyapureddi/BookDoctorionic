@@ -176,21 +176,6 @@ var confirmPopup = $ionicPopup.confirm({
          $scope.themeModal.hide();
       };
 
-// for help tab
-  $ionicModal.fromTemplateUrl('open-help.html',{
-    scope: $scope
-  }).then(function(modal) {
-        $scope.helpModal = modal;
-      });
-
-      $scope.openHelpModal = function() {
-        $scope.helpModal.show();
-      };
-
-      $scope.closeHelpModal = function(event) {
-         $scope.helpModal.hide();
-      };
-
     /* Read user password from DB*/
     $scope.fetchPassword = function() {
     var db;
@@ -256,6 +241,8 @@ var confirmPopup = $ionicPopup.confirm({
     }
   }
 
-
+  $scope.openHelpScreen = function(){
+    $state.go('guestUserScreen',{'fromWhere':'Help'});
+  }
 })
 

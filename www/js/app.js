@@ -196,10 +196,14 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                 controller:'rateUsController'
             }) 
             .state('guestUserScreen', {
-                url:'guestUserScreen',               
+                url:'guestUserScreen',    
+                params: {
+                   'fromWhere': 'Help'
+                },            
                 templateUrl: 'Modules/Templates/guestUser.html',
                 controller:'guestUserController'
             }) 
+          
         $urlRouterProvider.otherwise('/loginPage');
 })
 
