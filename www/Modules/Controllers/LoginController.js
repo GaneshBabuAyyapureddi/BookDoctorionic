@@ -76,7 +76,7 @@ angular.module('bookDoctor')
 $scope.onLoginSuccess = function(name){
    var alertPopup = $ionicPopup.alert({
          title: 'BookDoctor',
-         template: 'You have successfully logged in with '+name
+         template: 'You have successfully logged in '+name+' !'
       });
 
       alertPopup.then(function(res) {
