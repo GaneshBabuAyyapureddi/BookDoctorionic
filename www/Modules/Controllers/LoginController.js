@@ -1,6 +1,6 @@
 angular.module('bookDoctor')
 
-.controller("loginController",function ($scope,$cordovaSQLite, $state,$rootScope) {
+.controller("loginController",function ($scope,$cordovaSQLite, $state,$rootScope,$ionicPopup) {
   $rootScope.appTheme = "#11c1f3";
   $rootScope.tabsTheme="calm";
   $rootScope.combinationTheme = "#ef473a";
@@ -17,7 +17,7 @@ angular.module('bookDoctor')
     $state.go('forgotPassword');
   }
    $scope.loadguestPage = function() {
-    $state.go('guestUserScreen');
+    $state.go('guestUserScreen',{'fromWhere':'Guest User'});
   }
     $scope.load = function(username,pass) {
     	if(username === "demouser")
@@ -50,26 +50,46 @@ angular.module('bookDoctor')
                       if (pass === res.rows.item(i).password) {
                         $rootScope.myusername = res.rows.item(0).name;
                         $scope.statusMessage = "Message loaded successful, cheers!"+res.rows.item(0).name;
-                        window.alert("Logged in successfully, cheers "+res.rows.item(0).name+' !');
-                          $state.go('dashboard.homeScreen');
+                        $scope.onLoginSuccess(res.rows.item(0).name);
+                        
                       }else
                       {
-                         window.alert("Invalid password");
+                        $scope.onLoginFailure("Invalid password");
                       }
                     }
                     }
                     else
                       {
-                         window.alert("Invalid username");
+                        $scope.onLoginFailure("Invalid username");
                       }
                 },
                 function(error) {
                     $scope.statusMessage = "Error on loading: " + error.message;
                                           // $scope.goToPatientSearch(username);
-                                          window.alert("Invalid username/password");
+                                         // window.alert("Invalid username/password");
+                     $scope.onLoginFailure("Invalid username/password");
                 }
             );
 }
 }
 
+$scope.onLoginSuccess = function(name){
+   var alertPopup = $ionicPopup.alert({
+         title: 'BookDoctor',
+         template: 'You have successfully logged in with '+name
+      });
+
+      alertPopup.then(function(res) {
+          $state.go('dashboard.homeScreen');
+      });
+}
+$scope.onLoginFailure = function(message){
+  var alertPopup = $ionicPopup.alert({
+    title: 'BookDoctor',
+    template: message
+  })
+  alertPopup.then(function(res){
+
+  });
+}
 })
