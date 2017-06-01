@@ -16,7 +16,6 @@ var myOldPassword;
    // $ionicHistory.goBack();
   }
 
-
   $scope.goEditProfile = function() {
    $state.go('tabs.PatientProfile');
    // $ionicHistory.goBack();
@@ -31,7 +30,12 @@ var confirmPopup = $ionicPopup.confirm({
 
       confirmPopup.then(function(res) {
          if(res) {
+          
               $state.go('loginPage');
+
+         // $ionicHistory.clearCache();
+      $ionicHistory.clearHistory();
+           
          } else {
             console.log('Not sure!');
          }
@@ -153,7 +157,7 @@ var confirmPopup = $ionicPopup.confirm({
 
       };
 
-      $scope.closePasswordModal = function() {
+      $scope.closePasswordModal = function(event) {
          $scope.passwordModal.hide();
       };
 
@@ -171,7 +175,6 @@ var confirmPopup = $ionicPopup.confirm({
       $scope.closeModal = function() {
          $scope.themeModal.hide();
       };
-
 
     /* Read user password from DB*/
     $scope.fetchPassword = function() {
@@ -238,6 +241,8 @@ var confirmPopup = $ionicPopup.confirm({
     }
   }
 
-
+  $scope.openHelpScreen = function(){
+    $state.go('guestUserScreen',{'fromWhere':'Help'});
+  }
 })
 
