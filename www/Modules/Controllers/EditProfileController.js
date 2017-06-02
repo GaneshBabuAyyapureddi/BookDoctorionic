@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("EditProfileController", function($scope, $state,$rootScope, $ionicHistory,$cordovaSQLite, $cordovaImagePicker){
+.controller("EditProfileController", function($scope, $state,$rootScope, $ionicHistory,$cordovaSQLite, $cordovaImagePicker, $ionicPopup){
  $scope.editprofileobject = {};
   $scope.goBack = function() {
     // $state.go('settings');
@@ -28,7 +28,8 @@ angular.module('bookDoctor')
         try {
             db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});
         } catch (error) {
-            alert(error);
+           // alert(error);
+            $scope.showPopup(error);
         }
 
          $cordovaSQLite.execute(db, "SELECT * FROM signUpPatientDetails where name = ?",[$rootScope.myusername])
@@ -53,13 +54,15 @@ angular.module('bookDoctor')
                     }
                     else
                       {
-                         window.alert("Invalid username");
+                         //window.alert("Invalid username");
+                          $scope.showPopup('Invalid username');
                       }
                 },
                 function(error) {
                     $scope.statusMessage = "Error on loading: " + error.message;
           
-                        window.alert("Invalid username/password");
+                       // window.alert("Invalid username/password");
+                        $scope.showPopup('Invalid username/password');
                 }
             );
 
@@ -71,17 +74,33 @@ angular.module('bookDoctor')
         try {
             db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});
         } catch (error) {
-            alert(error);
+           // alert(error);
+            $scope.showPopup(error);
         }
         
        $cordovaSQLite.execute(db, 'UPDATE signUpPatientDetails SET mail = (?), mobile = (?), age = (?), gender = (?), dob = (?), bloodGroup = (?), address = (?)  WHERE name = (?) ', [editDetails.mail,editDetails.mobile,editDetails.age,editDetails.gender,editDetails.dob,editDetails.bloodGroup,editDetails.address,editDetails.fullname])
             .then(function(result) {
              //   $scope.statusMessage = "Message saved successful, cheers!";
-                 alert("update profile details done successfully");
+                // alert("update profile details done successfully");
+                 $scope.showPopup('update profile details done successfully');
             }, function(error) {
             //    $scope.statusMessage = "Error on saving: " + error.message;
-             alert("Form not submitted");
+            // alert("Form not submitted");
+            $scope.showPopup('Form not submitted');
             })
          
   }
+
+
+$scope.showPopup = function(message){
+  var alertPopup = $ionicPopup.alert({
+    title: 'BookDoctor',
+    template: message
+  })
+  alertPopup.then(function(res){
+
+  });
+}
+
+
 })
