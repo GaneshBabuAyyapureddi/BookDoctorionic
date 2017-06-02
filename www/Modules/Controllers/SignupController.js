@@ -1,6 +1,6 @@
 angular.module('bookDoctor')
 
-.controller("signupController",function ($scope, $state,  $cordovaSQLite, $ionicHistory, $cordovaCamera, $ionicActionSheet) {
+.controller("signupController",function ($scope, $state,  $cordovaSQLite, $ionicHistory, $cordovaCamera, $ionicActionSheet, $ionicPopup) {
    $scope.imgURI="img/plus-button1.png";
    $scope.selectedGenderPlaceHolderVal = "Gender";
    $scope.id = "name";
@@ -83,7 +83,9 @@ angular.module('bookDoctor')
    //alert(signUpDetails.selectedGenderVal)
 
     if(form.$valid) {
-     console.log('Image URI: expected'+signUpDetails.fullname+ ' '+signUpDetails.mail);   // Print image URI
+     console.log('Image URI: expected'+signUpDetails.fullname+ ' '+signUpDetails.mail); 
+       // Print image URI
+         
       var db;
         try {
             db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});
@@ -99,8 +101,22 @@ $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS signUpPatientDetails (id 
        $cordovaSQLite.execute(db, 'INSERT INTO signUpPatientDetails(imageUrl,name, mail, password, patient_id, code, mobile, emergency_mobile, Age, DOB, BloodGroup, Address, Street, Locality, City,Gender) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', [$scope.imgURI,signUpDetails.fullname,signUpDetails.mail,signUpDetails.password,signUpDetails.PatientId,signUpDetails.code,signUpDetails.Primarymobileno,signUpDetails.secondarymobileno,signUpDetails.age,signUpDetails.dob,signUpDetails.bloodgroup,signUpDetails.address,signUpDetails.street,signUpDetails.locality,signUpDetails.city,signUpDetails.gender])
             .then(function(result) {
              //   $scope.statusMessage = "Message saved successful, cheers!";
-                 alert("Signup done successfully");
-            }, function(error) {
+                // alert("Signup done successfully");
+          var confirmPopup = $ionicPopup.alert({
+              title: 'BookDoctor!',
+               template: 'Signup done successfully !'
+            });
+
+            confirmPopup.then(function(res) {
+                if(res) {
+                    $state.go('loginPage');
+                    $ionicHistory.clearHistory();
+                 } else {
+                    console.log('Not sure!');
+                  }
+            });
+
+      }, function(error) {
             //    $scope.statusMessage = "Error on saving: " + error.message;
              alert(error.message);
             })
