@@ -181,6 +181,19 @@
   margin-right: 20px;
 }
 
+.allergies_content {
+  top:0;
+  bottom: 0;
+  overflow-y: scroll;
+  left: 0;
+  right: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 #map_canvas {
     width: 670px;
     height: 400px;
@@ -188,7 +201,7 @@
     }
 /*Buy Medicine Screen start*/
 label#rounded{
-border-radius:15px; 
+border-radius:65px; 
 }
 #centerAlign_LR {
   width:70%;
@@ -196,9 +209,10 @@ border-radius:15px;
   margin-right:auto;
 }
 #centerAlign_patient_dashboard {
-  width:50%;
+  width:80%;
   margin-left:auto;
   margin-right:auto;
+  margin-top: 15px;
 }
 /*Buy Medicine Screen end*/
 
@@ -277,7 +291,32 @@ border-radius:15px;
     opacity: 0.3;
 }
 
+#main_wrapper{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index:1;
+  background-image: url('../img/DoctorBackGroundImg.jpg');
+ background-size: 100% 100%;  // or cover like Ben Dyer states
+ background-size:cover;
+ -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
 
+.backgroundImageCVR{
+  position:relative;
+  padding:15px;
+}
+
+.content_text{
+  position:relative;
+  z-index:2;
+}
 
 /*.popup-buttons .button.activated{
   background-color: #d62304;
