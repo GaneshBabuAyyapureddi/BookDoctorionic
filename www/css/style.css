@@ -12,7 +12,7 @@
     text-align: center;
 }
 .error-container {
-  margin: 5px 0;
+  margin: 0px 0;
 }
  
 .error-container:last-child {
@@ -123,6 +123,12 @@
   min-height: 80px;
   padding: 10px;
 }
+.round_corner2 {
+    /*border: 3px solid #fff;
+    box-shadow: 0 0 5px gray;*/
+    border: 3px;
+    border-radius: 50%;
+    }
 /* Doctor profile Controller - End */
 
 .my-disable{
@@ -175,6 +181,19 @@
   margin-right: 20px;
 }
 
+.allergies_content {
+  top:0;
+  bottom: 0;
+  overflow-y: scroll;
+  left: 0;
+  right: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 #map_canvas {
     width: 670px;
     height: 400px;
@@ -190,9 +209,10 @@ border-radius:65px;
   margin-right:auto;
 }
 #centerAlign_patient_dashboard {
-  width:50%;
+  width:80%;
   margin-left:auto;
   margin-right:auto;
+  margin-top: 15px;
 }
 /*Buy Medicine Screen end*/
 
@@ -231,3 +251,48 @@ border-radius:65px;
    margin-top: -20px; /* Note, this must be half the font size */
    color: $light;
    }
+#inner {
+  display: table;
+  margin: 0 auto;
+}
+.textplaceholdercolor{
+  color:#afafaf;
+}
+.textplaceholdercoloractive{
+  color: #454545;
+}
+
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  padding-top: 20px;
+  /*padding-bottom:20px;*/
+  
+}
+
+/*.padding {
+  margin: 50px 0;
+}*/
+.slider-pager-page.active {
+    display: inline-block;
+    margin: 0px 3px;
+    width: 15px;
+    color: #ef473a!important;
+    text-decoration: none;
+    opacity: 0.3;
+}
+.slider-pager-page {
+   display: inline-block;
+    margin: 0px 3px;
+    width: 15px;
+    color: #11c1f3!important;
+    text-decoration: none;
+    opacity: 0.3;
+}
+
+
+
+/*.popup-buttons .button.activated{
+  background-color: #d62304;
+}*/

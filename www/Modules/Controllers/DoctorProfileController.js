@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup) {
+.controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $ionicModal) {
     
   //$scope.$on('$ionicView.beforeEnter', function(){
     $scope.profileObject = $stateParams.doctorProfile;
@@ -48,8 +48,8 @@ angular.module('bookDoctor')
     $ionicHistory.goBack();
   }
 
-  $scope.rateMe = function() {
-    $state.go('rateUsScreen');
+  $scope.rateMe = function(rateUsDate) {
+    $state.go('rateUsScreen', {'selectedDate':rateUsDate});
   }
   
    angular.element(document).ready(function () {
@@ -104,40 +104,153 @@ angular.module('bookDoctor')
 
     $scope.appointmentList = [
   {
-    "appointmentDate":"2017-05-22",
+    "appointmentDate":"2017-05-28",
+    "appointmentTime":"5.00 PM",
     "image":"img/tick_green.png", 
-    "message":"Your appointment has been approved",
+    "message":"Appointment Scheduled and approved on 2017-05-22",
     "modifyValue":true,
-    "rateValue":false
+    "rateValue":false, 
+    "status":"Scheduled",
+    "buttonColor":"button-positive"
   },
   {
-    "appointmentDate":"2017-05-21",
+    "appointmentDate":"2017-06-21",
+    "appointmentTime":"2.30 PM",
     "image":"img/close_red.png", 
-    "message":"Your appointment has been cancelled",
-    "modifyValue":false,
-    "rateValue":true
+    "message":" has been approved.",
+    "modifyValue":true,
+    "rateValue":false,
+    "status":"Approved ",
+    "buttonColor":"button-balanced"
   },
   {
-    "appointmentDate":"2017-05-20",
+    "appointmentDate":"2017-06-10",
+    "appointmentTime":"11.30 AM",
     "image":"img/waiting.png", 
-    "message":"Your appointment is in progress",
-    "modifyValue":true,
-    "rateValue":false
+    "message":" has been rejected.",
+    "modifyValue":false,
+    "rateValue":false,
+    "status":"Rejected ",
+    "buttonColor":"button-assertive"
   },
   {
     "appointmentDate":"2017-05-23",
+    "appointmentTime":"4.15 PM",
     "image":"img/close_red.png", 
-    "message":"Your appointment has been cancelled",
+    "message":" is in progress",
     "modifyValue":false,
-    "rateValue":true
+    "rateValue":false,
+    "status":"In Progress",
+    "buttonColor":"button-energized"
   },
   {
     "appointmentDate":"2017-05-24",
+    "appointmentTime":"7.15 PM",
     "image":"img/tick_green.png", 
-    "message":"Your appointment has been approved",
+    "message":" has been completed successfully",
+    "modifyValue":false,
+    "rateValue":true,
+    "status":"Completed ",
+    "buttonColor":"button-royal"
+  },{
+    "appointmentDate":"2017-05-28",
+    "appointmentTime":"5.00 PM",
+    "image":"img/tick_green.png", 
+    "message":" and it is waiting for approval",
     "modifyValue":true,
-    "rateValue":false
-  }
+    "rateValue":false, 
+    "status":"Scheduled",
+    "buttonColor":"button-positive"
+  },
+  {
+    "appointmentDate":"2017-06-21",
+    "appointmentTime":"2.30 PM",
+    "image":"img/close_red.png", 
+    "message":" has been approved.",
+    "modifyValue":true,
+    "rateValue":false,
+    "status":"Approved ",
+    "buttonColor":"button-balanced"
+  },
+  {
+    "appointmentDate":"2017-06-10",
+    "appointmentTime":"11.30 AM",
+    "image":"img/waiting.png", 
+    "message":" has been rejected.",
+    "modifyValue":false,
+    "rateValue":false,
+    "status":"Rejected ",
+    "buttonColor":"button-assertive"
+  },
+  {
+    "appointmentDate":"2017-05-23",
+    "appointmentTime":"4.15 PM",
+    "image":"img/close_red.png", 
+    "message":" is in progress",
+    "modifyValue":false,
+    "rateValue":false,
+    "status":"In Progress",
+    "buttonColor":"button-energized"
+  },
+  {
+    "appointmentDate":"2017-05-24",
+    "appointmentTime":"7.15 PM",
+    "image":"img/tick_green.png", 
+    "message":" has been completed successfully",
+    "modifyValue":false,
+    "rateValue":true,
+    "status":"Completed ",
+    "buttonColor":"button-royal"
+  },{
+    "appointmentDate":"2017-05-28",
+    "appointmentTime":"5.00 PM",
+    "image":"img/tick_green.png", 
+    "message":" and it is waiting for approval",
+    "modifyValue":true,
+    "rateValue":false, 
+    "status":"Scheduled",
+    "buttonColor":"button-positive"
+  },
+  {
+    "appointmentDate":"2017-06-21",
+    "appointmentTime":"2.30 PM",
+    "image":"img/close_red.png", 
+    "message":" has been approved.",
+    "modifyValue":true,
+    "rateValue":false,
+    "status":"Approved ",
+    "buttonColor":"button-balanced"
+  },
+  {
+    "appointmentDate":"2017-06-10",
+    "appointmentTime":"11.30 AM",
+    "image":"img/waiting.png", 
+    "message":" has been rejected.",
+    "modifyValue":false,
+    "rateValue":false,
+    "status":"Rejected ",
+    "buttonColor":"button-assertive"
+  },
+  {
+    "appointmentDate":"2017-05-23",
+    "appointmentTime":"4.15 PM",
+    "image":"img/close_red.png", 
+    "message":" is in progress",
+    "modifyValue":false,
+    "rateValue":false,
+    "status":"In Progress",
+    "buttonColor":"button-energized"
+  },
+  {
+    "appointmentDate":"2017-05-24",
+    "appointmentTime":"7.15 PM",
+    "image":"img/tick_green.png", 
+    "message":" has been completed successfully",
+    "modifyValue":false,
+    "rateValue":true,
+    "status":"Completed ",
+    "buttonColor":"button-royal"
+  }  
   ];
 
   $scope.editValue = function(appointmentDate){
@@ -145,8 +258,30 @@ angular.module('bookDoctor')
     var FromDate = date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
     if (appointmentDate == FromDate) {
       alert("Your appointment date is today so, could not edit");
-    }else{
-      alert("Edit success");
+    }else{      
+      // alert($scope.date);
+      $scope.openModal();
+      $scope.date = new Date(appointmentDate);
+      $scope.appointmentTitle = "Edit Appointment";
+      $scope.specialityShow = false;
+      $scope.doctorShow = false;
+
+      /*Date Picker*/
+      // var todayDate = new Date();
+      // var year = todayDate.getFullYear();
+      // var month = todayDate.getMonth()+1;
+      // if (month<10){
+      //   month = "0" + month;
+      // };
+      // var day = todayDate.getDate();
+      // $scope.todayDate = year + "-" + month + "-" + day;
+      // $scope.todayDate = appointmentDate;
+
+      /*Time Picker*/
+      $scope.timeNow=new Date();
+      var hour = $scope.timeNow.getHours();
+      var minutes = $scope.timeNow.getMinutes();
+      $scope.timeNow.setHours(hour,minutes,0,0);
     }    
   }
 
@@ -177,6 +312,36 @@ angular.module('bookDoctor')
       });
     
    };
+
+   /* Add appointment modal view */
+  $ionicModal.fromTemplateUrl('Modules/Templates/AddAppointmentModalView.html', {
+      scope: $scope
+      }).then(function(modal) {
+        $scope.addAppointmentModal = modal;
+      });
+      $scope.openModal = function() {
+          $scope.addAppointmentModal.show();
+      };
+
+      $scope.closeModal = function() {
+          $scope.addAppointmentModal.hide();
+      };
+
+
+      $scope.$on('$destroy', function() {
+          // $scope.modal.remove();
+      });
+
+      $scope.$on('modal.hidden', function() {
+          // Execute action
+      });
+
+      $scope.$on('modal.removed', function() {
+          // Execute action
+      });
+
+
+  
    
 })
 

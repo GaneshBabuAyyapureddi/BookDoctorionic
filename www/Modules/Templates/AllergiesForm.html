@@ -1,14 +1,14 @@
   <ion-modal-view style=" height:260px;">
-            <ion-header-bar class="bar-positive fix-buttons bar-calm">
-              <a class="button" ng-click="closeModal()">Cancel</a>
+            <ion-header-bar class="bar-positive fix-buttons bar-calm" style="background-color:{{appTheme}}">
+              <a class="button" ng-click="closeModal()" style="background-color:{{appTheme}}">Cancel</a>
               <h1 class="title">Impression Details</h1>
             </ion-header-bar>
             <ion-content has-bouncing="true" >
                 <div class="card" style="flex-wrap: wrap;">
-                <p style="text-align:center; font-weight:bold; margin-top:10px" >IMPRESSION</p>
+                <p style="text-align:center; font-weight:bold;" >IMPRESSION</p>
                 <p style="margin-left:15px; margin-right:15px;" ng-bind-html="person.data" ></p>
               </div>
-              <div style=" text-align:center;background-color:#db5a3d; color:white; margin-top:-20px;">  
+             <!--  <div style=" text-align:center;background-color:{{combinationTheme}}; color:white; margin-top:-20px;">  
                   <div style="padding-top: 2px;" >
                     <span >Date:</span>
                     <span >{{person.date}}</span>
@@ -17,6 +17,18 @@
                     <span >Time:</span>
                     <span >{{person.time}}</span>
                   </div>
-                </div>
+                </div> -->
             </ion-content>
+            <ion-footer-bar class="bar-positive bar-calm" style="background-color:{{combinationTheme}};margin-top:5px;">
+               <div  id="inner" style="text-align:center;background-color:{{combinationTheme}}; color:white;">  
+                              <div >
+                                <span >Impression Date:</span>
+                                <span >{{person.date}}</span>
+                              </div>
+                              <div  style="padding-bottom:3px">
+                                <span >Impression Time:</span>
+                                <span >{{person.time}}</span>
+                              </div>
+                            </div>
+            </ion-footer-bar>
         </ion-modal-view>

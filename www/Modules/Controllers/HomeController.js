@@ -1,7 +1,7 @@
-
+//var appTheme = "#11c1f3";
 var app = angular.module('bookDoctor')
-.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter,$cordovaSQLite) {
-
+.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter,$cordovaSQLite,$rootScope) {
+$rootScope.appTheme ="#11c1f3";
 var showAppointmentDetails;
 /*Add appointment modal view*/
 var specialityArray = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",
@@ -31,7 +31,10 @@ var doctorsArray = [["Dr.George","Dr.Donald","Dr.Gilbert","Dr.Henry Aldrich","Dr
 //$scope.todayDate = $filter("date")(Date.now(), 'yyyy-MM-dd');
 //$scope.date = $filter("date")(Date.now(), 'yyyy-MM-dd');
 
-$scope.date = new Date()
+$scope.date = new Date();
+$scope.appointmentTitle = "Book Appointment";
+$scope.specialityShow = true;
+$scope.doctorShow = true;
 
 /*Date Picker*/
 var todayDate = new Date();
@@ -255,12 +258,12 @@ $scope.events = [
   // {title: 'You have an appointmentment with Dr. John Austin',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
   // {title: 'You have an appointmentment with Dr.Thomas Amory',start: new Date(y, m, 28),end: new Date(y, m, 29)}
 
-  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2), backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false, backgroundColor:'#f47a42',borderColor:'#f47a42'},
-  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29), backgroundColor:'#f47a42',borderColor:'#f47a42'}
+  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2), backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
+  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29), backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme}
 
 ];
 /* event source that calls a function on every view switch */

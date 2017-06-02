@@ -18,7 +18,7 @@ angular.module('bookDoctor')
     $state.go('notification');
   }
   $scope.goToSettings = function() {
-    $state.go('settings');
+    $state.go('dashboard.settings');
   }
     $scope.goToLogin = function() {
     $state.go('loginPage');
