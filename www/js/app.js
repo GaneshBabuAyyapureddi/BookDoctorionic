@@ -73,7 +73,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                 views: {
                   'menuContent': {
                     templateUrl: 'Modules/Templates/BuyMedicine.html',
-                    //controller:'doctorSearchController'
+                    controller:'BuyMedicineController'
                   }
                 }                  
                
