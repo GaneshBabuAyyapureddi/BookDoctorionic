@@ -1,11 +1,29 @@
 angular.module('bookDoctor')
-.controller("EditProfileController", function($scope, $state,$rootScope, $ionicHistory,$cordovaSQLite){
+.controller("EditProfileController", function($scope, $state,$rootScope, $ionicHistory,$cordovaSQLite, $cordovaImagePicker){
  $scope.editprofileobject = {};
   $scope.goBack = function() {
     // $state.go('settings');
     $ionicHistory.goBack();
   }
+ $scope.getPhoto = function() {       
+        // Image picker will load images according to these settings
+    var options = {
+        maximumImagesCount: 1, // Max number of selected images, I'm using only one for this example
+        width: 800,
+        height: 800,
+        quality: 80            // Higher is better
+    };
+ 
+    $cordovaImagePicker.getPictures(options).then(function (results) {
+                // Loop through acquired images
+        for (var i = 0; i < results.length; i++) {
+            console.log('Image URI: ' + results[i]);   // Print image URI
+        }
+    }, function(error) {
+        console.log('Error: ' + JSON.stringify(error));    // In case of error
+    });
 
+};
    var db;
         try {
             db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});
@@ -45,4 +63,25 @@ angular.module('bookDoctor')
                 }
             );
 
+
+ $scope.goToEditConfirm = function(editDetails) {
+ 
+//     console.log('Image URI: expected'+signUpDetails.fullname+ ' '+signUpDetails.mail);   // Print image URI
+      var db;
+        try {
+            db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});
+        } catch (error) {
+            alert(error);
+        }
+        
+       $cordovaSQLite.execute(db, 'UPDATE signUpPatientDetails SET mail = (?), mobile = (?), age = (?), gender = (?), dob = (?), bloodGroup = (?), address = (?)  WHERE name = (?) ', [editDetails.mail,editDetails.mobile,editDetails.age,editDetails.gender,editDetails.dob,editDetails.bloodGroup,editDetails.address,editDetails.fullname])
+            .then(function(result) {
+             //   $scope.statusMessage = "Message saved successful, cheers!";
+                 alert("update profile details done successfully");
+            }, function(error) {
+            //    $scope.statusMessage = "Error on saving: " + error.message;
+             alert("Form not submitted");
+            })
+         
+  }
 })
