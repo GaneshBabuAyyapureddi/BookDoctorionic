@@ -13,12 +13,12 @@
       <label id = "rounded" class="item item-input">
       <i class="icon ion-ios-search"></i>
       
-      <input type="Search" placeholder="Medicine Search" ng-model="searchText.patientName" id="searchField" value=searchText.patientName>
+      <input type="Search" placeholder="Medicine Search" ng-model="searchText.patientName" id="searchField" value=searchText.patientName ng-change="OnTextChange()">
       <!-- <button class="button button-balanced" ng-click="searchButtonClicked()">Search</button> -->
       </label>
       <div style="z-index: 1;" class="list" ng-show="searchText.patientName.length">
         <ul>
-          <li class="item" ng-repeat="item in patientsList | filter:searchText:strict" ng-click="patientSelected(item)"> {{item.patientName}}</li>
+          <li class="item" ng-repeat="item in patientsList | filter:searchText.patientName:strict" ng-click="patientSelected(item.patientName)"> {{item.patientName}}</li>
         </ul>
            </div>
     </div>
@@ -35,8 +35,11 @@
             <option>Thermometer</option>
           </select>
         </label>
-		<div id="centerAlign_LR">
-          <button class="button button-block button-balanced" style="margin-top:50px; margin-bottom:30px" ng-click="addDetails(data)">Buy</button>
-        </div>
+	
+      <button class="button button-calm " style="margin-top:50px; margin-bottom:30px; width:170px; height:50px;" ng-click="getPhoto()">Upload Prescription</button>
+       <img ng-src="{{imageURI}}" class="center_img"  style="
+                     width: 160px; height: 160px; margin-top:100px;" >
+      <button class="button button-block button-balanced" style="margin-top:210px; margin-bottom:30px" ng-click="addDetails(data)">Buy</button>
+      
         </div>
 </ion-content>

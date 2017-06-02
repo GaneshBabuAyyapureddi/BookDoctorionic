@@ -17,7 +17,8 @@ var myOldPassword;
   }
 
   $scope.goEditProfile = function() {
-   $state.go('tabs.PatientProfile');
+    $state.go('editProfile');
+   //$state.go('tabs.PatientProfile');
    // $ionicHistory.goBack();
   }
 

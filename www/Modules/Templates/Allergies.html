@@ -12,10 +12,15 @@
     <ion-tab title="History">
       <ion-view>
         <ion-content>
-          <div class="row responsive-sm" style="flex-wrap: wrap;" ng-repeat="row in persons | inSlicesOf:3">
+<div class="backgroundImageCVR">
+        <div id="main_wrapper"></div>
+        <div class="content_text">
+<!--          <div class="background-image"></div>
+          <div class="allergies_content">
+ -->          <div  class="row responsive-sm" style="flex-wrap: wrap;" ng-repeat="row in persons | inSlicesOf:3" >
           <!-- <div class="row responsive-lg"> -->
             <div class="col" ng-repeat="person in row" >
-              <div class="card" style="width:300px; height:230px;">
+              <div class="card"  style="width:300px; height:230px;">
                 <p style="text-align:center; font-weight:bold; margin-top:10px" ng-click="openModal(person)">IMPRESSION</p>
                 <p style="margin-left:15px; margin-right:15px;" ng-bind-html="person.data" ng-click="openModal(person)"></p>
               </div>
@@ -31,6 +36,8 @@
                 </div>
             </div>
           </div>
+</div>
+</div>
         </ion-content>
       </ion-view>
     </ion-tab>

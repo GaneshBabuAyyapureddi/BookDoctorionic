@@ -1,0 +1,63 @@
+<ion-view hide-nav-bar="true">
+     <ion-header-bar class="bar bar-header bar-calm" style="background-color: {{appTheme}};">
+      <button class="button button-icon icon ion-android-arrow-back" style="color: #E4E4E4" ng-click="goBack()"></button>
+      <div style="color: #FFFFFF;text-align: center;" class="title">Edit Profile</div>
+     </ion-header-bar>
+    <ion-content scroll="true">
+
+  <div class="list card" style="width:50%; margin-left: auto; margin-right: auto;">
+      <div class="item item-body" >
+        <div class="item" align="center">
+              <img src="img/patientimg.jpg" ng-model="editprofileobject.imageUrl" style="width: 20%;height:20%;" ng-click="getPhoto()">
+        </div>
+        <label class="item item-input item-floating-label animated fadeInUp"> 
+          <span >Patient Name</span>
+          <input type="text" placeholder="Full Name" ng-model="editprofileobject.name" ng-readonly=true>
+        </label>
+        <label class="item item-input item-floating-label animated fadeInUp"> 
+          <span >Patient ID</span>
+          <input type="text" placeholder="Patient ID" ng-model="editprofileobject.patient_id" ng-readonly=true>
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label" >
+             Gender
+            </div>
+            <select >
+              <option>Male</option>
+              <option selected>Female</option>
+            </select>
+        </label>
+        <label class="item item-input item-floating-label animated fadeInUp"> 
+          <span >DOB</span>
+          <input type="text" placeholder="DOB" ng-model="editprofileobject.dob" >
+        </label>
+        <label class="item item-input item-floating-label animated fadeInUp"> 
+          <span >Age</span>
+          <input type="text" placeholder="Age" ng-model="editprofileobject.age" >
+        </label>
+        <label class="item item-input item-floating-label animated fadeInUp"> 
+          <span >Blood Group</span>
+          <input type="text" placeholder="Blood Group" ng-model="editprofileobject.bloodGroup" >
+        </label>
+        <label class="item item-input item-floating-label animated fadeInUp"> 
+          <span >Mobile Number</span>
+          <input type="text" placeholder="Mobile Number" ng-model="editprofileobject.mobile" >
+        </label>
+        <label class="item item-input item-floating-label animated fadeInUp"> 
+          <span >Email ID</span>
+          <input type="text" placeholder="Email ID" ng-model="editprofileobject.mail" >
+        </label>
+        <label class="item item-input item-floating-label animated fadeInUp"> 
+          <span >Address</span>
+          <input type="text" placeholder="Address" ng-model="editprofileobject.address" >
+        </label>
+        <br>
+         <div class="col text-center">
+          <button class="button button-assertive" ng-click="goToEditConfirm(editprofileobject)" style="width: 70%;background-color: {{combinationTheme}}"> Submit </button>
+        </div>   
+      </div>
+  </div>
+
+
+    </ion-content>
+    </ion-view>

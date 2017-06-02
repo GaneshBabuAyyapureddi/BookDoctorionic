@@ -1,7 +1,7 @@
 angular.module('bookDoctor')
 
-.controller("signupController",function ($scope, $state,  $cordovaSQLite, $ionicHistory, $cordovaCamera, $ionicActionSheet, $ionicPopup) {
-   $scope.imgURI="img/plus-button1.png";
+.controller("signupController",function ($scope, $state,  $cordovaSQLite, $ionicHistory, $cordovaCamera, $ionicActionSheet) {
+   $scope.imgURI="img/AddProfileIcon.png";
    $scope.selectedGenderPlaceHolderVal = "Gender";
    $scope.id = "name";
 

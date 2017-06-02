@@ -54,10 +54,10 @@ angular.module('bookDoctor')
          $scope.popover = popover;
    });
 
-   $scope.specialistLists=["ShowAll","Obstetrics and gynecology", "Cardiology", "Gynecology"
-      , "General surgery", "Neurology and NeuroScience", "Urology", "Oncologist", "Epidemiologist", "Endocrinologist"
+   $scope.specialistLists=["ShowAll","Immunology","Obstetrics and gynecology", "Cardiology", "Gynecology"
+      , "General surgery", "Neurology", "Urology", "Oncologist", "Epidemiologist", "Endocrinologist"
       , "Dermatologist", "Dentist", "Endocrinologist", "Dermatologist", "Nephrologist", "Psychiatrist"
-      , "Pathologist", "Neurosurgeon", "Gastroenterologist", "Ophthalmologist", "Radiology", "Diabetology"];
+      , "Pathologist", "Neurosurgeon", "Gastroenterologist", "Ophthalmologist", "Radiology", "Diabetology", "NeuroScience"];
 
       $scope.doctorSelected = function(doctorObject) {
        $state.go('doctorProfile', {"doctorProfile":doctorObject});
