@@ -296,3 +296,7 @@ border-radius:15px;
 /*.popup-buttons .button.activated{
   background-color: #d62304;
 }*/
+
+.allergies {
+  background-image: url('../img/DoctorBackGroundImg.jpg') no-repeat center;
+}
