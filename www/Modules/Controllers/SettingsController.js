@@ -228,7 +228,7 @@ var confirmPopup = $ionicPopup.confirm({
                    template: 'You have successfully Password updated!'
                    });
 
-                  alertPopup.then(function(res) {
+                  confirmPopup.then(function(res) {
                            if(res) {
                             $scope.closePasswordModal();
                              $scope.passwordModal.hide();
