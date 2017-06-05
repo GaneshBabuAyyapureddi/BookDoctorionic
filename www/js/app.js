@@ -93,7 +93,8 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
             })
 
            .state('forgotPassword', {
-                url:'forgotPassword',               
+                url:'forgotPassword', 
+                cache: false,              
                 templateUrl: 'Modules/Templates/forgotPassword.html',
                 controller:'forgotPasswordController'
             }) 
