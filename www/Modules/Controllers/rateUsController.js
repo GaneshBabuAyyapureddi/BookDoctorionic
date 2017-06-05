@@ -31,7 +31,7 @@ angular.module('bookDoctor')
       $scope.closeModal = function(){
       var confirmPopup = $ionicPopup.alert({
               title: 'BookDoctor!',
-               template: 'You have been rated  successfully !'
+               template: 'Your reviews and ratings has been submitted successfully" !'
             });
 
             confirmPopup.then(function(res) {
