@@ -1,29 +1,72 @@
 angular.module('bookDoctor')
-.controller("EditProfileController", function($scope, $state,$rootScope, $ionicHistory,$cordovaSQLite, $cordovaImagePicker, $ionicPopup){
+.controller("EditProfileController", function($scope, $state,$rootScope, $ionicHistory,$cordovaSQLite,$cordovaCamera, $ionicActionSheet,$ionicPopup){
  $scope.editprofileobject = {};
+  $scope.imgURI="img/AddProfileIcon.png";
   $scope.goBack = function() {
     // $state.go('settings');
     $ionicHistory.goBack();
   }
  $scope.getPhoto = function() {       
-        // Image picker will load images according to these settings
-    var options = {
-        maximumImagesCount: 1, // Max number of selected images, I'm using only one for this example
-        width: 800,
-        height: 800,
-        quality: 80            // Higher is better
-    };
- 
-    $cordovaImagePicker.getPictures(options).then(function (results) {
-                // Loop through acquired images
-        for (var i = 0; i < results.length; i++) {
-            console.log('Image URI: ' + results[i]);   // Print image URI
-        }
-    }, function(error) {
-        console.log('Error: ' + JSON.stringify(error));    // In case of error
-    });
+         // Show the action sheet
+      var showActionSheet = $ionicActionSheet.show({
+         buttons: [
+        { text: '<i class="icon ion-camera"></i> Take Photo' },
+        { text: '<i class="icon ion-image"></i> Open Gallery' },
+        ],
+         destructiveText: 'Cancel',
+         titleText: 'Upload Photo',
+      
+         buttonClicked: function(index) {
+            if(index === 0) {
+                var options = {
+                    quality: 75,
+                    destinationType: Camera.DestinationType.DATA_URL,
+                    sourceType: Camera.PictureSourceType.CAMERA,
+                    allowEdit: true,
+                    encodingType: Camera.EncodingType.JPEG,
+                    targetWidth: 300,
+                    targetHeight: 300,
+                    popoverOptions: CameraPopoverOptions,
+                    saveToPhotoAlbum: false
+                };
+   
+                    $cordovaCamera.getPicture(options).then(function (imageData) {
+                        $scope.imgURI = "data:image/jpeg;base64," + imageData;
+                    }, function (err) {
+                        // An error occured. Show a message to the user
+                    });
+                    return true;
+            }
 
-};
+        
+            if(index === 1) {
+                var options = {
+                    quality: 75,
+                    destinationType: Camera.DestinationType.DATA_URL,
+                    sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+                    allowEdit: true,
+                    encodingType: Camera.EncodingType.JPEG,
+                    targetWidth: 300,
+                    targetHeight: 300,
+                    popoverOptions: CameraPopoverOptions,
+                    saveToPhotoAlbum: false
+                };
+   
+                    $cordovaCamera.getPicture(options).then(function (imageData) {
+                        $scope.imgURI = "data:image/jpeg;base64," + imageData;
+                    }, function (err) {
+                        // An error occured. Show a message to the user
+                    });
+                    return true;
+            }
+         },
+          destructiveButtonClicked: function() {
+            return true;
+         }
+
+      });
+   }
+   
    var db;
         try {
             db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});
