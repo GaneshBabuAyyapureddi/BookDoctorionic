@@ -223,15 +223,16 @@ var confirmPopup = $ionicPopup.confirm({
                   .then(
                 function(result) {
 
-                   var confirmPopup = $ionicPopup.confirm({
+                   var confirmPopup = $ionicPopup.alert({
                    title: 'BookDoctor!!',
                    template: 'You have successfully Password updated!'
                    });
 
-                  confirmPopup.then(function(res) {
+                  alertPopup.then(function(res) {
                            if(res) {
-          
-                               $state.go('loginPage');
+                            $scope.closePasswordModal();
+                             $scope.passwordModal.hide();
+                              // $state.go('loginPage');
 
                           // $ionicHistory.clearCache();
                                $ionicHistory.clearHistory();
@@ -241,6 +242,14 @@ var confirmPopup = $ionicPopup.confirm({
                                    }
                      });
                   //alert("password updated");
+              //     var alertPopup = $ionicPopup.alert({
+              //     title: 'BookDoctor',
+              //     template: 'You have successfully Password updated!'
+              //     });
+
+              // alertPopup.then(function(res) {
+              //   $state.go('dashboard.homeScreen');
+              //   });
          
                 },
                 function(error) {

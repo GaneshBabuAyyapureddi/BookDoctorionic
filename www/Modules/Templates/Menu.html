@@ -25,7 +25,7 @@
 		<ion-item menu-close ng-click="goToBuyMedicine()" class="item-icon-left"><i class="icon ion-medkit" style="color:{{appTheme}}"></i>Buy Medicine</ion-item>
 	<!-- 	<ion-item menu-close ng-click="openNotif($event)" class="item-icon-left"><i class="icon ion-android-notifications" style="color: #11c1f3"></i>Notification</ion-item> -->
 		<ion-item menu-close ui-sref="dashboard.settings" class="item-icon-left"><i class="icon ion-settings" style="color:{{appTheme}}"></i>Settings</ion-item>
-		<ion-item menu-close menu-close ui-sref="loginPage" class="item-icon-left"><i class="icon ion-log-out" style="color:{{appTheme}}"></i>Logout</ion-item>
+		<ion-item menu-close menu-close ng-click="goToLogout()" class="item-icon-left"><i class="icon ion-log-out" style="color:{{appTheme}}"></i>Logout</ion-item>
 
 	</ion-list>
 	</ion-side-menu>
