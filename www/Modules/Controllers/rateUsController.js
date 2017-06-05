@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("rateUsController",function ($scope, $state, $stateParams, $ionicHistory) {
+.controller("rateUsController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup) {
   $scope.rateUsDate = $stateParams.selectedDate;
 	$scope.goBack = function() {
     	$ionicHistory.goBack();
@@ -26,5 +26,22 @@ angular.module('bookDoctor')
           $scope.starImage = "img/star23.png";
         else
           $scope.starImage = "img/star45.jpg";
+      };
+
+      $scope.closeModal = function(){
+      var confirmPopup = $ionicPopup.alert({
+              title: 'BookDoctor!',
+               template: 'You have been rated  successfully !'
+            });
+
+            confirmPopup.then(function(res) {
+                if(res) {
+                   $ionicHistory.goBack();
+                 } else {
+                    console.log('Not sure!');
+                  }
+            });
+
+
       };
 })
