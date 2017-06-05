@@ -222,7 +222,26 @@ var confirmPopup = $ionicPopup.confirm({
         $cordovaSQLite.execute(db, "UPDATE signUpPatientDetails SET password ='" + newPassword + "' WHERE patient_id='123'")
                   .then(
                 function(result) {
-                  alert("password updated");
+
+                   var confirmPopup = $ionicPopup.confirm({
+                   title: 'BookDoctor!!',
+                   template: 'You have successfully Password updated!'
+                   });
+
+                  confirmPopup.then(function(res) {
+                           if(res) {
+          
+                               $state.go('loginPage');
+
+                          // $ionicHistory.clearCache();
+                               $ionicHistory.clearHistory();
+           
+                            } else {
+                               console.log('Not sure!');
+                                   }
+                     });
+                  //alert("password updated");
+         
                 },
                 function(error) {
                     // window.alert(error.message);
@@ -231,14 +250,29 @@ var confirmPopup = $ionicPopup.confirm({
   }
 
   $scope.validatePassword = function(data){
+    var alertPopup;
     if(data.oldPassword === myOldPassword){ 
         if(data.newPassword === data.confPassword){
             $scope.updatePassword(data.newPassword);
         }else{
-          alert("password missmatch");
+          //alert("password missmatch");
+         alertPopup = $ionicPopup.alert({
+            title: 'BookDoctor!',
+            template: 'Password missmatched'
+            });
+        alertPopup.then(function(res) {
+       console.log('password missmatched');
+        });
         }
     }else{
-      alert("Old password is incorrect");
+      //alert("Old password is incorrect");
+       alertPopup = $ionicPopup.alert({
+            title: 'BookDoctor!',
+            template: 'Old password is incorrect'
+            });
+        alertPopup.then(function(res) {
+       console.log('Old password is incorrect');
+        });
     }
   }
 

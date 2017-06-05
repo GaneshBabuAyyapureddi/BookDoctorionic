@@ -1,14 +1,50 @@
 var app = angular.module('bookDoctor')
-.controller("forgotPasswordController", function($scope, $state,$ionicHistory){
+.controller("forgotPasswordController", function($scope, $state,$ionicHistory, $ionicPopup){
   $scope.regEx="/^[0-9]{10,10}$/;"
 
     $scope.submitForgotPassword = function(form,data) {
 
 if (form.mobile.$valid) {
  //$scope.fetchPassword();
- 	 alert("You will receive a message shortly, with the password change link to the mobile number " +data.mobile);    
+ var confirmPopup = $ionicPopup.confirm({
+         title: 'BookDoctor!!',
+         template: 'You will receive a message shortly, with the password change link to the given mobile number !'
+      });
+
+      confirmPopup.then(function(res) {
+         if(res) {
+          
+              $state.go('loginPage');
+
+         // $ionicHistory.clearCache();
+      $ionicHistory.clearHistory();
+           
+         } else {
+            console.log('Not sure!');
+         }
+      });
+ 	 //alert("You will receive a message shortly, with the password change link to the mobile number " +data.mobile);    
 }else if(form.email.$valid){
-	alert("You will receive a mail shortly, with the password change link to the email-Id " +data.email);  
+
+  var confirmPopup = $ionicPopup.confirm({
+         title: 'BookDoctor!!',
+         template: 'You will receive a mail shortly, with the password change link to the given email-Id !'
+      });
+
+      confirmPopup.then(function(res) {
+         if(res) {
+          
+              $state.go('loginPage');
+
+         // $ionicHistory.clearCache();
+      $ionicHistory.clearHistory();
+           
+         } else {
+            console.log('Not sure!');
+         }
+      });
+  
+	//alert("You will receive a mail shortly, with the password change link to the email-Id " +data.email);  
 }
 //this has to be changed. Time being to resolve the error sent aslike
 // else{
