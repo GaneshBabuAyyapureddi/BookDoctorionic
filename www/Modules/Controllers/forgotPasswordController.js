@@ -14,10 +14,10 @@ if (form.mobile.$valid) {
       confirmPopup.then(function(res) {
          if(res) {
           
-              $state.go('loginPage');
+              $ionicHistory.goBack();
 
          // $ionicHistory.clearCache();
-      $ionicHistory.clearHistory();
+          // $ionicHistory.clearHistory();
            
          } else {
             console.log('Not sure!');
@@ -34,10 +34,10 @@ if (form.mobile.$valid) {
       confirmPopup.then(function(res) {
          if(res) {
           
-              $state.go('loginPage');
+             $ionicHistory.goBack();
 
-         // $ionicHistory.clearCache();
-      $ionicHistory.clearHistory();
+             // $ionicHistory.clearCache();
+            // $ionicHistory.clearHistory();
            
          } else {
             console.log('Not sure!');

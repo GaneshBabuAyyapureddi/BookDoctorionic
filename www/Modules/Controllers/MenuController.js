@@ -1,6 +1,6 @@
 angular.module('bookDoctor')
 
-.controller("MenuController",function ($scope, $state,$ionicModal,$http,$ionicSideMenuDelegate) {
+.controller("MenuController",function ($scope, $state,$ionicModal,$http,$ionicSideMenuDelegate,$ionicPopup) {
 
   $scope.goToHomeScreen = function() {
     $state.go('dashboard.homeScreen');
