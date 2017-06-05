@@ -87,6 +87,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
             
             .state('signupScreen',{
               url: '/signupScreen',
+                cache: false,
                 templateUrl: 'Modules/Templates/Signup.html',
                 controller: 'signupController'
             })
