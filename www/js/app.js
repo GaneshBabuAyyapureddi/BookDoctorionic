@@ -171,12 +171,12 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                     }
                    }
                 })
-           .state('tabs.Preference', {
-             url: '/Preference',
+           .state('tabs.Prescription', {
+             url: '/Prescription',
              views: {
-              'Preference-tab': {
-              templateUrl: 'Modules/Templates/Preference.html',
-              controller:'PreferenceController'
+              'Prescription-tab': {
+              templateUrl: 'Modules/Templates/Prescription.html',
+              controller:'PrescriptionController'
                     }
                    }
                 })
