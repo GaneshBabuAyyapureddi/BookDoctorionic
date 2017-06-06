@@ -171,6 +171,15 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                     }
                    }
                 })
+           .state('tabs.Preference', {
+             url: '/Preference',
+             views: {
+              'Preference-tab': {
+              templateUrl: 'Modules/Templates/Preference.html',
+              controller:'PreferenceController'
+                    }
+                   }
+                })
              /*   .state('tabs.Visits', {
              url: '/Visits',
              views: {
