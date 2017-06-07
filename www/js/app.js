@@ -171,6 +171,15 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                     }
                    }
                 })
+           .state('tabs.Prescription', {
+             url: '/Prescription',
+             views: {
+              'Prescription-tab': {
+              templateUrl: 'Modules/Templates/Prescription.html',
+              controller:'PrescriptionController'
+                    }
+                   }
+                })
              /*   .state('tabs.Visits', {
              url: '/Visits',
              views: {
