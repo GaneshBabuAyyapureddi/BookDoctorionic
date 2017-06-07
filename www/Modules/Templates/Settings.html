@@ -125,7 +125,7 @@
            <button class = "button button-icon icon-right ion-ios-close-outline" style="background-color:{{appTheme}}"
             ng-click = "closeModal()"></button>
         </ion-header-bar>
-     <ion-content>
+    <!--  <ion-content>
        <div class="item item-icon-right" ng-click="blueDialog()">Default Theme
       <i class="icon ion-ios-arrow-right" style="font-size: 25px;"></i>
        </div>
@@ -138,9 +138,56 @@
     <div class="item item-icon-right" ng-click="greenDialog()">Green Theme
       <i class="icon ion-ios-arrow-right" style="font-size: 25px;"></i>
     </div>
-    </ion-content>
-      </ion-modal-view>
-    </script>
+    </ion-content> -->
+
+
+<ion-content>
+<div class="backgroundImageCVR">
+    <div id="main_wrapper">
+    </div>
+    <div class="content_text">
+
+          <div  class="row responsive-sm" style="flex-wrap: wrap;">
+              <div class="col col-50" style="padding:0 20px 0 0;">
+              <div class="card"  style="width:100%;">
+                  <img src="img/DefaultTheme.png" width="100%" >
+                  <div style="text-align:center;background-color :#ef473a;"><strong>DEFAULT</strong>
+                  </div>
+              </div>
+              </div>
+
+              <div class="col col-50" style="padding:0 20px 0 0;">
+              <div class="card"  style="width:100%;">
+                  <img src="img/YellowTheme.png" width="100%" >
+                  <div style="text-align:center; background-color :#ef473a;"><strong>YELLOW</strong>
+                  </div>
+              </div>
+              </div>
+          </div>
+
+          <div  class="row responsive-sm" style="flex-wrap: wrap;">
+              <div class="col col-50" style="padding:0 20px 0 0;">
+              <div class="card"  style="width:100%;">
+                  <img src="img/RedTheme.png" width="100%" >
+                  <div style="text-align:center; background-color :#ef473a;"><strong>RED</strong>
+                  </div>
+              </div>
+              </div>
+
+              <div class="col col-50" style="padding:0 20px 0 0;">
+              <div class="card"  style="width:100%;">
+                <img src="img/GreenTheme.png" width="100%" >
+                <div style="text-align:center; background-color :#ef473a;"><strong>GREEN</strong>
+                </div>
+              </div>
+              </div>
+            </div>>
+    </div>
+   </div>
+  </ion-content>
+    
+  </ion-modal-view>
+ </script>
 
      <script id="open-help.html" type="text/ng-template">
       <ion-modal-view>
