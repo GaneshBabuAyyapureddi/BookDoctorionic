@@ -326,3 +326,7 @@ border-radius:65px;
 .allergies {
   background-image: url('../img/DoctorBackGroundImg.jpg') no-repeat center;
 }
+hr .vertical{
+ width: 0px;
+   height: 100%;
+}
