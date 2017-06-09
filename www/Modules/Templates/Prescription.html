@@ -12,38 +12,53 @@
   <ion-tab >
     <ion-view>
       <ion-content>
-        <div class="row responsive-sm"  ng-repeat="list in prescriptionList">
-          <div class="col">
-           <div class="card" style="margin-left: auto;margin-right: auto; width: 350px;" >
+        <div class="backgroundImageCVR">
+          <div id="main_wrapper"></div>
+          <div class="content_text">
+            <div class="row responsive-sm" style="flex-wrap: wrap;"  ng-repeat="list in prescriptionList | inSlicesOf:3">
+              <div class="col" ng-repeat="obj in list">
+               <div class="list card" style="width: 300px;height: 320px;" ng-click="openDetailList(obj)">
 
-            <div class="item">
-             <span style="margin: 5px;">{{list.name}}</span>
-             <span style="float:right;">{{list.age}}</span>
-           </div>
-           <div class="item item-text-wrap" style="background-color: #EAEAEA;">
-             <div>
-              <div class="row" >
-                <div class="col">Drug name</div>
-                <div class="col">Morning</div>
-                <div class="col">Noon</div>
-                <div class="col">Night</div>
-              </div>
-              <div class="row" ng-repeat="medicine in list.medicine">
-                <div class="col"><p>{{medicine.drug_name}}</p></div>
-                <div class="col"><input type="checkbox" ng-checked=medicine.is_morning ng-disabled=true></div>
-                <div class="col"><input type="checkbox" ng-checked={{list.is_noon}} ng-disabled=true></div>
-                <div class="col"><input type="checkbox" ng-checked={{list.is_night}} ng-disabled=true></div>
-              </div>
+                <div class="item" style="width: 100%">
+                 <span style="width:70%;color:#333;margin-left:-5px; ">Name : <span ng-model="name"style="color:{{combinationTheme}};">{{obj.name}} </span></span>
+                 <span style="float:left;"><hr style="width: 0.1px;height: 40px;position: absolute;left:190px;margin-top: -10px;"/></span>
+                 <span style="float:right;width:30%;color:#333;">Age : <span style="color:{{combinationTheme}};">{{obj.age}}yrs</span></span>
+               </div>
+               <div style="margin: 10px;font-size: 16px;">
+                 <div style="color:#333;">Date : <span style="color:{{combinationTheme}};font-size: 14px;">  {{obj.date}}</span></div>
+                 <div style="color:#333;">Time :  <span style="color:{{combinationTheme}};font-size: 14px;"> {{obj.time}}</span></div>
+               </div>
+               <div class="item item-text-wrap" style="background-color: #EAEAEA;padding: 0px !important; ">
 
-            </div>
-          </div>  
-          <div class="item">
-            <div>Prescribed by
-              <span style="float: right;font-weight: bold;">{{list.prescribedBy}}</span>
+                <div class="row" style = "background-color:{{combinationTheme}};color: #fff;}" >
+                  <div class="col">Drug</div>
+                  <div class="col">Morning</div>
+                  <div class="col">Noon</div>
+                  <div class="col">Night</div>
+                </div>
+                <div class="row" ng-repeat="medicine in obj.medicine | limitTo:3" style="margin-top: 3px;" ng-init="row = count()">
+
+                  <div class="col"><p style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" ng-if="medicine.drug_name.length>5">{{medicine.drug_name |limitTo:5}}... </p></div>
+                  <div class="col"><input type="checkbox" ng-checked=medicine.is_morning ng-disabled=true></div>
+                  <div class="col"><input type="checkbox" ng-checked=medicine.is_noon ng-disabled=true></div>
+                  <div class="col"><input type="checkbox" ng-checked=medicine.is_night ng-disabled=true>
+                    <a ng-if="obj.medicine.length>3 && row == 2" style="font-size: 13px;font-weight:bold;color:{{combinationTheme}};" >...more</a></div>
+
+                  </div>
+
+                </div>  
+                <div class="item" style="margin-bottom: 0px;">
+                  <div style="float: right;">
+                    <span style="color:#ccc;font-size: 14px;font-style: italic;">prescribed by</span>
+                    <span style="font-weight: bold;font-size:14px;color: {{combinationTheme}}">{{obj.prescribedBy | uppercase}}</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
     </ion-content>
 
   </ion-view>
@@ -51,5 +66,58 @@
 </ion-tabs>
 </ion-nav-buttons>
 </ion-nav-bar>
+
+
+<script id="detailedPrescription.html" type="text/ng-template">
+
+  <ion-modal-view style=" top: 10%;bottom: 10%;">
+    <ion-header-bar style="background-color:{{appTheme}}">
+      <button class = "button button-icon icon-right ion-ios-close-outline" style="float: right;" ng-click = "closeModal()"></button>
+    </ion-header-bar>
+    <ion-content>
+      <div  id="myAnim" style="margin-top: 30px;">
+
+       <div class="card" >
+
+        <div class="item" >
+         <span style="width:70%;color:#333;margin-left:-5px; ">Name : <span style="color:{{combinationTheme}};" > {{selectedPrescriptionObj.name}}</span></span>
+         <!-- <span style="float:left;"><hr style="width: 0.1px;height: 40px;position: absolute;left:190px;margin-top: -10px;"/></span> -->
+         <span style="float:right;width:20%;color:#333;">Age : <span style="color:{{combinationTheme}};">{{selectedPrescriptionObj.age}}yrs</span></span>
+       </div>
+       <div style="margin: 10px;font-size: 16px;">
+         <div style="color:#333;">Date : <span style="color:{{combinationTheme}};font-size: 14px;">  {{selectedPrescriptionObj.date}}</span></div>
+         <div style="color:#333;">Time :  <span style="color:{{combinationTheme}};font-size: 14px;"> {{selectedPrescriptionObj.time}}</span></div>
+       </div>
+       <div class="item item-text-wrap" style="background-color: #EAEAEA;padding: 0px !important; ">
+
+        <div class="row" style = "background-color:{{combinationTheme}};color: #fff;}" >
+          <div class="col col-50">Drug</div>
+          <div class="col">Morning</div>
+          <div class="col">Noon</div>
+          <div class="col">Night</div>
+        </div>
+        <div class="row" ng-repeat="medicine in selectedPrescriptionObj.medicine" style="margin-top: 3px;">
+
+          <div class="col col-50"><p>{{medicine.drug_name}}</p></div>
+          <div class="col"><input type="checkbox" ng-checked=medicine.is_morning ng-disabled=true></div>
+          <div class="col"><input type="checkbox" ng-checked=medicine.is_noon ng-disabled=true></div>
+          <div class="col"><input type="checkbox" ng-checked=medicine.is_night ng-disabled=true></div>
+
+        </div>
+
+      </div>  
+      <div class="item" style="margin-bottom: 0px;">
+        <div style="float: right;">
+        <span style="color:#ccc;font-size: 14px;font-style: italic;">prescribed by</span>
+          <span style="font-weight: bold;color: {{combinationTheme}}">{{selectedPrescriptionObj.prescribedBy}}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>
+</ion-modal-view>
+</script>
+
 </ion-view>
 

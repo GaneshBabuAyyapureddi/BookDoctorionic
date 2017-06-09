@@ -219,6 +219,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                 templateUrl: 'Modules/Templates/EditProfile.html',
                 controller:'EditProfileController'
             })  
+          
         $urlRouterProvider.otherwise('/loginPage');
 })
 
