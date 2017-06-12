@@ -14,8 +14,8 @@
       <ion-content>
         <div class="backgroundImageCVR">
           <div id="main_wrapper"></div>
-          <div class="content_text">
-            <div class="row responsive-sm" style="flex-wrap: wrap;"  ng-repeat="list in prescriptionList | inSlicesOf:3">
+          <div class="content_text" >
+            <div class="row responsive-sm" style="flex-wrap: wrap;"  ng-repeat="list in prescriptionList | inSlicesOf : 3">
               <div class="col" ng-repeat="obj in list">
                <div class="list card" style="width: 300px;height: 320px;" ng-click="openDetailList(obj)">
 
