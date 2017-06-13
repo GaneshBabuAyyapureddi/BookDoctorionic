@@ -6,9 +6,11 @@
    </ion-header-bar>
       <ion-content class="padding">
 <!-- <ion-slide-pager></ion-slide-pager> -->
-          <ion-slide-box>
-
-                    <ion-slide ng-repeat="image in images">
+          <ion-slide-box >
+                    <ion-slide ng-repeat="image in images" >
+                   <!--   <style ng-bind-html="mystyles1"></style>  -->
+                  <style ng-bind-html="mystyles1"></style>
+                  <style ng-bind-html="mystyles2"></style>
                         <img ng-src="{{image}}" style="width:700px;height:600px;margin:auto;display:block" >
                     </ion-slide>
              </ion-slide-box>
