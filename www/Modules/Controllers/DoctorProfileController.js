@@ -1,6 +1,10 @@
 angular.module('bookDoctor')
-.controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $ionicModal) {
-    
+.controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $ionicModal, $rootScope) {
+     $scope.$on("$ionicView.enter", function($state){
+        // handle event
+        
+    });
+
   //$scope.$on('$ionicView.beforeEnter', function(){
     $scope.profileObject = $stateParams.doctorProfile;
     $scope.ratings = $scope.profileObject.ratings;
@@ -15,8 +19,8 @@ angular.module('bookDoctor')
         iconOff: 'ion-ios-star-outline',   
         // iconOnColor: 'rgb(255, 215, 0)',  
         // iconOffColor:  'rgb(224, 224, 224)',   
-        iconOnColor:"#d62304", 
-        iconOffColor: "#ffa4a3",
+        iconOnColor:$rootScope.combinationTheme, 
+        iconOffColor: $rootScope.combinationTheme,
         rating: x.ratings, 
         minRating: 0,    
         readOnly: true, // Set to true so user cannot edit rating
@@ -31,16 +35,16 @@ angular.module('bookDoctor')
         iconOff : 'ion-ios-star-outline',
         // iconOnColor: 'rgb(255, 215, 0)',  
         // iconOffColor:  'rgb(224, 224, 224)',   
-        iconOnColor:"#d62304", 
-        iconOffColor: "#ffa4a3",        
-        rating:  $scope.ratings,
+        iconOnColor:$rootScope.combinationTheme, 
+        iconOffColor: $rootScope.combinationTheme,        
+       rating:  $scope.ratings,
         minRating:1,
         callback: function(rating) {
           $scope.ratingsCallback(rating);
         }
-      };
+      };   
       $scope.ratingsCallback = function(rating) {
-        console.log('Selected rating is : ', rating);
+        console.log('Selected rating is : '+ rating);
       };
   // });
   
