@@ -1,6 +1,9 @@
 angular.module('bookDoctor')
-.controller("rateUsController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup) {
+.controller("rateUsController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $rootScope) {
   $scope.rateUsDate = $stateParams.selectedDate;
+   $scope.$on('$ionicView.enter', function(){
+    console.log("view here....." + $rootScope.combinationTheme);
+});
 	$scope.goBack = function() {
     	$ionicHistory.goBack();
   	}
@@ -8,8 +11,8 @@ angular.module('bookDoctor')
 	$scope.ratingsObject = {
         iconOn : 'ion-ios-star',
         iconOff : 'ion-ios-star-outline',
-        iconOnColor: '#03A9F4',
-        iconOffColor:  '#CFD8DC',
+        iconOnColor: $rootScope.combinationTheme,
+        iconOffColor:  $rootScope.combinationTheme,
         rating:  0,
         minRating:0,
         callback: function(rating) {

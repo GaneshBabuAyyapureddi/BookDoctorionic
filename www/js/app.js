@@ -101,6 +101,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
 
            .state('doctorProfile', {
                 url:'/doctorProfile',
+                cache:false,
                 params: {
                     'doctorProfile': null
                 },          
