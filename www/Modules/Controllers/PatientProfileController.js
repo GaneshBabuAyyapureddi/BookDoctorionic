@@ -1,7 +1,7 @@
 var app = angular.module('bookDoctor')
 
 .controller("PatientProfileController", function($scope, $state, $ionicModal,$cordovaSQLite, $stateParams,$ionicHistory,$rootScope,$ionicSideMenuDelegate){
-  console.log("inside PatientProfileController..."+ $rootScope.appTheme);
+ // console.log("inside PatientProfileController..."+ $rootScope.appTheme);
      $scope.goBack = function() {
 	 $state.go('dashboard.homeScreen');
     }

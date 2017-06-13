@@ -32,9 +32,7 @@ angular.module('bookDoctor')
   });
 
   $scope.doctorSelected = function(doctorObject) {
-
    $state.go('doctorProfile', {"doctorProfile":doctorObject});
-   console.log("on doctorSelected ..... "+doctorObject.doctorName);
  }
 });
 
