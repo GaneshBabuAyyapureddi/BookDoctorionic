@@ -204,7 +204,7 @@ label#rounded{
 border-radius:65px; 
 }
 #centerAlign_LR {
-  width:70%;
+  width:90%;
   margin-left:auto;
   margin-right:auto;
 }
@@ -290,7 +290,30 @@ border-radius:65px;
     text-decoration: none;
     opacity: 0.3;
 }
+/*BuyMedicine Screen Style start*/
+#centerCardBuyMedicine {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 40px;
+    opacity: 0.85;
+}
+div.vertical-line{
+      width: 1px; /* Line width */
+      background-color: black; /* Line color */
+      height: 100%; /* Override in-line if you want specific height. */
+      float: left; /* Causes the line to float to left of content. 
+        You can instead use position:absolute or display:inline-block
+        if this fits better with your design */
+} 
+#upload-button-div {
+    position: relative;
+    width:50px;
+    margin-left: 10px;
+    margin-top:10%;
 
+}
+/*BuyMedicine Screen Style end*/
 
 
 /*.popup-buttons .button.activated{

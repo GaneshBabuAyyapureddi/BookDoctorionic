@@ -9,37 +9,65 @@
    </ion-header-bar>
 <ion-content>
 <div id="centerAlign_LR">
-    <div class="list list-inset">
-      <label id = "rounded" class="item item-input">
-      <i class="icon ion-ios-search"></i>
-      
-      <input type="Search" placeholder="Medicine Search" ng-model="searchText.patientName" id="searchField" value=searchText.patientName ng-change="OnTextChange()">
-      <!-- <button class="button button-balanced" ng-click="searchButtonClicked()">Search</button> -->
-      </label>
-      <div style="z-index: 1;" class="list" ng-show="searchText.patientName.length">
-        <ul>
-          <li class="item" ng-repeat="item in patientsList | filter:searchText.patientName:strict" ng-click="patientSelected(item.patientName)"> {{item.patientName}}</li>
-        </ul>
-           </div>
+  <div class="list card" id="centerCardBuyMedicine" style="background-color:{{appTheme}}">
+    <div style="margin-top:20px;margin-bottom:20px">
+      <div class="row">
+        <div class = "col1" style="width:65%;" padding:"false">
+          <div style="margin-left:10px;color:#000000; font-weight:bold; font-size:20px;">Search from thousands of products available on Book Docotor</div>
+          <div class="list list-inset">
+            <label id = "rounded" class="item item-input">
+              <i class="icon ion-ios-search"></i>
+              <input type="Search" placeholder="Search for Prescription Medicines" ng-model="searchText.tabletName" id="searchField" value=searchText.tabletName ng-change="OnTextChange()">
+            </label>
+            <div style="z-index: 1;" class="list" ng-show="searchText.tabletName.length">
+              <ul>
+                <li class="item" ng-repeat="item in prescriptionList | filter:searchText.tabletName:strict" ng-click="patientSelected(item.tabletName,item.tabletPrice)">
+                  <div class="row">
+                    <div class="col-75">  {{item.tabletName}} </div>
+                    <div class="col-25 text-right"> {{item.tabletPrice}}</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="vertical-line" style="height: 100px; margin-left:10px;" /></div>
+        <div>
+          <div style="margin-left:10px;color:#000000; font-weight:bold; font-size:20px;">Upload Prescription</div>
+         <div  id="upload-button-div">
+          <button class="button" ng-click="getPhoto()">Upload</button>
+          </div>
+        </div>
+         <img ng-src="{{imageURI}}"  style="
+                     width: 75px; height: 75px; margin-left: 10px;margin-top:10px;" >
     </div>
+  </div>
+</div>
+<div class="list card" id="centerCardBuyMedicine" style="background-color:{{appTheme}}">
+  <div style="margin-top:20px;margin-bottom:20px; margin-left:10px; margin-right:10px;">
+
 	<label class="item item-input item-select" id="spinnerAlign_LR"; style="color:#000000; margin-top:30px;">
                 <div class="input-label" >
-                  Home Checkup Machine
+                  Search for OTC Products
                 </div>
-          <select ng-model="data.vaccineType">
+          <select ng-model="data.homeCheckupMachine">
             <option>BP Monitor</option>
-            <option selected>Sugar Test Kit</option>
+            <option>Sugar Test Kit</option>
             <option>Digital Weight Scale</option>
             <option>Glucometer</option>
             <option>Pulse Oximeters</option>
             <option>Thermometer</option>
           </select>
         </label>
+      </div>
+</div>
 	
-      <button class="button button-calm " style="margin-top:50px; margin-bottom:30px; width:170px; height:50px;" ng-click="getPhoto()">Upload Prescription</button>
+      <!-- <button class="button button-calm " style="margin-top:50px; margin-bottom:30px; width:170px; height:50px;" ng-click="getPhoto()">Upload Prescription</button>
        <img ng-src="{{imageURI}}" class="center_img"  style="
-                     width: 160px; height: 160px; margin-top:100px;" >
-      <button class="button button-block button-balanced" style="margin-top:210px; margin-bottom:30px" ng-click="addDetails(data)">Buy</button>
-      
-        </div>
+                     width: 160px; height: 160px; margin-top:100px;" > -->
+                     <div style="width:10%;  margin: 0 auto;">
+                 
+      <button class="button button-block button-balanced" ng-disabled="BuyEnableandDisable()"style="margin-top:10%; margin-bottom:30px max-width:50px; height:50px; background-color:{{appTheme}} " ng-click="addDetails(data)">Buy</button>
+      </div>
+       
 </ion-content>
