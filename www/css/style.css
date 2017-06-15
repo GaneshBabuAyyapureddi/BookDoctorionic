@@ -199,22 +199,6 @@
     height: 400px;
     background-color: #CCC;
     }
-/*Buy Medicine Screen start*/
-label#rounded{
-border-radius:65px; 
-}
-#centerAlign_LR {
-  width:90%;
-  margin-left:auto;
-  margin-right:auto;
-}
-#centerAlign_patient_dashboard {
-  width:80%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top: 15px;
-}
-/*Buy Medicine Screen end*/
 
 .center_img {
     position:absolute;
@@ -278,7 +262,7 @@ border-radius:65px;
     display: inline-block;
     margin: 0px 3px;
     width: 15px;
-    color: #ef473a!important;
+    /*color: #ef473a!important;*/
     text-decoration: none;
     opacity: 0.3;
 }
@@ -286,7 +270,7 @@ border-radius:65px;
    display: inline-block;
     margin: 0px 3px;
     width: 15px;
-    color: #11c1f3!important;
+    /*color: #11c1f3!important;*/
     text-decoration: none;
     opacity: 0.3;
 }
@@ -311,11 +295,59 @@ div.vertical-line{
     width:50px;
     margin-left: 10px;
     margin-top:10%;
-
 }
+label#rounded{
+border-radius:65px; 
+}
+#centerAlign_LR {
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+#centerAlign_patient_dashboard {
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 15px;
+}my-disable
 /*BuyMedicine Screen Style end*/
+#main_wrapper{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index:1;
+  background-image: url('../img/DoctorBackGroundImg.jpg');
+ background-size: 100% 100%;  // or cover like Ben Dyer states
+ background-size:cover;
+ -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+>>>>>>> 4509de492feae7efaadfe8a5e6df00f8ccf48ba5
 
+.backgroundImageCVR{
+  position:relative;
+  padding:15px;
+}
+
+.content_text{
+  position:relative;
+  z-index:2;
+  opacity: 0.85;
+}
 
 /*.popup-buttons .button.activated{
   background-color: #d62304;
 }*/
+
+.allergies {
+  background-image: url('../img/DoctorBackGroundImg.jpg') no-repeat center;
+}
+hr .vertical{
+ width: 0px;
+   height: 100%;
+}

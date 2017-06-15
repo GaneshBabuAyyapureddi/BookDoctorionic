@@ -27,14 +27,17 @@
         <div style="color: #FFFFFF;text-align: center;" class="title">Dashboard</div>
    </ion-header-bar>
           <ion-content ng-init="readData()">
-       <div ng-repeat="profileObject in patientDetails">       
+    <!--    <div ng-repeat="profileObject in patientDetails">        -->
+<div class="backgroundImageCVR" ng-repeat="profileObject in patientDetails">
+        <div id="main_wrapper"></div>
+        <div class="content_text">      
             <div style="position: relative; left: 0; top: 0;"> 
               <img src="img/DoctorProfileBg1.png" class="profile_back" style="width:100%; height:250px;"/> 
               <img src="{{profileObject.imageUrl}}" class="round_corner animated zoomIn" style="width:110px; height:110px;margin-left:auto;margin-right: auto;"/>
             </div>
             <div class="row" style="margin-top:50px;">
               <div class="col">
-                  <h3 style="color:{{combinationTheme}};text-align:left;margin-left: 100px;">{{profileObject.name}}</h3>
+                  <h3 style="text-align:left;margin-left: 130px;">{{profileObject.name}}</h3>
                  <!--  <div>
                     <button class="button button-icon" style="text-align: center; color:#1B5E20; margin-top:-10px;">
                       <i class="icon ion-ios-telephone"></i> 
@@ -56,7 +59,7 @@
             <div class="card" id="centerAlign_patient_dashboard">
 <!--               <h4 style="margin-left:15px;">General Details</h4> -->
                <div class="item item-divider" style="text-align: left;background-color: {{appTheme}};">
-                  <h3 style="color: #FFFFFF;">GENERAL DETAILS</h3>
+                  <h3 style="color: #FFFFFF;text-align: center;">GENERAL DETAILS</h3>
                </div>
                <div  id="inner">
                <div class="row" id="patient-profile-row-margin">
@@ -99,7 +102,7 @@
             <div class="card" id="centerAlign_patient_dashboard">
 <!--               <h4 style="margin-left:15px;">Contact Details</h4 -->
               <div  class="item item-divider"  style="text-align: left;background-color: {{appTheme}};">
-                  <h3 style="color: #FFFFFF">CONTACT DETAILS</h3>
+                  <h3 style="color: #FFFFFF;text-align: center;">CONTACT DETAILS</h3>
                </div>
                  <div  id="inner">
               <div class="row" id="patient-profile-row-margin">
@@ -135,7 +138,7 @@
                      <div id="patient-profile-row-value-margin">{{profileObject.City}}</div>
                   </div> -->
             </div>
-
+</div>
             </div>
           </ion-content>
 </ion-view>   

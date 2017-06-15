@@ -87,18 +87,21 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
             
             .state('signupScreen',{
               url: '/signupScreen',
+                cache: false,
                 templateUrl: 'Modules/Templates/Signup.html',
                 controller: 'signupController'
             })
 
            .state('forgotPassword', {
-                url:'forgotPassword',               
+                url:'forgotPassword', 
+                cache: false,              
                 templateUrl: 'Modules/Templates/forgotPassword.html',
                 controller:'forgotPasswordController'
             }) 
 
            .state('doctorProfile', {
                 url:'/doctorProfile',
+                cache:false,
                 params: {
                     'doctorProfile': null
                 },          
@@ -169,6 +172,15 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                     }
                    }
                 })
+           .state('tabs.Prescription', {
+             url: '/Prescription',
+             views: {
+              'Prescription-tab': {
+              templateUrl: 'Modules/Templates/Prescription.html',
+              controller:'PrescriptionController'
+                    }
+                   }
+                })
              /*   .state('tabs.Visits', {
              url: '/Visits',
              views: {
@@ -206,8 +218,9 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
             .state('editProfile', {
                 url:'editProfile',
                 templateUrl: 'Modules/Templates/EditProfile.html',
-                controller:'editProfileController'
+                controller:'EditProfileController'
             })  
+          
         $urlRouterProvider.otherwise('/loginPage');
 })
 

@@ -1,6 +1,6 @@
 angular.module('bookDoctor')
 
-.controller("MenuController",function ($scope, $state,$ionicModal,$http,$ionicSideMenuDelegate) {
+.controller("MenuController",function ($scope, $state,$ionicModal,$http,$ionicSideMenuDelegate,$ionicPopup,$ionicHistory) {
 
   $scope.goToHomeScreen = function() {
     $state.go('dashboard.homeScreen');
@@ -35,6 +35,26 @@ $scope.toggleMenu = function() {
 $scope.goToBuyMedicine = function() {
   $state.go('dashboard.buyMedicine');
 }
+$scope.goToLogout = function() {
+ var confirmPopup = $ionicPopup.confirm({
+         title: 'Logout',
+         template: 'Are you want to logout?'
+      });
+
+      confirmPopup.then(function(res) {
+         if(res) {
+          
+              $state.go('loginPage');
+
+         // $ionicHistory.clearCache();
+      $ionicHistory.clearHistory();
+           
+         } else {
+            console.log('Not sure!');
+         }
+      });
+}
+
 
 })
 

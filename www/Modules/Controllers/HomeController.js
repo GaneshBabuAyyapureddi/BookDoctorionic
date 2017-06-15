@@ -1,6 +1,6 @@
 //var appTheme = "#11c1f3";
 var app = angular.module('bookDoctor')
-.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter,$cordovaSQLite,$rootScope) {
+.controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter,$cordovaSQLite,$rootScope,$ionicPopup) {
 $rootScope.appTheme ="#11c1f3";
 var showAppointmentDetails;
 /*Add appointment modal view*/
@@ -82,7 +82,19 @@ $scope.addAppointment = function(dateobj,timeObj,doctorName) {
 
 /* Insert appointment into DB*/
  $scope.insertAppointment =  function(dateobj,timeObj,doctorName){
-    $scope.alertStatus = 'Insert Prescription done';
+    //$scope.alertStatus = 'Insert Prescription done';
+    var confirmPopup = $ionicPopup.alert({
+              title: 'BookDoctor!',
+               template: 'Insert Prescription done!'
+            });
+
+            confirmPopup.then(function(res) {
+                if(res) {
+                   $scope.closeModal();
+                 } else {
+                    console.log('Not sure!');
+                  }
+            });
      var db;
       try {
         db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});

@@ -8,7 +8,7 @@
   <script id="create-patientReportModal.html" type="text/ng-template">
     <ion-modal-view>
      <form novalidate>
-      <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}}">
+      <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}};background-image:none;">
         <h1 class="title" style="text-align: center;">Medical History</h1>
         <button class = "button button-icon icon-right ion-ios-close-outline"
             ng-click = "closeModal()"></button>
@@ -29,12 +29,12 @@
     </ion-modal-view>
   </script>
 
-    <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}}">
+    <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}};background-image: none;">
      <!--  <button class="button button-icon icon ion-android-arrow-back" style="color: #E4E4E4" ng-click="goBack()"></button> -->
       <div style="color: #FFFFFF;text-align: center;" class="title">Medical History</div>
     </ion-header-bar>
     <ion-content ng-init="readData()">
-    <div style="background-color: #515561;" class="row" ng-repeat="profileObject in patientDetails">
+   <!--  <div style="background-color: #515561;" class="row" ng-repeat="profileObject in patientDetails">
       <div class = "col1" style="width:175px;margin-left:75px; color: #FFFFFF;">
         <div padding="false" class="item-avatar" >
         <img style="margin-left:75px; width:50px ; height:50px; max-width: 60px; max-height: 60px ;" ng-src={{profileObject.imageUrl}}>
@@ -59,12 +59,12 @@
           {{profileObject.mobile}}
         </div>
         <br>
-        <!-- <div>
+         <div>
           <img width="40px" height="40px" ng-src="img/Video.png"/>
-        </div> -->
+        </div> 
       </br>
       </div>
-    </div>
+    </div> -->
     <div class="text-center" style="font-weight:bold; color:#06a8a1; background-color:#FDFFFF; margin-top:10px; margin-bottom:10px;">Dashboard</div>
    
     <div class = "col col-100">

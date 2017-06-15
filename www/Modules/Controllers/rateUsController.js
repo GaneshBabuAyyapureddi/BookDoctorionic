@@ -1,6 +1,9 @@
 angular.module('bookDoctor')
-.controller("rateUsController",function ($scope, $state, $stateParams, $ionicHistory) {
+.controller("rateUsController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $rootScope) {
   $scope.rateUsDate = $stateParams.selectedDate;
+   $scope.$on('$ionicView.enter', function(){
+    console.log("view here....." + $rootScope.combinationTheme);
+});
 	$scope.goBack = function() {
     	$ionicHistory.goBack();
   	}
@@ -8,8 +11,8 @@ angular.module('bookDoctor')
 	$scope.ratingsObject = {
         iconOn : 'ion-ios-star',
         iconOff : 'ion-ios-star-outline',
-        iconOnColor: '#03A9F4',
-        iconOffColor:  '#CFD8DC',
+        iconOnColor: $rootScope.combinationTheme,
+        iconOffColor:  $rootScope.combinationTheme,
         rating:  0,
         minRating:0,
         callback: function(rating) {
@@ -26,5 +29,22 @@ angular.module('bookDoctor')
           $scope.starImage = "img/star23.png";
         else
           $scope.starImage = "img/star45.jpg";
+      };
+
+      $scope.closeModal = function(){
+      var confirmPopup = $ionicPopup.alert({
+              title: 'BookDoctor!',
+               template: 'Your reviews and ratings has been submitted successfully" !'
+            });
+
+            confirmPopup.then(function(res) {
+                if(res) {
+                   $ionicHistory.goBack();
+                 } else {
+                    console.log('Not sure!');
+                  }
+            });
+
+
       };
 })

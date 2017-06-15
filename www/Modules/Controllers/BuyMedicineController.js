@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("BuyMedicineController",function ($scope, $state, $stateParams, $ionicHistory, $cordovaCamera, $ionicActionSheet) {
+.controller("BuyMedicineController",function ($scope, $state, $stateParams, $ionicHistory, $cordovaCamera, $ionicActionSheet, $ionicPopup) {
   $scope.searchText = {};
   $scope.selectedMedicine = '';
   $scope.imageURI = '';
@@ -330,11 +330,30 @@ angular.module('bookDoctor')
       });
    }
    $scope.BuyEnableandDisable = function(){
-    $scope.buyValue = false;
-    if(/*$scope.searchText.patientName !== null &&*/ $scope.data.homeCheckupMachine !==null){
-      $scope.buyValue = true;
+    $scope.buyValue = true;
+    if($scope.searchText.tabletName != null){
+      $scope.buyValue = false;
       return  $scope.buyValue;
     }
     return $scope.buyValue;
    }
+    $scope.closeModal = function(){
+      var confirmPopup = $ionicPopup.alert({
+              title: 'Buy Medicine!',
+               template: 'Your Medince has been submitted successfully" !'
+            });
+
+            confirmPopup.then(function(res) {
+                if(res) {
+                  $scope.searchText.tabletName = '';
+                  $scope.imageURI = '';
+                  $ionicHistory.goBack();
+                 } else {
+                    console.log('Not sure!');
+                  }
+            });
+
+
+      };
+  
 })

@@ -39,7 +39,7 @@
 
    <script id="password-modal.html" type="text/ng-template">
       <ion-modal-view>
-        <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}}">
+        <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}};background-image: none;">
           <h1 class="title" style="text-align: center;">Change Password</h1>
            <button class = "button button-icon icon-right ion-ios-close-outline" style="background-color:{{appTheme}}"
             ng-click = "closePasswordModal()"></button>
@@ -120,12 +120,12 @@
 
        <script id="change-theme.html" type="text/ng-template">
       <ion-modal-view>
-      <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}}" >
+      <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}};background-image: none;" >
           <h1 class="title" style="text-align: center;">Select your Theme</h1>
            <button class = "button button-icon icon-right ion-ios-close-outline" style="background-color:{{appTheme}}"
             ng-click = "closeModal()"></button>
         </ion-header-bar>
-     <ion-content>
+    <!--  <ion-content>
        <div class="item item-icon-right" ng-click="blueDialog()">Default Theme
       <i class="icon ion-ios-arrow-right" style="font-size: 25px;"></i>
        </div>
@@ -138,9 +138,55 @@
     <div class="item item-icon-right" ng-click="greenDialog()">Green Theme
       <i class="icon ion-ios-arrow-right" style="font-size: 25px;"></i>
     </div>
-    </ion-content>
-      </ion-modal-view>
-    </script>
+    </ion-content> -->
+
+
+<ion-content>
+<div class="backgroundImageCVR">
+    <div class="content_text">
+
+          <div  class="row responsive-sm" style="flex-wrap: wrap;">
+              <div class="col col-50" style="padding:0 20px 0 0;">
+              <div class="card"  style="width:100%;padding-bottom:0" ng-click="blueDialog()">
+                 <img src="img/DefaultTheme.png" width="100%" style="vertical-align: bottom;">
+                <div style="text-align:center;background-color :#ef473a; height: 35px">
+                <strong style="line-height:34px;color: white">DEFAULT</strong>
+                  </div>
+              </div>
+              </div>
+
+              <div class="col col-50" style="padding:0 20px 0 0;">
+              <div class="card"  style="width:100%; padding-bottom:0" ng-click="yellowDialog()">
+                  <img src="img/YellowTheme.png" width="100%" style="vertical-align: bottom;" >
+                  <div style="text-align:center; background-color :#ef473a; height: 35px"><strong style="line-height:34px;color: white">YELLOW</strong>
+                  </div>
+              </div>
+              </div>
+          </div>
+
+          <div  class="row responsive-sm" style="flex-wrap: wrap;">
+              <div class="col col-50" style="padding:0 20px 0 0;">
+              <div class="card"  style="width:100%; padding-bottom:0" ng-click="redDialog()">
+                  <img src="img/RedTheme.png" width="100%" style="vertical-align: bottom;" >
+                  <div style="text-align:center; background-color :#ef473a; height: 35px "><strong style="line-height:34px;color: white">RED</strong>
+                  </div>
+              </div>
+              </div>
+
+              <div class="col col-50" style="padding:0 20px 0 0;">
+              <div class="card"  style="width:100%; padding-bottom:0" ng-click="greenDialog()">
+                <img src="img/GreenTheme.png" width="100%" style="vertical-align: bottom;" >
+                <div style="text-align:center; background-color :#ef473a; height: 35px" ><strong style="line-height:34px;color: white">GREEN</strong>
+                </div>
+              </div>
+              </div>
+            </div>
+    </div>
+   </div>
+  </ion-content>
+    
+  </ion-modal-view>
+ </script>
 
      <script id="open-help.html" type="text/ng-template">
       <ion-modal-view>
