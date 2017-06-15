@@ -199,22 +199,6 @@
     height: 400px;
     background-color: #CCC;
     }
-/*Buy Medicine Screen start*/
-label#rounded{
-border-radius:65px; 
-}
-#centerAlign_LR {
-  width:70%;
-  margin-left:auto;
-  margin-right:auto;
-}
-#centerAlign_patient_dashboard {
-  width:80%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top: 15px;
-}
-/*Buy Medicine Screen end*/
 
 .center_img {
     position:absolute;
@@ -290,7 +274,43 @@ border-radius:65px;
     text-decoration: none;
     opacity: 0.3;
 }
-
+/*BuyMedicine Screen Style start*/
+#centerCardBuyMedicine {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 40px;
+    opacity: 0.85;
+}
+div.vertical-line{
+      width: 1px; /* Line width */
+      background-color: black; /* Line color */
+      height: 100%; /* Override in-line if you want specific height. */
+      float: left; /* Causes the line to float to left of content. 
+        You can instead use position:absolute or display:inline-block
+        if this fits better with your design */
+} 
+#upload-button-div {
+    position: relative;
+    width:50px;
+    margin-left: 10px;
+    margin-top:10%;
+}
+label#rounded{
+border-radius:65px; 
+}
+#centerAlign_LR {
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+#centerAlign_patient_dashboard {
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 15px;
+}my-disable
+/*BuyMedicine Screen Style end*/
 #main_wrapper{
   position:absolute;
   left:0;
@@ -307,6 +327,7 @@ border-radius:65px;
   -ms-filter: blur(3px);
   filter: blur(3px);
 }
+>>>>>>> 4509de492feae7efaadfe8a5e6df00f8ccf48ba5
 
 .backgroundImageCVR{
   position:relative;
