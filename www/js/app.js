@@ -174,6 +174,7 @@ angular.module('bookDoctor', ['ionic', 'ui.router','chart.js','ui.calendar', 'io
                 })
            .state('tabs.Prescription', {
              url: '/Prescription',
+             cache: false,
              views: {
               'Prescription-tab': {
               templateUrl: 'Modules/Templates/Prescription.html',
