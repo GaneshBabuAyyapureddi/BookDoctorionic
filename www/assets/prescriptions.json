@@ -38,11 +38,6 @@
 		"is_morning":false,
 		"is_noon" : true,
 		"is_night" : true
-		},{
-		"drug_name" : "SILDENAFIL CITRATE 100MG",
-		"is_morning":false,
-		"is_noon" : false,
-		"is_night" : true
 		}],
 		"prescribedBy" : "George"
 	},
