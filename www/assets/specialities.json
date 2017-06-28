@@ -1,0 +1,56 @@
+{	
+	"specialistLists" :[
+     					"ShowAll",
+    					"Immunology",
+    					"Obstetrics and gynecology",
+    					"Cardiology",
+    					"Gynecology",
+					    "General surgery",
+					    "Neurology",
+					    "Urology",
+					    "Oncologist",
+					    "Epidemiologist",
+					    "Endocrinologist",
+					    "Dermatologist",
+					    "Dentist",
+					    "Endocrinologist",
+					    "Dermatologist",
+					    "Nephrologist",
+					    "Psychiatrist",
+					    "Pathologist",
+					    "Neurosurgeon",
+					    "Gastroenterologist", 
+					    "Ophthalmologist",
+					    "Radiology",
+					    "Diabetology",
+					    "NeuroScience"
+        				]
+}
+
+
+// [	
+//      					"ShowAll",
+//     					"Immunology",
+//     					"Obstetrics and gynecology",
+//     					"Cardiology",
+//     					"Gynecology",
+// 					    "General surgery",
+// 					    "Neurology",
+// 					    "Urology",
+// 					    "Oncologist",
+// 					    "Epidemiologist",
+// 					    "Endocrinologist",
+// 					    "Dermatologist",
+// 					    "Dentist",
+// 					    "Endocrinologist",
+// 					    "Dermatologist",
+// 					    "Nephrologist",
+// 					    "Psychiatrist",
+// 					    "Pathologist",
+// 					    "Neurosurgeon",
+// 					    "Gastroenterologist", 
+// 					    "Ophthalmologist",
+// 					    "Radiology",
+// 					    "Diabetology",
+// 					    "NeuroScience"
+// ]

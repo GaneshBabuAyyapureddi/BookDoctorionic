@@ -1,0 +1,38 @@
+[
+	{
+		"name":"Heart Rate", 
+		"date":"Feb22, 2:14 PM",
+		"value":"99",
+		"description":"beats/min"
+	},
+  	{
+  		"name":"Blood Pressure",
+  		"date":"Feb22, 2:14 PM", 
+  		"value":"113/76",
+  		"description":"mmahg"
+  	},
+  	{
+  		"name":"Blood Glucose",
+  		"date":"Feb22, 2:14 PM", 
+  		"value":"76", 
+  		"description":"mmhol"
+  	},
+  	{
+  		"name":"Body Weight", 
+  		"date":"Oct20, 2016 11.27 AM",
+  		"value":"58", 
+  		"description":"Kg"
+  	},
+  	{
+  		"name":"BMI",
+  		"date":"Feb22, 2:14 PM", 
+  		"value":"95", 
+  		"description":"BMI"
+  	},
+   	{
+   		"name":"Body Fat Percentage", 
+   		"date":"Oct20, 2016", 
+   		"value":"28", 
+   		"description":"%"
+   	}
+]

@@ -1,0 +1,127 @@
+[
+   {  
+      "tabletName":"NEUROBEX B TABLET 10'S",
+      "tabletPrice":"Rs 14",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"PARACIP 500MG TABLET 10'S",
+      "tabletPrice":"Rs.8.71",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"GLUCORED FORTE TABLET 10'S",
+      "tabletPrice":"Rs.37.00",
+      "tabletAvailable":false
+   },
+   {  
+      "tabletName":"TRIGABANTIN 100MG TABLET 10'S",
+      "tabletPrice":"Rs.121.00",
+      "tabletAvailable":true
+   }, 
+   {  
+      "tabletName":"NEUROPILL TABLET 10'S",
+      "tabletPrice":"Rs.175.40",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"FOLIACT N TABLET 10'S",
+      "tabletPrice":"Rs.118.75",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"LENALID 10MG CAPSULE 30'S",
+      "tabletPrice":"Rs.8976",
+      "tabletAvailable":false
+   },
+   {  
+      "tabletName":"GOUTNIL 0.5MG TABLET 10'S",
+      "tabletPrice":"Rs.30.38",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"ELMEFOL 1MG TABLET 10'S",
+      "tabletPrice":"Rs.80",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"BIOFOLIC 1MG TABLET 10'S",
+      "tabletPrice":"Rs.59",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"ELFOLIN 7.5MG TABLET 10'S",
+      "tabletPrice":"Rs.104.00",
+      "tabletAvailable":false
+   },
+   {  
+      "tabletName":"REDIHEALTH TABLET 15'S",
+      "tabletPrice":"Rs.97.95",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"VEGEFER TABLET 10'S",
+      "tabletPrice":"Rs.81.99",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"COBESE 120MG CAPSULE 10'S",
+      "tabletPrice":"Rs.546.00",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"LIPOCUT 120MG CAPSULE 10'S",
+      "tabletPrice":"Rs.449.50",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"LIPOPHAGE 60MG CAPSULE 10'S",
+      "tabletPrice":"Rs.207.20",
+      "tabletAvailable":false
+   },
+   {  
+      "tabletName":"LIPOPHAGE 120MG CAPSULE 10'S",
+      "tabletPrice":"Rs.414.20",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"O STAT 120MG CAPSULE 10'S",
+      "tabletPrice":"Rs.335.00",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"OBESTAT 10MG CAPSULE 10'S",
+      "tabletPrice":"Rs.167.77",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"OBEZITA 60MG CAPSULE 10'S",
+      "tabletPrice":"Rs.171.89",
+      "tabletAvailable":false
+   },
+   {  
+      "tabletName":"ADRIDE 4MG TABLET 10'S",
+      "tabletPrice":"Rs.40.20",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"POZITIV 7.5MG TABLET 10'S",
+      "tabletPrice":"Rs.38.84",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"HILGLIM 2MG TABLET 10'S",
+      "tabletPrice":"Rs.55.00",
+      "tabletAvailable":true
+   },
+   {  
+      "tabletName":"REBOSE 100MG TABLET 10'S",
+      "tabletPrice":"Rs.57.00",
+      "tabletAvailable":false
+   },
+   {  
+      "tabletName":"REJUMET TABLET 10'S",
+      "tabletPrice":"Rs.60.00",
+      "tabletAvailable":true
+   }
+]
