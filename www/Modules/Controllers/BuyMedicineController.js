@@ -1,5 +1,5 @@
 angular.module('bookDoctor')
-.controller("BuyMedicineController",function ($scope, $state, $stateParams, $ionicHistory, $cordovaCamera, $ionicActionSheet, $ionicPopup) {
+.controller("BuyMedicineController",function ($scope, $state, $ionicHistory, $cordovaCamera, $ionicActionSheet, $ionicPopup) {
   $scope.searchText = {};
   $scope.selectedMedicine = '';
   $scope.imageURI = '';
@@ -7,7 +7,7 @@ angular.module('bookDoctor')
     // $ionicHistory.goBack();
     	$state.go('dashboard.homeScreen');
    }
-    $scope.prescriptionList = [
+    $scope.medicineList = [
    {  
       "tabletName":"NEUROBEX B TABLET 10'S",
       "tabletPrice":"Rs 14",

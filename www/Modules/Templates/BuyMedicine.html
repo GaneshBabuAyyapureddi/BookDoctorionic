@@ -22,7 +22,7 @@
             </label>
             <div style="z-index: 1;" class="list" ng-show="searchText.tabletName.length">
               <ul>
-                <li class="item" ng-repeat="item in prescriptionList | filter:searchText.tabletName:strict" ng-click="patientSelected(item.tabletName,item.tabletPrice)">
+                <li class="item" ng-repeat="item in medicineList | filter:searchText.tabletName:strict" ng-click="patientSelected(item.tabletName,item.tabletPrice)">
                   <div class="row">
                     <div class="col-75">  {{item.tabletName}} </div>
                     <div class="col-25 text-right" style="color:{{combinationTheme}}; font-weight:bold;"> {{item.tabletPrice}}</div>
