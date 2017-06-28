@@ -189,6 +189,7 @@ $ionicPopover.fromTemplateUrl('Modules/Templates/NotificationView.html', {
     $http.get('assets/notifications.json')
     .success(function(data) {
     $scope.Notifications = data;
+    $scope.popupTitle="Notifications";
     $scope.notificationPopOver.show($event);
     })
     .error(function(error) {
@@ -197,6 +198,22 @@ $ionicPopover.fromTemplateUrl('Modules/Templates/NotificationView.html', {
  };
 
  $scope.closeNotif = function() {
+    $scope.notificationPopOver.hide();
+ };
+
+// For Announcements
+$scope.openAnnouncements = function($event){
+ $http.get('assets/announcements.json')
+    .success(function(data) {
+    $scope.Notifications = data;
+    $scope.popupTitle = "Announcements";
+    $scope.notificationPopOver.show($event);
+    })
+    .error(function(error) {
+      console.log('could not find notifications.json'+error);
+    });
+};
+ $scope.closeAnnouncements = function() {
     $scope.notificationPopOver.hide();
  };
 
@@ -270,12 +287,12 @@ $scope.events = [
   // {title: 'You have an appointmentment with Dr. John Austin',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
   // {title: 'You have an appointmentment with Dr.Thomas Amory',start: new Date(y, m, 28),end: new Date(y, m, 29)}
 
-  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
-  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2), backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
-  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
-  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
-  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false, backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme},
-  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29), backgroundColor:$rootScope.combinationTheme,borderColor:$rootScope.combinationTheme}
+  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false},
+  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
+  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false},
+  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false},
+  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
+  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29)}
 
 ];
 /* event source that calls a function on every view switch */

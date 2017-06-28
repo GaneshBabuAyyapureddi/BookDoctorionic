@@ -1,32 +1,33 @@
 <ion-view class="bar-balanced" hide-nav-bar="false" >
 
-<!-- <ion-side-menus enable-menu-with-back-views="false"> -->
-<ion-nav-bar class="navi-bar">
-<ion-nav-buttons side="left">  
-       <button class="button  button-icon light icon icon-left ion-navicon" menu-toggle="left" ></button>  
- </ion-nav-buttons>
- <ion-nav-buttons side="right" > 
-     <button class="button button-icon light icon icon-right ion-android-notifications" ng-click="openNotif($event)"></button>
+  <!-- <ion-side-menus enable-menu-with-back-views="false"> -->
+  <ion-nav-bar class="navi-bar">
+    <ion-nav-buttons side="left">  
+     <button class="button  button-icon light icon icon-left ion-navicon" menu-toggle="left" ></button>  
+   </ion-nav-buttons>
+   <ion-nav-buttons side="right" > 
      <button class="button button-icon light icon icon-right ion-plus" ng-click="openModal()"></button>
-  </ion-nav-buttons>
-</ion-nav-bar>
+     <button class="button button-icon light icon icon-right ion-android-notifications" ng-click="openNotif($event)"></button>
+     <button class="button button-icon light icon icon-right ion-speakerphone" ng-click="openAnnouncements($event)"></button>
+   </ion-nav-buttons>
+ </ion-nav-bar>
 
 
-   <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}};background-image: none;">
-        <div style="color: #FFFFFF;text-align: center;" class="title">HOME</div>
-   </ion-header-bar>
-   <ion-content overflow-scroll="true">
+ <ion-header-bar class="bar bar-header bar-calm" style="background-color:{{appTheme}};background-image: none;">
+  <div style="color: #FFFFFF;text-align: center;" class="title">HOME</div>
+</ion-header-bar>
+<ion-content overflow-scroll="true">
 
-   <div ui-calendar class="span8 calendar" ng-model="eventSources" style="padding: 20px;"></div> 
+ <div ui-calendar class="span8 calendar" ng-model="eventSources" style="padding: 20px;"></div> 
 
-      <!-- <button class="button button-block button-calm" ng-click="goToDoctorSearch()" style="width: 250px;margin-left: auto;margin-right: auto;">Doctor Search </button> -->
+ <!-- <button class="button button-block button-calm" ng-click="goToDoctorSearch()" style="width: 250px;margin-left: auto;margin-right: auto;">Doctor Search </button> -->
 
-   </ion-content>
-   <style>
-.fc-day-grid-event{
-     background-color: {{combinationTheme}}; border-color: {{combinationTheme}};
-}
-   </style>
+</ion-content>
+<style>
+  .fc-day-grid-event{
+   background-color: {{combinationTheme}}; border-color: {{combinationTheme}};
+ }
+</style>
 
 </ion-view>
 
