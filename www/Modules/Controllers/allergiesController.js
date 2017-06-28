@@ -1,25 +1,8 @@
 angular.module('bookDoctor')
-.controller("allergiesController", function($scope, $state,$stateParams,$ionicHistory,$ionicModal){
- //  $scope.profileObject = $stateParams.patientProfile;
-  $scope.profileObject = 
-   {  
-      "patientID":"PE458",
-      "patientName":"Peter",
-      "dateOfBirth":"01-May-1985",
-      "age":"31",
-      "street": "Downtown",
-      "city":"Atlanta",
-      "address":"No 8, abc Avenue, Houston-12",
-      "profilePic":"img/Mark.jpeg",
-      "gender":"Male",
-      "bloodGroup":"B+",
-      "mobileNumber":5551234567,
-      "emailID":"peter@doctorapp.com"
-   };
-   console.log($scope.profileObject.patientID);
+.controller("allergiesController", function($scope, $state,$ionicHistory,$ionicModal){
+
   $scope.goBack = function() {
-    //$state.go('patientProfile',{"patientProfile":$scope.profileObject});
-    $ionicHistory.goBack();
+      $ionicHistory.goBack();
   }
 $ionicModal.fromTemplateUrl('Modules/Templates/AllergiesForm.html', {
       scope: $scope,
@@ -27,35 +10,15 @@ $ionicModal.fromTemplateUrl('Modules/Templates/AllergiesForm.html', {
     }).then(function(modal) {
       $scope.modal = modal;
     });
-  $scope.openModal = function(person){
-  	$scope.person=person;
+  $scope.openModal = function(allergies){
+  	$scope.allergies=allergies;
     $scope.modal.show();
   }
   $scope.closeModal = function(){
     $scope.modal.hide();
   }
-  $scope.submitAllergies = function(allergiesDetails) {
-      
-      var db;
-         try {
-            db = $cordovaSQLite.openDB({name:"myapp.db",location:'default'});
-        } catch (error) {
-            alert(error);
-        }
-        
-      $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS enterAllergiesDetail (patientID TEXT, complaint TEXT, history TEXT, environment TEXT, familyHistory TEXT, reviewSystems TEXT, physicalExaminations TEXT, allergen TEXT, impression TEXT, recommendations TEXT)');
-
-      $cordovaSQLite.execute(db, 'INSERT INTO enterAllergiesDetail(patientID, complaint, history, environment, familyHistory, reviewSystems, physicalExaminations, allergen, impression, recommendations ) VALUES (?,?,?,?,?,?,?,?,?,?)', [$scope.profileObject.patientID, allergiesDetails.complaint,allergiesDetails.history,allergiesDetails.environment,allergiesDetails.familyHistory,allergiesDetails.reviewSystems,allergiesDetails.mobile,allergiesDetails.allergen,allergiesDetails.impression,allergiesDetails.recommendations])
- 
-            .then(function(result) {
-                 alert("Added successfully");
-            }, function(error) {
-                 alert("Details not submitted, try again");
-            })
-  }
-
-  
-  $scope.persons = [
+   
+  $scope.allergiesArray = [
     {
       "data": "1.  The patient appears to be having some anxiety and panic now.  It is hard to say whether this started with some mild asthma symptoms as a result of his immunotherapy or if this is purely an anxiety issue.<br>2.  Allergic asthma.<br>3.  Allergic rhinitis.",
       "date": "20-04-17", 

@@ -1,10 +1,6 @@
 angular.module('bookDoctor')
 .controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $ionicModal, $rootScope) {
- $scope.$on("$ionicView.enter", function($state){
-        // handle event
-        
-      });
-
+ 
   //$scope.$on('$ionicView.beforeEnter', function(){
     $scope.profileObject = $stateParams.doctorProfile;
     $scope.ratings = $scope.profileObject.ratings;
@@ -106,7 +102,7 @@ angular.module('bookDoctor')
       $scope.map = map;
     }
 
-    $scope.appointmentList = [
+    $scope.doctorsAppointmentList = [
     {
       "appointmentDate":"2017-05-28",
       "appointmentTime":"5.00 PM",
