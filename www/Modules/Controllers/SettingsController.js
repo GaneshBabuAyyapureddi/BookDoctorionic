@@ -4,7 +4,7 @@ var combinationTheme = "#ef473a";
 angular.module('bookDoctor')
 
 .controller("SettingsController",function ($scope,$cordovaSQLite,$cordovaToast, $state,$rootScope,$ionicModal,$ionicHistory,$ionicPopup, $window) {
- 
+
   var myOldPassword;
   $scope.goBack = function() {
    $state.go('dashboard.homeScreen');
@@ -36,102 +36,49 @@ $scope.showLogoutConfirm = function(){
 });
 }
 
+$scope.themeArray=["Default","Yellow","Red","Green"];
 
-$scope.blueDialog = function(){
-  
+$scope.openThemeDialog = function(theme){
   var confirmPopup = $ionicPopup.confirm({
    title: 'Change your Theme',
-   template: 'Do you want to change your theme to Blue?',
+   template: 'Do you want to change your theme to '+theme+'?',
    cssClass:'style'
  });
-
   confirmPopup.then(function(res) {
    if(res) {
-    $scope.appTheme = '#11c1f3';
+    switch(theme){
+      case 'Yellow' :
+      $scope.appTheme = '#ffc900';
+      $scope.tabsTheme = "energized";
+      $scope.combinationTheme = "#7c6262";
+      break;
+      case 'Red' :
+      $scope.appTheme = '#ef473a';
+      $scope.tabsTheme = "assertive";
+      $scope.combinationTheme = "#11c1f3";
+      break;
+      case 'Green' :
+      $scope.appTheme = '#33cd5f';
+      $scope.tabsTheme = "balanced";
+      $scope.combinationTheme = "#cd3571";
+      break;
+      default :
+      $scope.appTheme = '#11c1f3';
+      $scope.tabsTheme = "calm";
+      $scope.combinationTheme = "#ef473a";
+      break;
+    }
     $rootScope.appTheme = $scope.appTheme;
-    $scope.tabsTheme = "calm";
     $rootScope.tabsTheme = $scope.tabsTheme;
-    $scope.combinationTheme = "#ef473a";
     $rootScope.combinationTheme = $scope.combinationTheme;
     $scope.themeModal.hide();
-              // $state.go('loginPage');
-            } else {
-              console.log('Not sure!');
-            }
-          });
-    // confirm("Do you want to change your theme to Blue?", "title", "buttonLabels");
-  }
-  $scope.yellowDialog = function(){
-    
-    var confirmPopup = $ionicPopup.confirm({
-     title: 'Change your Theme',
-     template: 'Do you want to change your theme to Yellow?'
-   });
 
-    confirmPopup.then(function(res) {
-     if(res) {
-      $scope.appTheme = '#ffc900';
-      $rootScope.appTheme = $scope.appTheme;
-      $scope.tabsTheme = "energized";
-      $rootScope.tabsTheme = $scope.tabsTheme;
-      $scope.combinationTheme = "#7c6262";
-      $rootScope.combinationTheme = $scope.combinationTheme;
-      $scope.themeModal.hide();
-              // $state.go('loginPage');
-            } else {
-              console.log('Not sure!');
-            }
-          });
-    // confirm("Do you want to change your theme to Blue?", "title", "buttonLabels");
+  } else {
+    console.log('Not sure!');
   }
-  $scope.redDialog = function(){
-    
-    var confirmPopup = $ionicPopup.confirm({
-     title: 'Change your Theme',
-     template: 'Do you want to change your theme to Red?'
-   });
+});
+}
 
-    confirmPopup.then(function(res) {
-     if(res) {
-      $scope.appTheme = '#ef473a';
-      $rootScope.appTheme = $scope.appTheme;
-      $scope.tabsTheme = "assertive";
-      $rootScope.tabsTheme = $scope.tabsTheme;
-      $scope.combinationTheme = "#11c1f3";
-      $rootScope.combinationTheme = $scope.combinationTheme;
-      $scope.themeModal.hide();
-           // $cordovaToast.show('Theme changed to Red', 'long', 'center');
-              // $state.go('loginPage');
-            } else {
-              console.log('Not sure!');
-            }
-          });
-    // confirm("Do you want to change your theme to Red?", "title", "buttonLabels");
-  }
-  $scope.greenDialog = function(){
-    
-    var confirmPopup = $ionicPopup.confirm({
-     title: 'Change your Theme',
-     template: 'Do you want to change your theme to Green?'
-   });
-
-    confirmPopup.then(function(res) {
-     if(res) {
-       $scope.appTheme = '#33cd5f';
-       $rootScope.appTheme = $scope.appTheme;
-       $scope.tabsTheme = "balanced";
-       $rootScope.tabsTheme = $scope.tabsTheme;
-       $scope.combinationTheme = "#cd3571";
-       $rootScope.combinationTheme = $scope.combinationTheme;
-       $scope.themeModal.hide();
-              // $state.go('loginPage');
-
-            } else {
-              console.log('Not sure!');
-            }
-          });
-    // confirm("Do you want to change your theme to Green?", "title", "buttonLabels");
-  }
   $ionicModal.fromTemplateUrl('password-modal.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -263,3 +210,32 @@ $scope.fetchPassword = function() {
     }
   })
 
+.filter('inSlicesOf', 
+    ['$rootScope',  
+    function($rootScope) {
+      makeSlices = function(items, count) { 
+        if (!count)            
+          count = 3;
+        
+        if (!angular.isArray(items) && !angular.isString(items)) return items;
+        
+        var array = [];
+        for (var i = 0; i < items.length; i++) {
+          var chunkIndex = parseInt(i / count, 10);
+          var isFirst = (i % count === 0);
+          if (isFirst)
+            array[chunkIndex] = [];
+          array[chunkIndex].push(items[i]);
+        }
+
+        if (angular.equals($rootScope.arrayinSliceOf, array))
+          return $rootScope.arrayinSliceOf;
+        else
+          $rootScope.arrayinSliceOf = array;
+          
+        return array;
+      };
+      
+      return makeSlices; 
+    }]
+  )
