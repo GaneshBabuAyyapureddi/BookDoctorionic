@@ -1,8 +1,6 @@
 angular.module('bookDoctor')
-.controller("labResultsController", function($scope, $state,$stateParams,$ionicModal,$ionicHistory,$cordovaPrinter){
-    $scope.profileObject = $stateParams.patientProfile;
+.controller("labResultsController", function($scope, $state,$ionicModal,$ionicHistory,$cordovaPrinter){
     $scope.goBack = function() {
-     // $state.go('patientProfile',{"patientProfile":$scope.profileObject});
      $ionicHistory.goBack();
     }
 
@@ -35,7 +33,7 @@ angular.module('bookDoctor')
         }
     }
 
-    $scope.persons = [{"src":"img/LabResult1.jpg", "date":"04/04/2017","time":"10:33 AM"},
+    $scope.labReportPaths = [{"src":"img/LabResult1.jpg", "date":"04/04/2017","time":"10:33 AM"},
       {"src":"img/LabResults7.jpg", "date":"19/03/2017","time":"9:30 AM"}, 
       {"src":"img/LabResults6.jpg", "date":"10/02/2017","time":"10:45 AM"},
       {"src":"img/LabResults5.jpg", "date":"05/01/2017","time":"12:30 PM"},

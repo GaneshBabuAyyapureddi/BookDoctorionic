@@ -1,7 +1,6 @@
 angular.module('bookDoctor')
 .controller("DoctorProfileController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $ionicModal, $rootScope) {
  
-  //$scope.$on('$ionicView.beforeEnter', function(){
     $scope.profileObject = $stateParams.doctorProfile;
     $scope.ratings = $scope.profileObject.ratings;
     $scope.doctorName = $scope.profileObject.doctorName;
@@ -42,7 +41,6 @@ angular.module('bookDoctor')
       $scope.ratingsCallback = function(rating) {
         console.log('Selected rating is : '+ rating);
       };
-  // });
   
   $scope.goBack = function() {
     $ionicHistory.goBack();
@@ -266,17 +264,6 @@ angular.module('bookDoctor')
       $scope.specialityShow = false;
       $scope.doctorShow = false;
 
-      /*Date Picker*/
-      // var todayDate = new Date();
-      // var year = todayDate.getFullYear();
-      // var month = todayDate.getMonth()+1;
-      // if (month<10){
-      //   month = "0" + month;
-      // };
-      // var day = todayDate.getDate();
-      // $scope.todayDate = year + "-" + month + "-" + day;
-      // $scope.todayDate = appointmentDate;
-
       /*Time Picker*/
       $scope.timeNow=new Date();
       var hour = $scope.timeNow.getHours();
@@ -338,11 +325,7 @@ angular.module('bookDoctor')
 
   $scope.$on('modal.removed', function() {
           // Execute action
-        });
-
-
-  
-  
+        }); 
 })
 
 .filter('inSlicesOf', 

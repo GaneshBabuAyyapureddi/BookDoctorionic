@@ -2,7 +2,6 @@ angular.module('bookDoctor')
 .controller("rateUsController",function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $rootScope) {
   $scope.rateUsDate = $stateParams.selectedDate;
    $scope.$on('$ionicView.enter', function(){
-    console.log("view here....." + $rootScope.combinationTheme);
 });
 	$scope.goBack = function() {
     	$ionicHistory.goBack();
@@ -44,7 +43,5 @@ angular.module('bookDoctor')
                     console.log('Not sure!');
                   }
             });
-
-
       };
 })

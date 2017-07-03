@@ -1,57 +1,6 @@
 angular.module('bookDoctor')
 .controller("HistoryChartController", function($scope, $state, $ionicModal, $stateParams,$ionicHistory,$cordovaSQLite,$rootScope){
- // $scope.profileObject = $stateParams.patientProfile; 
- $scope.patientDetails = [];  
-   /*{  
-      "patientID":"PE458",
-      "patientName":"Peter",
-      "dateOfBirth":"01-May-1985",
-      "age":"31",
-      "street": "Downtown",
-      "city":"Atlanta",
-      "address":"No 8, abc Avenue, Houston-12",
-      "profilePic":"img/Mark.jpeg",
-      "gender":"Male",
-      "bloodGroup":"B+",
-      "mobileNumber":5551234567,
-      "emailID":"peter@doctorapp.com"
-   };*/
-   $scope.readData = function(){
 
-  
-    var db;
-
-         try {
-            db = $cordovaSQLite.openDB({name:"myapp_patient.db",location:'default'});
-   
-        } catch (error) {
-            alert(error);
-        }
-                   // Execute SELECT statement to load message from database.
-           //        db, "SELECT ? AS amount, ? AS salary", [var_amount, var_salary])
-        $cordovaSQLite.execute(db, "SELECT * FROM signUpPatientDetails where name = ?",[$rootScope.myusername])
-                  .then(
-                function(res) {
-        var arr = [];
-                    if (res.rows.length > 0) {          
-                       
-                        for (var i =0; i < res.rows.length; i++) {
-                            console.log('result array'+ res.rows.item(i).name);
-                                            arr.push(res.rows.item(i));
-                    }
-              $scope.patientDetails = arr;
-
-                    }          
-         
-                },
-                function(error) {
-                    $scope.statusMessage = "Error on loading: " + error.message;
-                                          // $scope.goToPatientSearch(username);
-                                          window.alert("Invalid username/password");
-                }
-            );
-    
-}
   $ionicModal.fromTemplateUrl('create-patientReportModal.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -69,7 +18,6 @@ angular.module('bookDoctor')
   }
  
   $scope.goBack = function() {
-   // $state.go('patientSearch');
     $ionicHistory.goBack();
   }
  $scope.goToLabResultsScreen = function(profileObject){

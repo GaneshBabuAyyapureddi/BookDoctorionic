@@ -13,7 +13,7 @@ angular.module('bookDoctor')
       
    })
   .error(function(error) {
-  	console.log('could not find notifications.json '+error);
+  	console.log('could not find prescriptions.json '+error);
   	alert("ERROR!");
   });
   $scope.count = function() {

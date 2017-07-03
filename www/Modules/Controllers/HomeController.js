@@ -1,4 +1,3 @@
-//var appTheme = "#11c1f3";
 var app = angular.module('bookDoctor')
 .controller("HomeController",function ($scope, $state,$ionicPopover, $ionicModal,$compile,uiCalendarConfig,$http,$filter,$cordovaSQLite,$rootScope,$ionicPopup) {
 $rootScope.appTheme ="#11c1f3";
@@ -28,9 +27,6 @@ var doctorsArray = [["Dr.George","Dr.Donald","Dr.Gilbert","Dr.Henry Aldrich","Dr
 
 /*Date Picker*/
 
-//$scope.todayDate = $filter("date")(Date.now(), 'yyyy-MM-dd');
-//$scope.date = $filter("date")(Date.now(), 'yyyy-MM-dd');
-
 $scope.date = new Date();
 $scope.appointmentTitle = "Book Appointment";
 $scope.specialityShow = true;
@@ -54,18 +50,7 @@ var minutes = $scope.timeNow.getMinutes();
 $scope.timeNow.setHours(hour,minutes,0,0);
 
 
-
-// var seld;var selm;var sely;
-// var selectedDate = new Date(Date.parse($scope.date)) ;
-// console.log(selectedDate.getDate());
-// console.log(selectedDate.getMonth()+1);
-// console.log(selectedDate.getFullYear());
-// seld = selectedDate.getDate();
-// selm = selectedDate.getMonth()+1;
-// sely = selectedDate.getFullYear();
-
 /* add custom event*/
-//var appointment = {title: 'Appointment',start: new Date(sely,selm,seld)}
 $scope.addAppointment = function(dateobj,timeObj,doctorName) {
   var date = dateobj;
   var time = timeObj;
@@ -82,7 +67,6 @@ $scope.addAppointment = function(dateobj,timeObj,doctorName) {
 
 /* Insert appointment into DB*/
  $scope.insertAppointment =  function(dateobj,timeObj,doctorName){
-    //$scope.alertStatus = 'Insert Prescription done';
     var confirmPopup = $ionicPopup.alert({
               title: 'BookDoctor!',
                template: 'Insert Prescription done!'
@@ -148,7 +132,6 @@ $scope.addAppointment = function(dateobj,timeObj,doctorName) {
                 }
             );
   }
-
 
 /* Add appointment modal view */
 $ionicModal.fromTemplateUrl('Modules/Templates/AddAppointmentModalView.html', {
@@ -261,9 +244,6 @@ $scope.openAppointmentDetails = function(date, jsEvent, view) {
     // Execute action
  });
 
-
-
-
 /* Home Calendar */
 var date = new Date();
 var d = date.getDate();
@@ -279,13 +259,6 @@ $scope.eventSource = {
 };
 /* event source that contains custom events on the scope */
 $scope.events = [
-
-  // {title: 'You have an appointmentment with Dr.Edwin Arnold',start: new Date(y, m, 1,10,0,0),allDay: false},
-  // {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-  // {title: 'You have an appointmentment with Dr. John Austin',start: new Date(y, m, d - 3, 16, 0),allDay: false},
-  // {title: 'You have an appointmentment with Dr.Henry Aldrich',start: new Date(y, m, d + 4, 16, 0),allDay: false},
-  // {title: 'You have an appointmentment with Dr. John Austin',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
-  // {title: 'You have an appointmentment with Dr.Thomas Amory',start: new Date(y, m, 28),end: new Date(y, m, 29)}
 
   {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false},
   {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
@@ -399,18 +372,9 @@ $scope.changeLang = function() {
   }
 };  
 
-
-
-
-
 /* event sources array*/
 $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
 $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
 
-
     myDate: String = new Date().toISOString();
 });
-
-
-
-

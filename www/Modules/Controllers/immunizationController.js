@@ -1,8 +1,7 @@
 angular.module('bookDoctor')
-.controller("immunizationController", function($scope, $state, $stateParams, $ionicHistory){
-  $scope.profileObject = $stateParams.patientProfile;
+.controller("immunizationController", function($scope, $state,$ionicHistory){
+
   $scope.goBack = function() {
-    // $state.go('patientProfile',{"patientProfile":$scope.profileObject});
     $ionicHistory.goBack();
   }
   $scope.patientImmunizations = [{"comments":"HEPATITIS A", "date":"19/4/2016","time":"10:33 AM"},
@@ -18,33 +17,8 @@ angular.module('bookDoctor')
       {"comments":"MMR", "date":"5/4/2017","time":"10:12 AM"},
       {"comments":"HEPATITIS A", "date":"13/4/2017","time":"5:33 PM"}];
 
-  $scope.addDetails = function(immuneInfo) {
-    var db;
-        try {
-            db = $cordovaSQLite.openDB({name:"myapp.db",location:'default'});
-        } catch (error) {
-            alert(error);
-        }
-    var month = ('0' + (immuneInfo.fullDate.getMonth() + 1)).slice(-2); //months from 1-12
-    var day = ('0' + (immuneInfo.fullDate.getDate())).slice(-2);
-    var year = immuneInfo.fullDate.getFullYear();
-    var selectedDate = year + "/" + month + "/" + day;
-    $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS immuneDetails (patientId TEXT, immuneDate TEXT, immuneType TEXT)');
-
-    $cordovaSQLite.execute(db, 'INSERT INTO immuneDetails(patientId, immuneDate, immuneType) VALUES (?,?,?)', [$scope.profileObject.patientID, selectedDate, immuneInfo.vaccineType])
-        .then(function(result) {
-         //   $scope.statusMessage = "Message saved successful, cheers!";
-             window.alert("Successfully Inserted");
-             $scope.loadData();
-        }, function(error) {
-        //    $scope.statusMessage = "Error on saving: " + error.message;
-         window.alert("Form not submitted");
-        })
-  }
-
   $scope.loadData = function() {
-   
-                        $scope.patientImmunizations;                        
+       $scope.patientImmunizations;                        
                
   }
 })
