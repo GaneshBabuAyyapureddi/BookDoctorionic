@@ -36,9 +36,7 @@ angular.module('bookDoctor')
  }
 });
 
-
  $scope.goBack = function() {
-    // $ionicHistory.goBack();
     $state.go('dashboard.homeScreen');
   }
 
@@ -62,12 +60,14 @@ angular.module('bookDoctor')
 }).then(function(popover) {
  $scope.popover = popover;
 });
-
-$scope.specialistLists=["ShowAll","Immunology","Obstetrics and gynecology", "Cardiology", "Gynecology"
-, "General surgery", "Neurology", "Urology", "Oncologist", "Epidemiologist", "Endocrinologist"
-, "Dermatologist", "Dentist", "Endocrinologist", "Dermatologist", "Nephrologist", "Psychiatrist"
-, "Pathologist", "Neurosurgeon", "Gastroenterologist", "Ophthalmologist", "Radiology", "Diabetology", "NeuroScience"];
-
-
+ 
+ $http.get('assets/specialities.json')
+   .success(function(obj) {
+    $scope.specialistLists = obj.specialities;
+   })
+  .error(function(error) {
+    console.log('could not find prescriptions.json '+error);
+    alert("ERROR!");
+  });
 
 })
