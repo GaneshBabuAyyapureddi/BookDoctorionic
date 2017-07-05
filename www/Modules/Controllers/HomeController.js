@@ -3,16 +3,30 @@ var app = angular.module('bookDoctor')
 $rootScope.appTheme ="#11c1f3";
 var showAppointmentDetails;
 /*Add appointment modal view*/
-var specialityArray = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",
-"Neurologist","General Physician"];
-var doctorsArray = [["Dr.George","Dr.Donald","Dr.Gilbert","Dr.Henry Aldrich","Dr.Edwin Arnold","Dr. Jane Austen"],
-["Dr. Jane Austen","Dr.Edwin Arnold","Dr.Gilbert","Dr.Donald","Dr.Henry Aldrich","Dr.George"],
-["Dr.Edwin Arnold","Dr. Jane Austen","Dr.Thomas Amory","Dr.Henry Aldrich","Dr.Jane Austen","Dr.George"],
-["Dr.Jane Austen","Dr.Gilbert","Dr. Henry Aldrich","Dr.Donald","Dr.George","Dr.Edwin Arnold"],
-["Dr.Edwin Arnold","Dr.Gilbert","Dr.Henry Aldrich","Dr. John Austin","Dr.Jane Austen","Dr.Thomas Amory"],
-["Dr.Jane Austen","Dr.Edwin Arnold","Dr.Donald","Dr.Gilbert","Dr. John Austin","Dr.Henry Aldrich"]];
+// var specialityArray = ["E.N.T", "Pediatrician", "Cardialogist","Phyciatrist",
+// "Neurologist","General Physician"];
 
-    $scope.options1 = specialityArray;
+$http.get('assets/specialities.json')
+   .success(function(obj) {
+    $scope.options1= obj.specialities;
+   })
+  .error(function(error) {
+    console.log('could not find specialities.json '+error);
+    alert("ERROR!");
+  });
+
+var doctorsArray;
+  $http.get('assets/BookDoctors.json')
+   .success(function(obj) {
+    doctorsArray= obj.doctorslist;
+     console.log('Doctorslist '+doctorsArray);
+   })
+  .error(function(error) {
+    console.log('could not find BookDoctors.json '+error);
+    alert("ERROR!");
+  });
+
+    //$scope.options1 = specialityArray;
     $scope.options2 = []; // we'll get these later
     $scope.getOptions2 = function(option1){
         // just some silly stuff to get the key of what was selected since we are using simple arrays.
