@@ -272,16 +272,27 @@ $scope.eventSource = {
         currentTimezone: 'America/Chicago' // an option!
 };
 /* event source that contains custom events on the scope */
-$scope.events = [
+$http.get('assets/appointments.json')
+   .success(function(data) {
+    $scope.events= data;
+    console.log('data appontmets... '+data);
+   })
+  .error(function(error) {
+    console.log('could not find appointments.json '+error);
+    alert("ERROR!");
+  });
 
-  {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false},
-  {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-  {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false},
-  {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false},
-  {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
-  {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29)}
 
-];
+// $scope.events = [
+
+//   {title: 'Dr.Edwin Arnold Appointment',start: new Date(y, m, 1,10,0,0),allDay: false},
+//   {title: 'Physiotherapy appointment with Dr.Donald',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
+//   {title: 'Dr.John Appointment',start: new Date(y, m, d - 3, 16, 0),allDay: false},
+//   {title: 'Dr.Henry Appointment',start: new Date(y, m, d + 4, 16, 0),allDay: false},
+//   {title: 'Dr.Austin Appointment',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
+//   {title: 'Dr.Thomas Amory Appointment',start: new Date(y, m, 28),end: new Date(y, m, 29)}
+
+//  ];
 /* event source that calls a function on every view switch */
 $scope.eventsF = function (start, end, timezone, callback) {
   var s = new Date(start).getTime() / 1000;
